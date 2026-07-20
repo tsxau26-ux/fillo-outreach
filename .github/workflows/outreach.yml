@@ -1,0 +1,45 @@
+name: Fillo Outreach Campaign
+
+on:
+  schedule:
+    # Runs every day at 08:00 UTC (15:00 in Bangkok/Vietnam, 12:00 in Dubai)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Allows manual trigger from the GitHub website
+
+jobs:
+  run-outreach:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Needed to push state commits
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run Outreach Script
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+          OUTREACH_MODE: '2' # Live Send
+          CONFIRM_SEND: 'y'
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 send_outreach.py
+
+      - name: Commit and Push Progress
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outreach_state.json
+          # Only commit if there are changes
+          if ! git diff --quiet outreach_state.json; then
+            git commit -m "Update outreach progress [skip ci]"
+            git push
+          else
+            print("No new emails were sent, skipping commit.")
+          fi
