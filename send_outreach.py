@@ -15,7 +15,7 @@ CSV_FILE_PATH = "fillo_leads.csv" if os.path.exists("fillo_leads.csv") else "/Us
 STATE_FILE_PATH = "outreach_state.json"
 
 # Google Outreach Security Settings
-DAILY_LIMIT = 50          # Max emails to send per day
+DAILY_LIMIT = int(os.environ.get("DAILY_LIMIT", 50))  # Max emails to send per day (configurable via environment)
 MIN_DELAY_SECS = 60       # Minimum delay between emails (1 minute)
 MAX_DELAY_SECS = 180      # Maximum delay between emails (3 minutes)
 
