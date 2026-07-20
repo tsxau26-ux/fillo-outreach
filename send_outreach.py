@@ -31,9 +31,9 @@ TEMPLATES = {
 
 I came across your barbershop in {location} and love the premium setup you have.
 
-We built a tool called Fillo that helps barbershops fill empty chairs and last-minute cancellations. When you have a cancellation, you can notify your clients instantly on Telegram with a direct booking link to grab the chair.
+We built a tool called Fillo that helps barbershops fill empty chairs and last-minute cancellations. When you have a gap, you can alert your clients instantly on Telegram with a direct booking link to grab the chair.
 
-Most shops see open spots filled within an hour of sending the Telegram notification.
+We are currently offering local shops in your area a 1-month free trial of Fillo to help you recover lost revenue from cancellations risk-free.
 
 Are you open to a brief chat this week to see how it works?
 
@@ -47,9 +47,9 @@ Fillo Team"""
 
 I came across your salon and love the work you do.
 
-We built a tool called Fillo that helps salons and spas turn quiet hours and cancellations into paid bookings. When you have an empty slot, the app lets you alert your clients instantly on Telegram with a direct booking link to claim the spot.
+We built a tool called Fillo that helps salons and spas turn quiet hours and cancellations into paid bookings. When a slot opens up, the app lets you alert your clients instantly on Telegram with a direct booking link to claim it.
 
-Most salons see open slots booked within an hour of sending the Telegram notification.
+We are currently offering local salons a 1-month free trial of Fillo to help you keep your schedule full, completely risk-free.
 
 Are you open to a brief chat this week to see how it works?
 
@@ -63,9 +63,9 @@ Fillo Team"""
 
 I came across your pilates studio in {location} and love your focus on quality training.
 
-We built a tool called Fillo that helps pilates and fitness studios fill last-minute open reformer spots or cancellations. When a slot opens up, the app lets you alert your clients instantly on Telegram with a direct booking link.
+We built a tool called Fillo that helps pilates and fitness studios fill last-minute open reformer spots or class cancellations. When a slot opens up, the app lets you alert your clients instantly on Telegram with a direct booking link to reserve it.
 
-Most studios see open spots filled within an hour of sending the notification.
+We are currently offering local studios a 1-month free trial of Fillo to help you keep your classes full risk-free.
 
 Are you open to a brief chat this week to see how it works?
 
@@ -79,9 +79,9 @@ Fillo Team"""
 
 I came across your business in {location} and love what you do.
 
-We built a tool called Fillo that helps hospitality and booking-based businesses turn quiet hours and last-minute open slots into paid bookings. When you have slow periods, the app lets you alert your clients instantly on Telegram with a direct link.
+We built a tool called Fillo that helps hospitality and booking-based businesses turn quiet hours and empty tables/slots into paid bookings. When you have slow periods, the app lets you alert your clients instantly on Telegram with a direct link.
 
-Most businesses see new bookings within an hour of sending the notification.
+We are currently offering local businesses a 1-month free trial of Fillo to help you fill your slow hours, completely risk-free.
 
 Are you open to a brief chat this week to see how it works?
 
