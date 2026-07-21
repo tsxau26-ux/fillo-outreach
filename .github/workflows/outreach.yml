@@ -24,6 +24,14 @@ jobs:
       - name: Auto-Refill Daily Lead Batch
         run: python3 auto_refill.py
 
+      - name: Check Unread Email Replies
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 check_replies.py
+
       - name: Run Outreach Script
         env:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}

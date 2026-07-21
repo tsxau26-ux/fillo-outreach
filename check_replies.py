@@ -2,12 +2,31 @@
 import os
 import imaplib
 import email
+import urllib.request
+import urllib.parse
+import ssl
 from email.header import decode_header
 
 # Configuration
 SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "joinfillo@gmail.com")
 APP_PASSWORD = os.environ.get("APP_PASSWORD", "vfvqocxsqrxdpttf")
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8827856631:AAGTJvC7UkOqVHtTEgbV4WxK_Ir8kE0IDAQ")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "5219669099")
 IMAP_SERVER = "imap.gmail.com"
+
+def send_telegram_alert(token, chat_id, message):
+    if not token or not chat_id:
+        return
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = {"chat_id": chat_id, "text": message}
+    data = urllib.parse.urlencode(payload).encode("utf-8")
+    try:
+        context = ssl._create_unverified_context()
+        req = urllib.request.Request(url, data=data)
+        with urllib.request.urlopen(req, context=context) as response:
+            pass
+    except Exception as e:
+        print(f"Failed to send Telegram alert: {e}")
 
 def main():
     print("=======================================")
@@ -54,9 +73,6 @@ def main():
             if isinstance(from_, bytes):
                 from_ = from_.decode(encoding or "utf-8", errors="ignore")
                 
-            print(f"From: {from_}")
-            print(f"Subject: {subject}")
-            
             # Get body snippet
             body = ""
             if msg.is_multipart():
@@ -75,9 +91,16 @@ def main():
                 except Exception:
                     pass
             
-            snippet = body.strip().replace("\n", " ").replace("\r", "")[:120]
+            snippet = body.strip().replace("\n", " ").replace("\r", "")[:150]
+            
+            print(f"From: {from_}")
+            print(f"Subject: {subject}")
             print(f"Snippet: {snippet}...")
             print("-" * 50)
+            
+            # Send alert to Telegram
+            alert_msg = f"📩 **NEW OUTREACH REPLY**\n\n**From:** {from_}\n**Subject:** {subject}\n**Snippet:** {snippet}..."
+            send_telegram_alert(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, alert_msg)
             
         mail.close()
         mail.logout()
@@ -87,3 +110,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
