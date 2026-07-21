@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Auto-Refill Daily Lead Batch
+        run: python3 auto_refill.py
+
       - name: Run Outreach Script
         env:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
@@ -36,11 +39,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outreach_state.json
+          git add outreach_state.json fillo_leads.csv
           # Only commit if there are changes
-          if ! git diff --quiet outreach_state.json; then
-            git commit -m "Update outreach progress [skip ci]"
+          if ! git diff --quiet outreach_state.json fillo_leads.csv; then
+            git commit -m "Update outreach progress and leads list [skip ci]"
             git push
           else
-            echo "No new emails were sent, skipping commit."
+            echo "No changes, skipping commit."
           fi
