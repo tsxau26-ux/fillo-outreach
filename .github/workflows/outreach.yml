@@ -42,5 +42,5 @@ jobs:
             git commit -m "Update outreach progress [skip ci]"
             git push
           else
-            print("No new emails were sent, skipping commit.")
+            echo "No new emails were sent, skipping commit."
           fi
