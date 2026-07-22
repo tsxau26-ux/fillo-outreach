@@ -8,12 +8,26 @@ def test_template_contains_free_trial():
     for cat in ["barber", "spa", "pilates", "cafe"]:
         template = get_template(cat)
         body = template["body"].format(business_name="Test Store", location="Dubai")
-        assert "1-month free trial" in body.lower() or "1 month free trial" in body.lower()
+        assert "free" in body.lower() and ("1-month" in body.lower() or "1 month" in body.lower())
         assert "telegram" in body.lower()
-        assert "benefit" in body.lower() or "recover" in body.lower() or "fill" in body.lower()
 
-def test_template_explains_ad_generation():
+def test_template_explains_how_fillo_works():
     for cat in ["barber", "spa", "pilates", "general"]:
         template = get_template(cat)
         body = template["body"].format(business_name="Test Store", location="Dubai")
-        assert "generate" in body.lower() or "promo" in body.lower() or "ad" in body.lower()
+        assert "generates" in body.lower() or "creates" in body.lower()
+        assert "qr code" in body.lower() or "booking link" in body.lower()
+
+def test_subject_mentions_free():
+    for cat in ["barber", "spa", "pilates", "general"]:
+        template = get_template(cat)
+        subject = template["subject"].format(business_name="Test Store")
+        assert "free" in subject.lower()
+
+def test_natural_tone_no_all_caps_marketing():
+    for cat in ["barber", "spa", "pilates", "general"]:
+        template = get_template(cat)
+        body = template["body"].format(business_name="Test Store", location="Dubai")
+        # Should not have aggressive all-caps marketing phrases
+        assert "CLAIM YOUR" not in body
+        assert "ACT NOW" not in body
