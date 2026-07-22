@@ -32,16 +32,16 @@ def load_font(path, index, size):
 
 
 def create_store_qr(target_url, output_qr_path):
-    """Generate a high-resolution QR code with error correction level H."""
+    """Generate a ultra-high-resolution QR code with error correction level H."""
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_H,
-        box_size=12,
-        border=2,
+        box_size=16,
+        border=4,
     )
     qr.add_data(target_url)
     qr.make(fit=True)
-    img = qr.make_image(fill_color=FILLO_DARK, back_color=WHITE).convert("RGBA")
+    img = qr.make_image(fill_color=(0, 0, 0), back_color=(255, 255, 255)).convert("RGBA")
     img.save(output_qr_path)
     print(f"QR Code saved: {output_qr_path}")
     return img
