@@ -8,8 +8,8 @@ def test_template_contains_free_trial():
     for cat in ["barber", "spa", "pilates", "cafe"]:
         template = get_template(cat)
         body = template["body"].format(business_name="Test Store", location="Dubai")
-        assert "free" in body.lower() and ("1-month" in body.lower() or "1 month" in body.lower())
-        assert "telegram" in body.lower()
+        assert "free trial" in body.lower()
+        assert "https://t.me/filloappbot" in body.lower()
 
 def test_template_explains_how_fillo_works():
     for cat in ["barber", "spa", "pilates", "general"]:

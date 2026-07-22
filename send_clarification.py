@@ -20,9 +20,10 @@ Just to clarify — Fillo is NOT a replacement for your existing appointment or 
 
 Fillo works alongside your current setup specifically for unexpected cancellations and quiet hours. Whenever a client cancels last minute or you have an empty slot, you can send an automated 1-click alert to your regular clients via Telegram with a direct booking link to claim the slot.
 
-It requires 0 software changes on your end and takes under 5 minutes to set up.
+It requires 0 software changes on your end and takes under 2 minutes to get started directly on Telegram:
+👉 Launch your 1-Month Free Trial here: https://t.me/Filloappbot
 
-Since we offer a 1-month free trial with zero commitment, would you be open to trying it out for 2 weeks to see how many lost slots it recovers for JK Barber?
+You can try it risk-free for 2 weeks to see how many lost slots it recovers for JK Barber.
 
 Best regards,
 Fillo Team

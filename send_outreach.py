@@ -24,7 +24,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 # ========================================================
 
-# Email templates — professional, benefit-driven, natural tone
+# Email templates — professional, benefit-driven, natural tone with direct Telegram Mini App link
 TEMPLATES = {
     "barber": {
         "subject": "Free for 1 month — fill empty chairs at {business_name}",
@@ -42,7 +42,8 @@ Here's what Fillo does for you:
 
 You don't need to change anything about how you currently manage appointments. Fillo just fills the gaps.
 
-We're offering {business_name} a free 1-month trial — no credit card, no commitment, cancel anytime. Setup takes about 5 minutes.
+We're offering {business_name} a free 1-month trial — no credit card, no commitment, cancel anytime. Setup takes about 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
 
 Would you be open to trying it out this week?
 
@@ -62,9 +63,8 @@ We built Fillo specifically for this. When a slot opens up, you tap one button a
 - That promo goes instantly to your clients on Telegram, where open rates are 90%+ (compared to ~20% for email).
 - Clients book the open slot directly. No phone calls needed.
 
-The whole point is that it works alongside whatever booking system you already use. Zero changes on your end, and setup takes under 5 minutes.
-
-We're giving select salons in {location} a free 1-month trial — no credit card, no strings attached.
+The whole point is that it works alongside whatever booking system you already use. Zero changes on your end, and setup takes under 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
 
 Interested in giving it a try?
 
@@ -87,7 +87,8 @@ That's exactly what Fillo solves:
 
 It doesn't replace your scheduling system — it just fills the empty spots your existing setup can't reach in time.
 
-We're offering studios in {location} a free 1-month trial. No credit card, no commitment. Takes about 5 minutes to set up.
+We're offering studios in {location} a free 1-month trial. No credit card, no commitment. Setup takes about 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
 
 Would you like to try it?
 
@@ -108,9 +109,8 @@ Here's how it works:
 - That promo goes straight to your clients on Telegram, where open rates are 90%+ (much higher than email or social posts).
 - Clients book directly. No friction.
 
-It works alongside your existing setup. Nothing to change, nothing to learn. Setup takes about 5 minutes.
-
-We're giving select businesses in {location} a free 1-month trial — no credit card, no commitment, cancel anytime.
+It works alongside your existing setup. Nothing to change, nothing to learn. Setup takes about 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
 
 Want to give it a try?
 
