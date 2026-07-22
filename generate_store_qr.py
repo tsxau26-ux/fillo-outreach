@@ -231,7 +231,7 @@ if __name__ == "__main__":
     output_flyer = os.path.join(base_dir, "fillo_store_flyer.png")
     output_qr = os.path.join(base_dir, "fillo_store_qr.png")
 
-    telegram_link = "https://t.me/Filloappbot?start=activate_store"
+    telegram_link = "https://t.me/Filloappbot"
 
     create_store_qr(telegram_link, output_qr)
     generate_store_flyer("JK Barber FICS31", telegram_link, output_flyer)
