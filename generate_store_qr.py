@@ -174,9 +174,9 @@ def generate_store_flyer(store_name, telegram_link, output_flyer_path):
 
     # --- 3 Steps ---
     steps = [
-        ("Scan & Connect", "Open Telegram and tap Start to link your store."),
-        ("Share Your Details", "Send your store name, location, and a photo."),
-        ("Start Filling Slots", "Your free trial activates instantly. Fill empty hours."),
+        ("Scan & Open Fillo App", "Open Telegram to launch the Fillo Mini App."),
+        ("Submit Store Info & Photo", "Submit your business details & counter photo to activate."),
+        ("Instant 1-Month Free Trial", "Start filling quiet hours and recovering lost revenue!"),
     ]
 
     left_margin = 180
