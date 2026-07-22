@@ -1,2 +1,4 @@
-*.metadata.json
-.DS_Store
+__pycache__/
+*.pyc
+temp_qr.png
+outreach_state.json

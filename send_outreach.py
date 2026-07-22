@@ -24,67 +24,107 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 # ========================================================
 
-# Templates tailored to Fillo's Telegram features
+# Templates tailored to Fillo's Telegram & Promo Generation features
 TEMPLATES = {
     "barber": {
-        "subject": "question about empty slots at {business_name}",
+        "subject": "Fill empty chairs & launch promos at {business_name} (1 Month Free Trial)",
         "body": """Hi {business_name} team,
 
-I came across your barbershop in {location} and love the premium setup you have.
+I came across your barbershop in {location} and love the quality of your work.
 
-We built a tool called Fillo that helps barbershops fill empty chairs and last-minute cancellations. When you have a gap, you can alert your clients instantly on Telegram with a direct booking link to grab the chair.
+We built Fillo — an automated marketing and revenue tool designed specifically for local stores and barbershops to fill quiet hours and last-minute cancellations.
 
-We are currently offering local shops in your area a 1-month free trial of Fillo to help you recover lost revenue from cancellations risk-free.
+Here is how Fillo works for {business_name}:
+1. Whenever you have empty chairs or slow hours, you can create and launch local promotions in 1 click right inside Fillo.
+2. Fillo automatically generates branded promo graphics & QR codes and broadcasts instant booking alerts directly to your clients on Telegram.
+3. You get 90%+ open rates compared to regular emails or manual Instagram posts.
 
-Are you open to a brief chat this week to see how it works?
+Key Benefits for your shop:
+• Zero out lost revenue from last-minute no-shows.
+• Launch instant local ads & flash sales without paying marketing agencies.
+• Works seamlessly alongside your current setup in under 5 minutes.
+
+We are currently offering select shops in {location} a 1-Month FREE Trial (100% risk-free, no credit card required) so you can test it and start filling empty chairs immediately.
+
+Would you be open to claiming your 1-month free trial this week?
 
 Best regards,
 
 Fillo Team"""
     },
     "salon_spa": {
-        "subject": "question about empty slots at {business_name}",
+        "subject": "Turn cancellations into paid bookings at {business_name} (1 Month Free Trial)",
         "body": """Hi {business_name} team,
 
-I came across your salon and love the work you do.
+I came across your salon/spa and loved your work.
 
-We built a tool called Fillo that helps salons and spas turn quiet hours and cancellations into paid bookings. When a slot opens up, the app lets you alert your clients instantly on Telegram with a direct booking link to claim it.
+We built Fillo — an automated revenue recovery tool designed specifically for beauty salons and spas to turn quiet hours and cancellations into paid bookings.
 
-We are currently offering local salons a 1-month free trial of Fillo to help you keep your schedule full, completely risk-free.
+Here is how Fillo works for {business_name}:
+1. Whenever a slot opens up or you have slow hours, you can launch local flash promos in 1 click right inside Fillo.
+2. Fillo automatically generates custom promo visuals & QR codes and alerts your loyal client list directly on Telegram.
+3. Clients book open slots instantly through a direct link.
 
-Are you open to a brief chat this week to see how it works?
+Key Benefits for {business_name}:
+• Keep your therapists & stylists fully booked every day.
+• Launch local promotions effortlessly without technical skills or marketing agencies.
+• 0 friction — works alongside your current booking system in 5 minutes.
+
+We are offering local salons a 1-Month FREE Trial (completely risk-free, no credit card needed) to help you keep your schedule full.
+
+Would you be open to claiming your 1-month free trial this week?
 
 Best regards,
 
 Fillo Team"""
     },
     "pilates": {
-        "subject": "question about empty slots at {business_name}",
+        "subject": "Fill empty reformer slots & launch promos at {business_name} (1 Month Free Trial)",
         "body": """Hi {business_name} team,
 
-I came across your pilates studio in {location} and love your focus on quality training.
+I came across your studio in {location} and love your focus on quality training.
 
-We built a tool called Fillo that helps pilates and fitness studios fill last-minute open reformer spots or class cancellations. When a slot opens up, the app lets you alert your clients instantly on Telegram with a direct booking link to reserve it.
+We built Fillo — an automated revenue tool designed specifically for fitness and pilates studios to fill empty reformer slots and class cancellations.
 
-We are currently offering local studios a 1-month free trial of Fillo to help you keep your classes full risk-free.
+Here is how Fillo works for {business_name}:
+1. When a class has open spots or slow hours, you can launch a local promotion in 1 click right inside Fillo.
+2. Fillo automatically generates branded promo assets & QR codes and broadcasts instant reservation alerts directly to your members on Telegram.
+3. Members grab remaining spots in seconds.
 
-Are you open to a brief chat this week to see how it works?
+Key Benefits:
+• Maximize class occupancy and eliminate lost revenue from cancellations.
+• Effortlessly generate and launch local offers without complex ad platforms.
+• 100% complementary to your current booking system.
+
+We are currently offering select studios in {location} a 1-Month FREE Trial (risk-free, zero commitment) so you can test it live.
+
+Would you be open to claiming your 1-month free trial this week?
 
 Best regards,
 
 Fillo Team"""
     },
     "general": {
-        "subject": "question about empty slots at {business_name}",
+        "subject": "Fill quiet hours & launch local promos at {business_name} (1 Month Free Trial)",
         "body": """Hi {business_name} team,
 
 I came across your business in {location} and love what you do.
 
-We built a tool called Fillo that helps hospitality and booking-based businesses turn quiet hours and empty tables/slots into paid bookings. When you have slow periods, the app lets you alert your clients instantly on Telegram with a direct link.
+We built Fillo — an automated marketing and revenue platform that helps local stores and service businesses turn slow hours and empty slots into paid bookings.
 
-We are currently offering local businesses a 1-month free trial of Fillo to help you fill your slow hours, completely risk-free.
+Here is how Fillo works for {business_name}:
+1. Whenever you have slow periods, you can launch local promotions and flash offers in 1 click right inside Fillo.
+2. Fillo automatically generates branded promo graphics & QR codes and broadcasts instant alerts directly to your clients on Telegram.
+3. You achieve instant 90%+ engagement and fast bookings.
 
-Are you open to a brief chat this week to see how it works?
+Key Benefits for {business_name}:
+• Fill quiet hours and recover lost revenue automatically.
+• Launch instant promotions without hiring expensive marketing agencies.
+• 0 hassle — sets up in under 5 minutes alongside your current setup.
+
+We are currently offering select businesses in {location} a 1-Month FREE Trial (completely risk-free, no credit card required) to test it live.
+
+Would you be open to claiming your 1-month free trial this week?
 
 Best regards,
 

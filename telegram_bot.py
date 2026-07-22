@@ -13,15 +13,16 @@ from email.header import decode_header
 # Configuration
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8827856631:AAGTJvC7UkOqVHtTEgbV4WxK_Ir8kE0IDAQ")
 ALLOWED_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "5219669099")
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO = "tsxau26-ux/fillo-outreach"
 
 SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "joinfillo@gmail.com")
 APP_PASSWORD = os.environ.get("APP_PASSWORD", "vfvqocxsqrxdpttf")
 IMAP_SERVER = "imap.gmail.com"
 
-CSV_FILE = "fillo_leads.csv"
-STATE_FILE = "outreach_state.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE = os.path.join(BASE_DIR, "fillo_leads.csv")
+STATE_FILE = os.path.join(BASE_DIR, "outreach_state.json")
 
 def send_telegram_msg(chat_id, text):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
@@ -58,6 +59,18 @@ def get_status_summary():
 
 Use `/run` to start sending or `/replies` to check inbox!"""
 
+BOUNCE_SENDERS = ["mailer-daemon", "postmaster", "no-reply", "noreply", "accounts.google.com"]
+BOUNCE_SUBJECTS = ["delivery status notification", "undelivered mail", "failure notice", "mail delivery failed", "out of office", "security alert", "2-step verification", "finish setting up"]
+
+def is_real_human_reply(from_str, subject_str):
+    from_lower = str(from_str).lower()
+    subj_lower = str(subject_str).lower()
+    if any(b in from_lower for b in BOUNCE_SENDERS):
+        return False
+    if any(s in subj_lower for s in BOUNCE_SUBJECTS):
+        return False
+    return True
+
 def check_unread_replies():
     if not SENDER_EMAIL or not APP_PASSWORD:
         return "⚠️ Missing email credentials."
@@ -73,9 +86,9 @@ def check_unread_replies():
             return "📬 No unread replies in your inbox."
             
         mail_ids = response[0].split()
-        res = [f"📬 **Found {len(mail_ids)} unread message(s):**\n"]
+        res = []
         
-        for num in mail_ids[:5]: # Top 5
+        for num in reversed(mail_ids):
             status, data = mail.fetch(num, '(RFC822)')
             if status != "OK":
                 continue
@@ -91,6 +104,9 @@ def check_unread_replies():
             if isinstance(from_, bytes):
                 from_ = from_.decode(encoding or "utf-8", errors="ignore")
                 
+            if not is_real_human_reply(from_, subject):
+                continue
+
             body = ""
             if msg.is_multipart():
                 for part in msg.walk():
@@ -102,9 +118,13 @@ def check_unread_replies():
                 
             snippet = body.strip().replace("\n", " ")[:100]
             res.append(f"• **From:** {from_}\n  **Subject:** {subject}\n  **Snippet:** {snippet}...\n")
+            if len(res) >= 5:
+                break
             
         mail.logout()
-        return "\n".join(res)
+        if not res:
+            return "📬 No real customer replies found (bounces filtered out)."
+        return f"📬 **Found {len(res)} real customer reply(ies):**\n\n" + "\n".join(res)
     except Exception as e:
         return f"Error checking replies: {e}"
 
@@ -152,14 +172,16 @@ def main():
                 message = result.get("message", {})
                 chat = message.get("chat", {})
                 chat_id = str(chat.get("id"))
-                text = message.get("text", "").strip()
+                raw_text = message.get("text", "").strip()
 
                 if chat_id != ALLOWED_CHAT_ID:
+                    print(f"Ignored message from unauthorized chat_id: {chat_id}")
                     continue
 
-                print(f"Received command: '{text}' from {chat_id}")
+                cmd = raw_text.split("@")[0].strip().lower()
+                print(f"Received command: '{raw_text}' (parsed: '{cmd}') from {chat_id}")
 
-                if text in ["/start", "/help"]:
+                if cmd in ["/start", "/help"]:
                     reply = """🤖 **Fillo Outreach Bot Commands**
 
 • `/status` - Check campaign progress and lead stats.
@@ -168,13 +190,13 @@ def main():
 • `/help` - Show this menu."""
                     send_telegram_msg(chat_id, reply)
 
-                elif text == "/status":
+                elif cmd == "/status":
                     send_telegram_msg(chat_id, get_status_summary())
 
-                elif text == "/replies":
+                elif cmd == "/replies":
                     send_telegram_msg(chat_id, check_unread_replies())
 
-                elif text == "/run":
+                elif cmd == "/run":
                     send_telegram_msg(chat_id, "⏳ Triggering cloud campaign...")
                     res = trigger_github_workflow()
                     send_telegram_msg(chat_id, res)

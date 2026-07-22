@@ -14,6 +14,18 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8827856631:AAGTJvC7Uk
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "5219669099")
 IMAP_SERVER = "imap.gmail.com"
 
+BOUNCE_SENDERS = ["mailer-daemon", "postmaster", "no-reply", "noreply", "accounts.google.com"]
+BOUNCE_SUBJECTS = ["delivery status notification", "undelivered mail", "failure notice", "mail delivery failed", "out of office", "security alert", "2-step verification", "finish setting up"]
+
+def is_real_human_reply(from_str, subject_str):
+    from_lower = str(from_str).lower()
+    subj_lower = str(subject_str).lower()
+    if any(b in from_lower for b in BOUNCE_SENDERS):
+        return False
+    if any(s in subj_lower for s in BOUNCE_SUBJECTS):
+        return False
+    return True
+
 def send_telegram_alert(token, chat_id, message):
     if not token or not chat_id:
         return
@@ -72,6 +84,10 @@ def main():
             from_, encoding = decode_header(msg["From"])[0]
             if isinstance(from_, bytes):
                 from_ = from_.decode(encoding or "utf-8", errors="ignore")
+
+            if not is_real_human_reply(from_, subject):
+                print(f"Skipping automated/bounce message from: {from_} ({subject})")
+                continue
                 
             # Get body snippet
             body = ""
