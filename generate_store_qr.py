@@ -211,7 +211,7 @@ def generate_store_flyer(store_name, telegram_link, output_flyer_path):
     y = badge_y + badge_h + 40
 
     # --- Footer ---
-    draw_centered(draw, "fillo.app  |  Telegram: @Mounirmailsbot", f_footer, y, W, fill=MID_GRAY)
+    draw_centered(draw, "fillo.app  |  Telegram: @Filloappbot", f_footer, y, W, fill=MID_GRAY)
     y += 35
     draw_centered(draw, "Fill quiet hours. Recover lost revenue. Grow your business.", f_footer, y, W, fill=MID_GRAY)
 
@@ -231,7 +231,7 @@ if __name__ == "__main__":
     output_flyer = os.path.join(base_dir, "fillo_store_flyer.png")
     output_qr = os.path.join(base_dir, "fillo_store_qr.png")
 
-    telegram_link = "https://t.me/Mounirmailsbot?start=activate_store"
+    telegram_link = "https://t.me/Filloappbot?start=activate_store"
 
     create_store_qr(telegram_link, output_qr)
     generate_store_flyer("JK Barber FICS31", telegram_link, output_flyer)
