@@ -1,4 +1,5 @@
 __pycache__/
 *.pyc
+*.metadata.json
 temp_qr.png
 outreach_state.json

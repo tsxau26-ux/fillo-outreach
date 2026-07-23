@@ -37,27 +37,22 @@ def send_telegram_msg(chat_id, text):
         print(f"Error sending Telegram message: {e}")
 
 def get_status_summary():
-    total_leads = 0
-    if os.path.exists(CSV_FILE):
-        with open(CSV_FILE, "r", encoding="utf-8") as f:
-            total_leads = max(0, len(f.readlines()) - 1)
-            
-    sent_emails = []
-    if os.path.exists(STATE_FILE):
-        with open(STATE_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            sent_emails = data.get("sent_emails", [])
-            
-    pending = max(0, total_leads - len(sent_emails))
-    
-    return f"""📊 **Fillo Outreach Status**
+    try:
+        from bounce_cleaner import run_lead_cleaning
+        stats = run_lead_cleaning()
+        return f"""📊 **Fillo Outreach Status**
 
-• **Total Database Leads:** {total_leads}
-• **Successfully Sent:** {len(sent_emails)}
-• **Pending Leads:** {pending}
-• **Daily Limit:** 50 emails/day
+• **Total Database Leads:** {stats['total_leads']}
+• **Clean Active Leads:** {stats['clean_leads_count']}
+• **Successfully Delivered:** {stats['sent_delivered']}
+• **Bounced (Email Not Found):** {stats['bounced']}
+• **Invalid MX Domain:** {stats['invalid_mx']}
+• **Clean Pending Queue:** {stats['pending_valid']}
+• **Daily Safety Limit:** 50 emails/day
 
-Use `/run` to start sending or `/replies` to check inbox!"""
+Use `/run` to start sending, `/clean` to purge bounces, or `/replies` to check inbox!"""
+    except Exception as e:
+        return f"Error computing status: {e}"
 
 BOUNCE_SENDERS = ["mailer-daemon", "postmaster", "no-reply", "noreply", "accounts.google.com"]
 BOUNCE_SUBJECTS = ["delivery status notification", "undelivered mail", "failure notice", "mail delivery failed", "out of office", "security alert", "2-step verification", "finish setting up"]
@@ -184,13 +179,18 @@ def main():
                 if cmd in ["/start", "/help"]:
                     reply = """🤖 **Fillo Outreach Bot Commands**
 
-• `/status` - Check campaign progress and lead stats.
+• `/status` - Check campaign progress & lead stats.
 • `/replies` - Check unread inbox replies.
+• `/clean` - Purge bounced & invalid email addresses.
 • `/run` - Instantly start sending outreach emails.
 • `/help` - Show this menu."""
                     send_telegram_msg(chat_id, reply)
 
                 elif cmd == "/status":
+                    send_telegram_msg(chat_id, get_status_summary())
+
+                elif cmd == "/clean":
+                    send_telegram_msg(chat_id, "🧹 Scanning inbox for bounces & verifying domain MX records...")
                     send_telegram_msg(chat_id, get_status_summary())
 
                 elif cmd == "/replies":

@@ -224,13 +224,24 @@ def main():
             print("Aborted.")
             return
 
+    # Run Lead Cleaner & Bounce Verification before starting campaign
+    try:
+        from bounce_cleaner import run_lead_cleaning, check_mx_record
+        print("Running pre-campaign lead cleaning & bounce verification...")
+        clean_stats = run_lead_cleaning()
+        print(f"Cleaner Stats: Clean Leads: {clean_stats['clean_leads_count']}, Bounced: {clean_stats['bounced']}, Pending Valid: {clean_stats['pending_valid']}")
+    except Exception as e:
+        print(f"Cleaner warning: {e}")
+        def check_mx_record(d): return True
+
     # Load leads
     leads = []
-    if not os.path.exists(CSV_FILE_PATH):
-        print(f"Error: Lead file not found at {CSV_FILE_PATH}")
+    active_csv = "fillo_leads_clean.csv" if os.path.exists("fillo_leads_clean.csv") else CSV_FILE_PATH
+    if not os.path.exists(active_csv):
+        print(f"Error: Lead file not found at {active_csv}")
         return
         
-    with open(CSV_FILE_PATH, "r", encoding="utf-8") as f:
+    with open(active_csv, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             leads.append(row)
@@ -239,12 +250,16 @@ def main():
     
     state = load_state()
     
-    # Filter out already sent leads
-    pending_leads = [l for l in leads if state.get(l["Email"]) != "sent"]
-    print(f"Pending leads to send: {len(pending_leads)}")
+    # Filter out sent, bounced, or invalid_domain leads
+    pending_leads = [
+        l for l in leads 
+        if state.get(l["Email"].strip()) not in ["sent", "bounced", "invalid_domain"]
+        and state.get(l["Email"].strip().lower()) not in ["sent", "bounced", "invalid_domain"]
+    ]
+    print(f"Clean pending leads ready to send: {len(pending_leads)}")
     
     if not pending_leads:
-        print("All leads have already been emailed!")
+        print("All pending leads have been processed (delivered, bounced, or invalid)!")
         return
         
     # Telegram settings
