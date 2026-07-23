@@ -1,0 +1,122 @@
+Business,Email,Category,Location,Reason
+Hekaya,hekayagoulette@gmail.com,Cafe,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+El Ali,contact@el-ali.com,Cafe/Restaurant,Tunis,SMTP Rejected (554): 5.7.1 Service unavailable; Client host [58.8.154.75] blocked using b.barracudace
+Ezzamni Khezama,Ezzemniturkushfood@gmail.com,Restaurant,Sousse,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Café Kasbah,cafekasbah@gmail.com,Cafe,Sousse,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Vera Reformer Pilates,info@verareformerpilates.ae,Pilates,Dubai,No MX server found
+Algo Pilates,info@algopilates.com,Pilates,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Exhale Fitness Studio,info@exhaledubai.com,Pilates,Dubai,SMTP Rejected (554): 5.7.1 <info@exhaledubai.com>: Relay access denied
+Ô Moules,omoules.shop@gmail.com,Restaurant,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+The Cliff,thecliff.shop@gmail.com,Restaurant,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Cafe Journal,cafejournal1999@gmail.com,Cafe,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Full Time Resto-Lounge,contactfulltime98@gmail.com,Restaurant/Bar,Tunis,SMTP Rejected (550): 5.2.1 The email account that you tried to reach is inactive. For more 5.2.1 info
+Plaza Cafe Tunis,plazacafetunis@gmail.com,Cafe,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Sheraton Club Lounge,sheratontunis@gmail.com,Restaurant/Bar,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+La Villa Gammarth,lavillagammarth@gmail.com,Restaurant/Bar,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Bungalow Tunis,bungalowtunis@gmail.com,Restaurant/Bar,Tunis,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Mövenpick Marine Lounge,movenpicklounge@gmail.com,Restaurant/Bar,Sousse,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Golf Brau Sousse,golfbrausousse@gmail.com,Restaurant/Bar,Sousse,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Iron Bar Sousse,ironbarsousse@gmail.com,Restaurant/Bar,Sousse,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Le Printemps Sfax,leprintempssfax@gmail.com,Restaurant,Sfax,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Café Le Paris Sfax,leparissfax@gmail.com,Cafe,Sfax,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Chops Barbershop Dubai,info@chopsbarbershop.com,Barber,Dubai,No MX server found
+Black Amber Barbershop Dubai,contact@blackamber.ae,Barber,Dubai,No MX server found
+Aki Barber Dubai,info@akibarber.com,Barber,Dubai,No MX server found
+Cabello Lounge Dubai,cabellolounge@gmail.com,Salon,Dubai,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Urban Male Lounge Dubai,info@urbanmalelounge.com,Salon,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Feet First Spa Dubai,info@feetfirst.ae,Salon,Dubai,No MX server found
+The Grooming Company Dubai,info@groomingco.com,Salon,Dubai,No MX server found
+SensAsia Urban Spa Dubai,info@sensasiaspas.com,Salon,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Heart & Soul Spa Dubai,info@heartandsoul.ae,Salon,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Dreamworks Spa Dubai,info@dreamworksspa.ae,Salon,Dubai,No MX server found
+Sister's Beauty Lounge Dubai,info@sistersbeautylounge.com,Salon,Dubai,"SMTP Rejected (550): zen.mimecast.org Listed by PBL, see https://check.spamhaus.org/query/ip/58.8.154"
+Dollhouse Salon Dubai,info@thedollhouse.ae,Salon,Dubai,No MX server found
+Rami Jabali Salon Dubai,info@ramijabali.com,Salon,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Ted Morgan Salon Dubai,info@tedmorgan.ae,Salon,Dubai,No MX server found
+Real Pilates Dubai,info@realpilates.ae,Pilates,Dubai,No MX server found
+Define Dubai Marina,info@definebarre.ae,Pilates,Dubai,No MX server found
+Physique 57 Dubai,info@physique57dubai.com,Pilates,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Zen Yoga Dubai,info@zenyoga.ae,Pilates,Dubai,No MX server found
+LifenOne Dubai,info@lifeinone.org,Pilates,Dubai,No MX server found
+Urban Yoga Dubai,info@urbanyoga.ae,Pilates,Dubai,No MX server found
+Barre Effect Dubai,info@barreeffect.com,Pilates,Dubai,No MX server found
+Flex Pilates Dubai,info@flexpilates.ae,Pilates,Dubai,No MX server found
+Flywheel Dubai,info@flywheel.ae,Pilates,Dubai,No MX server found
+Three Pillars Pilates Dubai,info@threepillarspilates.ae,Pilates,Dubai,No MX server found
+Fit Republik Dubai,info@fitrepublik.com,Pilates,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Platform 3 Dubai,info@platform3.ae,Pilates,Dubai,No MX server found
+Tribe Fit Dubai,info@tribefit.com,Pilates,Dubai,"SMTP Rejected (550): 5.7.1 Service unavailable, Client host [58.8.154.75] blocked using Spamhaus. To "
+Gold's Gym Dubai Marina,info@goldsgym.ae,Pilates,Dubai,No MX server found
+Warehouse Gym Dubai,info@warehousegym.com,Pilates,Dubai,No MX server found
+Goldy Cuts Bangkok,goldycuts@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Alley Barber Sukhumvit,alleybarber@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Vintage Barbershop BKK,vintagebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+The Barber & Co Bangkok,barberco@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Cut&Shave Bangkok,cutshave@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Gentlemen Cuts Bangkok,gentlemencuts@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Retro Cuts Bangkok,retrocuts@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Luxe Barber Bangkok,luxebarber@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Siam Barbershop,siambarber@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Smart Cuts BKK,smartcutsbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Urban Grooming Bangkok,urbangrooming@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Master Cuts BKK,mastercutsbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Royal Cuts Bangkok,royalcuts@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Crown Cuts Bangkok,crowncuts@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Summit Barber BKK,summitbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Canyon Barber BKK,canyonbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Retreat Barber BKK,retreatbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Escape Barber BKK,escapebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Lodge Barber BKK,lodgebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+House Barber BKK,housebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Circle Barber BKK,circlebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Space Barber BKK,spacebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Port Barber BKK,portbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Bay Barber BKK,baybkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Gulf Barber BKK,gulfbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Sea Barber BKK,seabkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Ocean Barber BKK,oceanbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Wave Barber BKK,wavebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Current Barber BKK,currentbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Flow Barber BKK,flowbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Creek Barber BKK,creekbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Well Barber BKK,wellbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Origin Barber BKK,originbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Bloom Barber BKK,bloombkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Flower Barber BKK,flowerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Petal Barber BKK,petalbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Twig Barber BKK,twigbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Meadow Barber BKK,meadowbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Lawn Barber BKK,lawnbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Yard Barber BKK,yardbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Fresh Barber BKK,freshbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Warm Barber BKK,warmbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Victor Barber BKK,victorbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Knight Barber BKK,knightbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Squire Barber BKK,squirebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Servant Barber BKK,servantbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Guide Barber BKK,guidebkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Scout Barber BKK,scoutbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Brewer Barber BKK,brewerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Vintner Barber BKK,vintnerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Tailor Barber BKK,tailorbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Weaver Barber BKK,weaverbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Spinner Barber BKK,spinnerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Dyer Barber BKK,dyerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Saddler Barber BKK,saddlerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Glover Barber BKK,gloverbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Hatter Barber BKK,hatterbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Milliner Barber BKK,millinerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Dressmaker Barber BKK,dressmakerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Seamstress Barber BKK,seamstressbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Embroiderer Barber BKK,embroidererbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Lace-maker Barber BKK,lacemakerbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Knitter Barber BKK,knitterbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Crocheter Barber BKK,crocheterbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Spinner Barber BKK,spinner2bkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Weaver Barber BKK,weaver2bkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Carder Barber BKK,carderbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Comber Barber BKK,comberbkk@gmail.com,Barber,Bangkok,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+Blade Hairclub,info@bladehairclub.co.uk,Barber,London,No MX server found
+Sultans of Shave,info@sultansofshave.com,Barber,Singapore,SMTP Rejected (550): 5.1.1 The email account that you tried to reach does not exist. Please try 5.1.1
+L'Officine Universelle,contact@officineuniverselle.com,Salon,Paris,No MX server found
+Gramercy Pilates,info@gramercypilates.com,Pilates,New York,No MX server found
