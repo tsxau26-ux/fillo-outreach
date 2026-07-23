@@ -24,10 +24,10 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 # ========================================================
 
-# Email templates — professional, benefit-driven, natural tone with direct Telegram Mini App link
+# Email templates: professional, benefit-driven, natural tone with direct Telegram Mini App link
 TEMPLATES = {
     "barber": {
-        "subject": "Free for 1 month — fill empty chairs at {business_name}",
+        "subject": "Free for 1 month: fill empty chairs at {business_name}",
         "body": """Hi {business_name} team,
 
 I noticed your barbershop in {location} and really like the work you put into your craft.
@@ -36,13 +36,13 @@ I'm reaching out because we built something called Fillo that solves a problem e
 
 Here's what Fillo does for you:
 - When you have an open slot, you tap one button inside Fillo.
-- Fillo generates a branded promo for your shop automatically — visuals, QR code, booking link — everything.
+- Fillo generates a branded promo for your shop automatically (visuals, QR code, booking link).
 - That promo goes straight to your clients on Telegram, where it gets 90%+ open rates (way higher than email or Instagram).
 - Clients book the slot directly. No calls, no back-and-forth.
 
 You don't need to change anything about how you currently manage appointments. Fillo just fills the gaps.
 
-We're offering {business_name} a free 1-month trial — no credit card, no commitment, cancel anytime. Setup takes about 2 minutes directly on Telegram:
+We're offering {business_name} a free 1-month trial (no credit card, no commitment, cancel anytime). Setup takes about 2 minutes directly on Telegram:
 👉 Start your free trial here: https://t.me/Filloappbot
 
 Would you be open to trying it out this week?
@@ -51,7 +51,7 @@ Best,
 The Fillo Team"""
     },
     "salon_spa": {
-        "subject": "Free for 1 month — fill cancelled slots at {business_name}",
+        "subject": "Free for 1 month: fill cancelled slots at {business_name}",
         "body": """Hi {business_name} team,
 
 I came across your salon and really admire the experience you've built for your clients.
@@ -59,7 +59,7 @@ I came across your salon and really admire the experience you've built for your 
 Quick question: how do you currently handle last-minute cancellations or quiet mornings when therapists and stylists are free?
 
 We built Fillo specifically for this. When a slot opens up, you tap one button and Fillo takes care of the rest:
-- It generates a branded flash promo with your salon's name — visuals, QR code, and a direct booking link.
+- It generates a branded flash promo with your salon's name (visuals, QR code, and a direct booking link).
 - That promo goes instantly to your clients on Telegram, where open rates are 90%+ (compared to ~20% for email).
 - Clients book the open slot directly. No phone calls needed.
 
@@ -72,20 +72,20 @@ Best,
 The Fillo Team"""
     },
     "pilates": {
-        "subject": "Free for 1 month — fill empty reformer spots at {business_name}",
+        "subject": "Free for 1 month: fill empty reformer spots at {business_name}",
         "body": """Hi {business_name} team,
 
 I found your studio in {location} and love your approach to training.
 
-One thing we've heard from studio owners is that reformer classes rarely run at full capacity — there's almost always a spot or two that goes unfilled, especially from late cancellations.
+One thing we've heard from studio owners is that reformer classes rarely run at full capacity: there's almost always a spot or two that goes unfilled, especially from late cancellations.
 
 That's exactly what Fillo solves:
 - When a class has open spots, you tap one button in Fillo.
-- Fillo automatically generates a branded promo for your studio — visuals, QR code, and a direct reservation link.
+- Fillo automatically generates a branded promo for your studio (visuals, QR code, and a direct reservation link).
 - That promo is sent instantly to your member list on Telegram, where 90%+ of people actually see it.
 - Members grab the spot in seconds. Done.
 
-It doesn't replace your scheduling system — it just fills the empty spots your existing setup can't reach in time.
+It doesn't replace your scheduling system: it just fills the empty spots your existing setup can't reach in time.
 
 We're offering studios in {location} a free 1-month trial. No credit card, no commitment. Setup takes about 2 minutes directly on Telegram:
 👉 Start your free trial here: https://t.me/Filloappbot
@@ -96,16 +96,16 @@ Best,
 The Fillo Team"""
     },
     "general": {
-        "subject": "Free for 1 month — fill quiet hours at {business_name}",
+        "subject": "Free for 1 month: fill quiet hours at {business_name}",
         "body": """Hi {business_name} team,
 
 I came across your business in {location} and like what you've built.
 
-I wanted to reach out because we created a tool called Fillo that helps local businesses like yours turn slow hours into paid bookings — without any marketing effort on your part.
+I wanted to reach out because we created a tool called Fillo that helps local businesses like yours turn slow hours into paid bookings without any marketing effort on your part.
 
 Here's how it works:
 - When you have a quiet period, you tap one button inside Fillo.
-- Fillo automatically creates a branded promo for {business_name} — graphics, QR code, and a direct booking link.
+- Fillo automatically creates a branded promo for {business_name} (graphics, QR code, and a direct booking link).
 - That promo goes straight to your clients on Telegram, where open rates are 90%+ (much higher than email or social posts).
 - Clients book directly. No friction.
 
@@ -133,10 +133,10 @@ def get_template(category):
 
 # Follow-Up Email Template (Sent 3 days after Email #1 if no reply)
 FOLLOWUP_TEMPLATE = {
-    "subject": "Quick follow-up — {business_name}",
+    "subject": "Quick follow-up: {business_name}",
     "body": """Hi {business_name} team,
 
-Quick bump on my previous email — wanted to make sure it didn't get buried!
+Quick bump on my previous email, wanted to make sure it didn't get buried!
 
 We're currently offering local businesses in {location} a 1-month free trial of Fillo to fill quiet hours and last-minute cancellations (no credit card or software changes needed).
 

@@ -16,7 +16,7 @@ BODY = """Hi JK Barber Team,
 
 Thank you for your reply!
 
-Just to clarify — Fillo is NOT a replacement for your existing appointment or booking management software.
+Just to clarify: Fillo is NOT a replacement for your existing appointment or booking management software.
 
 Fillo works alongside your current setup specifically for unexpected cancellations and quiet hours. Whenever a client cancels last minute or you have an empty slot, you can send an automated 1-click alert to your regular clients via Telegram with a direct booking link to claim the slot.
 
