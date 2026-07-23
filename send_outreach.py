@@ -277,9 +277,22 @@ def main():
             break
             
         business_name = lead["Business"]
-        recipient_email = lead["Email"]
+        recipient_email = lead["Email"].strip()
         category = lead["Category"]
         location = lead["Location"]
+        
+        # Real-time pre-send SMTP verification to prevent sending to non-existent inboxes
+        try:
+            from bounce_cleaner import verify_email_inbox_smtp
+            is_valid, reason = verify_email_inbox_smtp(recipient_email)
+            if is_valid is False:
+                msg = f"Skipped non-existent email address for {business_name} ({recipient_email}): {reason}"
+                print(f"-> 🚫 {msg}")
+                state[recipient_email] = "email_not_found"
+                save_state(state)
+                continue
+        except Exception as e:
+            print(f"Pre-send SMTP check warning: {e}")
         
         # Select and customize template
         template = get_template(category)

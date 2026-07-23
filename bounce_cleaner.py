@@ -3,6 +3,7 @@ import os
 import re
 import json
 import csv
+import smtplib
 import imaplib
 import email
 import subprocess
@@ -16,19 +17,55 @@ SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "joinfillo@gmail.com")
 APP_PASSWORD = os.environ.get("APP_PASSWORD", "vfvqocxsqrxdpttf")
 IMAP_SERVER = "imap.gmail.com"
 
-def check_mx_record(domain):
-    """Verify if a domain has valid MX DNS records."""
+def get_mx_server(domain):
+    """Retrieve primary MX mail server for a domain."""
     if not domain or "." not in domain:
-        return False
+        return None
     try:
         out = subprocess.check_output(
             ["nslookup", "-type=MX", domain],
             stderr=subprocess.STDOUT,
             timeout=4
         ).decode()
-        return "mail exchanger" in out.lower() or "mx" in out.lower()
+        for line in out.splitlines():
+            if "mail exchanger =" in line:
+                return line.split("mail exchanger =")[-1].strip().split()[-1].rstrip(".")
     except Exception:
-        return False
+        pass
+    return None
+
+def verify_email_inbox_smtp(email_addr):
+    """
+    Performs real-time SMTP RCPT TO handshake to verify if an inbox actually exists.
+    Returns:
+      (True, "250 OK") if inbox exists and is active.
+      (False, "550 Account does not exist") if inbox is NOT FOUND.
+      (None, "Connection error / Timeout") if verification is inconclusive.
+    """
+    if not email_addr or "@" not in email_addr:
+        return False, "Invalid email format"
+        
+    domain = email_addr.split("@")[-1].lower()
+    mx = get_mx_server(domain)
+    if not mx:
+        return False, "No MX server found"
+
+    try:
+        server = smtplib.SMTP(timeout=5)
+        server.connect(mx, 25)
+        server.helo("gmail.com")
+        server.mail("joinfillo@gmail.com")
+        code, resp = server.rcpt(email_addr)
+        server.quit()
+        resp_str = resp.decode(errors="ignore").replace("\n", " ")
+        if code == 250:
+            return True, "250 OK (Inbox exists)"
+        elif code in [550, 551, 552, 553, 554]:
+            return False, f"SMTP Rejected ({code}): {resp_str[:80]}"
+        else:
+            return None, f"SMTP Response {code}: {resp_str[:80]}"
+    except Exception as e:
+        return None, str(e)
 
 def load_state():
     if os.path.exists(STATE_FILE):
@@ -95,10 +132,11 @@ def scan_imap_bounces():
 
 def run_lead_cleaning():
     """
-    1. Scans IMAP for bounce notifications.
+    1. Scans IMAP for past bounce notifications.
     2. Marks bounced emails as 'bounced' in state.
-    3. Performs MX domain validation on all pending leads.
-    4. Filters fillo_leads.csv to create a clean, verified leads list.
+    3. Performs real-time SMTP RCPT TO verification on pending leads.
+    4. Marks non-existent addresses as 'email_not_found'.
+    5. Saves clean leads to fillo_leads_clean.csv.
     """
     state = load_state()
     bounced_from_imap = scan_imap_bounces()
@@ -111,7 +149,6 @@ def run_lead_cleaning():
                 if state[key] != "bounced":
                     state[key] = "bounced"
                     bounced_marked += 1
-        # Also ensure bounced_addr is recorded in state
         if bounced_addr not in [k.lower() for k in state.keys()]:
             state[bounced_addr] = "bounced"
             bounced_marked += 1
@@ -127,7 +164,7 @@ def run_lead_cleaning():
     else:
         fieldnames = ["Business", "Email", "Category", "Location"]
 
-    invalid_mx_marked = 0
+    not_found_marked = 0
     clean_leads = []
 
     for lead in leads:
@@ -136,17 +173,19 @@ def run_lead_cleaning():
             continue
 
         email_lower = email_addr.lower()
-        domain = email_lower.split("@")[-1] if "@" in email_lower else ""
 
-        # Check if already marked as bounced in state
-        if state.get(email_addr) == "bounced" or state.get(email_lower) == "bounced":
+        # Check if already marked as bounced or invalid in state
+        if state.get(email_addr) in ["bounced", "email_not_found", "invalid_domain"] or \
+           state.get(email_lower) in ["bounced", "email_not_found", "invalid_domain"]:
             continue
 
-        # Check MX record if not yet processed
+        # If pending (not yet sent or verified), run real-time SMTP verification
         if state.get(email_addr) is None and state.get(email_lower) is None:
-            if not check_mx_record(domain):
-                state[email_addr] = "invalid_domain"
-                invalid_mx_marked += 1
+            is_valid, reason = verify_email_inbox_smtp(email_addr)
+            if is_valid is False:
+                state[email_addr] = "email_not_found"
+                not_found_marked += 1
+                print(f"🚫 [EMAIL NOT FOUND]: {email_addr} ({reason})")
                 continue
 
         clean_leads.append(lead)
@@ -161,22 +200,20 @@ def run_lead_cleaning():
 
     total_leads = len(leads)
     sent_count = sum(1 for v in state.values() if v == "sent")
-    bounced_count = sum(1 for v in state.values() if v == "bounced")
-    invalid_mx_count = sum(1 for v in state.values() if v == "invalid_domain")
+    bounced_count = sum(1 for v in state.values() if v in ["bounced", "email_not_found", "invalid_domain"])
     pending_valid = sum(1 for l in clean_leads if state.get(l.get("Email", "").strip()) is None)
 
     return {
         "total_leads": total_leads,
         "clean_leads_count": len(clean_leads),
         "sent_delivered": sent_count,
-        "bounced": bounced_count,
-        "invalid_mx": invalid_mx_count,
+        "bounced_or_not_found": bounced_count,
         "pending_valid": pending_valid,
         "newly_bounced_marked": bounced_marked,
-        "newly_invalid_mx_marked": invalid_mx_marked
+        "newly_not_found_marked": not_found_marked
     }
 
 if __name__ == "__main__":
-    print("Running Fillo Lead Cleaner & Bounce Verification...")
+    print("Running Real-Time Fillo SMTP Lead Cleaner...")
     stats = run_lead_cleaning()
     print(json.dumps(stats, indent=4))
