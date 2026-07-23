@@ -131,6 +131,24 @@ def get_template(category):
     else:
         return TEMPLATES["general"]
 
+# Follow-Up Email Template (Sent 3 days after Email #1 if no reply)
+FOLLOWUP_TEMPLATE = {
+    "subject": "Quick follow-up — {business_name}",
+    "body": """Hi {business_name} team,
+
+Quick bump on my previous email — wanted to make sure it didn't get buried!
+
+We're currently offering local businesses in {location} a 1-month free trial of Fillo to fill quiet hours and last-minute cancellations (no credit card or software changes needed).
+
+You can claim your free trial in under 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
+
+Would love to hear if you're open to trying it out this week!
+
+Best,
+The Fillo Team"""
+}
+
 def load_state():
     if os.path.exists(STATE_FILE_PATH):
         try:
@@ -143,6 +161,14 @@ def load_state():
 def save_state(state):
     with open(STATE_FILE_PATH, "w") as f:
         json.dump(state, f, indent=4)
+
+def get_lead_info(state, email_addr):
+    val = state.get(email_addr) or state.get(email_addr.lower())
+    if isinstance(val, dict):
+        return val
+    elif isinstance(val, str):
+        return {"status": val, "sent_at": 0, "followup": "none"}
+    return {"status": "pending", "sent_at": 0, "followup": "none"}
 
 def send_email(server, sender_email, recipient_email, subject, body):
     msg = MIMEMultipart()
@@ -249,19 +275,46 @@ def main():
     print(f"Loaded {len(leads)} leads from CSV.")
     
     state = load_state()
-    
-    # Filter out sent, bounced, or invalid_domain leads
-    pending_leads = [
-        l for l in leads 
-        if state.get(l["Email"].strip()) not in ["sent", "bounced", "invalid_domain"]
-        and state.get(l["Email"].strip().lower()) not in ["sent", "bounced", "invalid_domain"]
-    ]
-    print(f"Clean pending leads ready to send: {len(pending_leads)}")
-    
-    if not pending_leads:
-        print("All pending leads have been processed (delivered, bounced, or invalid)!")
+    now_ts = time.time()
+    THREE_DAYS_SECS = 3 * 86400
+
+    # Categorize leads into 3-Day Follow-Ups and Pending Initial Outreach
+    due_followups = []
+    pending_initial = []
+
+    for lead in leads:
+        email_addr = lead["Email"].strip()
+        info = get_lead_info(state, email_addr)
+        status = info.get("status")
+        followup_status = info.get("followup_status", info.get("followup", "none"))
+        sent_at = info.get("sent_at", 0)
+
+        if status in ["bounced", "invalid_domain", "email_not_found"]:
+            continue
+
+        if status == "sent":
+            # If initial email was sent >= 3 days ago and no follow-up sent yet
+            if followup_status == "none":
+                # Check if 3 days have elapsed (or if sent_at was legacy 0, treat as due for follow-up)
+                if sent_at == 0 or (now_ts - sent_at >= THREE_DAYS_SECS):
+                    due_followups.append(lead)
+        elif status == "pending":
+            pending_initial.append(lead)
+
+    print(f"Due 3-Day Follow-Ups: {len(due_followups)}")
+    print(f"Pending Initial Outreach: {len(pending_initial)}")
+
+    # Combine work: Process Follow-Ups first, then Pending Initial
+    work_queue = []
+    for l in due_followups:
+        work_queue.append((l, "followup"))
+    for l in pending_initial:
+        work_queue.append((l, "initial"))
+
+    if not work_queue:
+        print("No outreach or follow-up actions due at this time!")
         return
-        
+
     # Telegram settings
     tg_token = os.environ.get("TELEGRAM_BOT_TOKEN")
     tg_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
@@ -269,67 +322,85 @@ def main():
         print("Telegram notifications enabled.")
 
     sent_count = 0
-    for idx, lead in enumerate(pending_leads):
+    for idx, (lead, action_type) in enumerate(work_queue):
         if sent_count >= DAILY_LIMIT:
             msg = f"Daily safety limit of {DAILY_LIMIT} emails reached. Stopping outreach campaign."
             print(f"\n{msg}")
             send_telegram_notification(tg_token, tg_chat_id, f"🚨 {msg}")
             break
-            
+
         business_name = lead["Business"]
         recipient_email = lead["Email"].strip()
         category = lead["Category"]
         location = lead["Location"]
-        
-        # Real-time pre-send SMTP verification to prevent sending to non-existent inboxes
+
+        # Real-time pre-send SMTP verification
         try:
             from bounce_cleaner import verify_email_inbox_smtp
             is_valid, reason = verify_email_inbox_smtp(recipient_email)
             if is_valid is False:
                 msg = f"Skipped non-existent email address for {business_name} ({recipient_email}): {reason}"
                 print(f"-> 🚫 {msg}")
-                state[recipient_email] = "email_not_found"
+                state[recipient_email] = {"status": "email_not_found", "reason": reason}
                 save_state(state)
                 continue
         except Exception as e:
             print(f"Pre-send SMTP check warning: {e}")
-        
-        # Select and customize template
-        template = get_template(category)
-        subject = template["subject"].format(business_name=business_name)
-        body = template["body"].format(business_name=business_name, location=location)
-        
-        print(f"\n[{idx+1}/{len(pending_leads)}] Processing: {business_name} ({recipient_email})")
-        
+
+        # Select template based on action type
+        if action_type == "followup":
+            subject = FOLLOWUP_TEMPLATE["subject"].format(business_name=business_name)
+            body = FOLLOWUP_TEMPLATE["body"].format(business_name=business_name, location=location)
+            tag = "🔄 3-DAY FOLLOW-UP"
+        else:
+            template = get_template(category)
+            subject = template["subject"].format(business_name=business_name)
+            body = template["body"].format(business_name=business_name, location=location)
+            tag = "✉️ INITIAL OUTREACH"
+
+        print(f"\n[{idx+1}/{len(work_queue)}] [{tag}] Processing: {business_name} ({recipient_email})")
+
         if is_dry_run:
-            print(f"-> [DRY RUN] Would send to: {recipient_email}")
+            print(f"-> [DRY RUN] Would send [{action_type}] to: {recipient_email}")
             print(f"-> Subject: {subject}")
             print("-" * 40)
             sent_count += 1
         else:
             server = None
             try:
-                # Connect on demand
                 print("Connecting to Gmail SMTP server...")
                 server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
                 server.starttls()
                 server.login(sender_email, app_password)
-                
+
                 # Send email
                 send_email(server, sender_email, recipient_email, subject, body)
-                success_msg = f"Email successfully sent to {business_name} ({recipient_email})"
+                success_msg = f"[{tag}] Email successfully sent to {business_name} ({recipient_email})"
                 print(f"-> {success_msg}")
                 send_telegram_notification(tg_token, tg_chat_id, f"✅ {success_msg}")
-                
-                # Disconnect
+
                 try:
                     server.quit()
                     server = None
                 except Exception:
                     pass
-                
-                # Update state
-                state[recipient_email] = "sent"
+
+                # Update rich state
+                existing_info = get_lead_info(state, recipient_email)
+                if action_type == "followup":
+                    state[recipient_email] = {
+                        "status": "sent",
+                        "sent_at": existing_info.get("sent_at", now_ts),
+                        "followup_status": "sent",
+                        "followup_sent_at": time.time()
+                    }
+                else:
+                    state[recipient_email] = {
+                        "status": "sent",
+                        "sent_at": time.time(),
+                        "followup_status": "none"
+                    }
+
                 save_state(state)
                 sent_count += 1
                 

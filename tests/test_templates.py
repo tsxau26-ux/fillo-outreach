@@ -31,3 +31,13 @@ def test_natural_tone_no_all_caps_marketing():
         # Should not have aggressive all-caps marketing phrases
         assert "CLAIM YOUR" not in body
         assert "ACT NOW" not in body
+
+def test_followup_template_content():
+    from send_outreach import FOLLOWUP_TEMPLATE, get_lead_info
+    body = FOLLOWUP_TEMPLATE["body"].format(business_name="Test Store", location="Dubai")
+    assert "quick bump" in body.lower() or "follow-up" in body.lower()
+    assert "https://t.me/filloappbot" in body.lower()
+
+    info = get_lead_info({"test@example.com": "sent"}, "test@example.com")
+    assert info["status"] == "sent"
+    assert info["followup"] == "none"
