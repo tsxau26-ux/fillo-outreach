@@ -116,6 +116,30 @@ Want to give it a try?
 
 Best,
 The Fillo Team"""
+    },
+    "restaurant_cafe": {
+        "subject": "Free for 1 month: fill empty tables at {business_name}",
+        "body": """Hi {business_name} team,
+
+I came across your place in {location} and really love the atmosphere you've created.
+
+I wanted to reach out because we built a tool called Fillo that solves a problem almost every restaurant and cafe deals with: slow afternoons, last-minute cancellations, and empty tables during quiet hours.
+
+Here's how Fillo helps:
+- When you have a slow period or empty tables, you tap one button inside Fillo.
+- Fillo automatically creates a branded flash promo for {business_name} (graphics, QR code, and a direct booking link).
+- That promo goes straight to your regular customers on Telegram, where open rates are 90%+ (much higher than email or social media).
+- Customers book the table directly. No friction.
+
+It works right alongside your current reservation system. Nothing to change, nothing to learn.
+
+We're offering {business_name} a free 1-month trial (no credit card, no commitment, cancel anytime). Setup takes about 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
+
+Would you be open to trying it out this week?
+
+Best,
+The Fillo Team"""
     }
 }
 
@@ -128,6 +152,8 @@ def get_template(category):
         return TEMPLATES["salon_spa"]
     elif "pilates" in cat_lower:
         return TEMPLATES["pilates"]
+    elif any(word in cat_lower for word in ["restaurant", "cafe", "food", "dining", "bar"]):
+        return TEMPLATES["restaurant_cafe"]
     else:
         return TEMPLATES["general"]
 
