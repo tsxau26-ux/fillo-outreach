@@ -171,7 +171,7 @@ def get_lead_info(state, email_addr):
     return {"status": "pending", "sent_at": 0, "followup": "none"}
 
 def send_email(server, sender_email, recipient_email, subject, body):
-    msg = MIMEMultipart()
+    msg = MIMEMultipart("alternative")
     msg["From"] = f"Fillo Team <{sender_email}>"
     msg["To"] = recipient_email
     msg["Subject"] = subject
@@ -180,7 +180,27 @@ def send_email(server, sender_email, recipient_email, subject, body):
     msg["X-Mailer"] = "Gmail Outlook Client"
     msg["X-Priority"] = "3"
     
-    msg.attach(MIMEText(body, "plain"))
+    # Plain text version
+    text_part = MIMEText(body, "plain")
+    msg.attach(text_part)
+    
+    # HTML version with open pixel and click tracking
+    tracking_url = os.environ.get("TRACKING_BASE_URL", "https://fillo.app")
+    try:
+        from email_analytics import encode_email_token
+        token = encode_email_token(recipient_email)
+        open_pixel_url = f"{tracking_url}/track/open?id={token}"
+        click_redirect_url = f"{tracking_url}/track/click?id={token}&target=https://t.me/Filloappbot"
+        
+        html_body = body.replace("\n", "<br>\n")
+        html_body = html_body.replace("https://t.me/Filloappbot", f'<a href="{click_redirect_url}">https://t.me/Filloappbot</a>')
+        html_body += f'<br><br><img src="{open_pixel_url}" width="1" height="1" style="display:none;" alt="" />'
+        
+        html_part = MIMEText(f"<html><body>{html_body}</body></html>", "html")
+        msg.attach(html_part)
+    except Exception as e:
+        print(f"Tracking attachment warning: {e}")
+        
     server.sendmail(sender_email, recipient_email, msg.as_string())
 
 def send_telegram_notification(token, chat_id, text):

@@ -180,6 +180,7 @@ def main():
                     reply = """🤖 **Fillo Outreach Bot Commands**
 
 • `/status` - Check campaign progress & lead stats.
+• `/analytics` - View live email open & click tracking rates.
 • `/replies` - Check unread inbox replies.
 • `/clean` - Purge bounced & invalid email addresses.
 • `/run` - Instantly start sending outreach emails.
@@ -188,6 +189,13 @@ def main():
 
                 elif cmd == "/status":
                     send_telegram_msg(chat_id, get_status_summary())
+
+                elif cmd in ["/analytics", "/opens"]:
+                    try:
+                        from email_analytics import get_analytics_report
+                        send_telegram_msg(chat_id, get_analytics_report())
+                    except Exception as e:
+                        send_telegram_msg(chat_id, f"Analytics error: {e}")
 
                 elif cmd == "/clean":
                     send_telegram_msg(chat_id, "🧹 Scanning inbox for bounces & verifying domain MX records...")
