@@ -367,6 +367,18 @@ def main():
     if tg_token and tg_chat_id:
         print("Telegram notifications enabled.")
 
+    if not is_dry_run:
+        print("Connecting to Gmail SMTP server...")
+        try:
+            server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+            server.starttls()
+            server.login(sender_email, app_password)
+        except Exception as e:
+            msg = f"Failed to connect to SMTP server: {e}"
+            print(f"🚨 {msg}")
+            send_telegram_notification(tg_token, tg_chat_id, f"🚨 {msg}")
+            return
+
     sent_count = 0
     for idx, (lead, action_type) in enumerate(work_queue):
         if sent_count >= DAILY_LIMIT:
@@ -412,61 +424,59 @@ def main():
             print("-" * 40)
             sent_count += 1
         else:
-            server = None
             try:
-                print("Connecting to Gmail SMTP server...")
-                server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-                server.starttls()
-                server.login(sender_email, app_password)
-
+                # Reconnect if connection was dropped
+                try:
+                    server.noop()
+                except Exception:
+                    print("Reconnecting to SMTP server...")
+                    server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+                    server.starttls()
+                    server.login(sender_email, app_password)
+                
                 # Send email
                 send_email(server, sender_email, recipient_email, subject, body)
                 success_msg = f"[{tag}] Email successfully sent to {business_name} ({recipient_email})"
                 print(f"-> {success_msg}")
                 send_telegram_notification(tg_token, tg_chat_id, f"✅ {success_msg}")
 
-                try:
-                    server.quit()
-                    server = None
-                except Exception:
-                    pass
-
-                # Update rich state
-                existing_info = get_lead_info(state, recipient_email)
+                # Update State
+                now_ts = time.time()
+                current_info = get_lead_info(state, recipient_email)
                 if action_type == "followup":
                     state[recipient_email] = {
                         "status": "sent",
-                        "sent_at": existing_info.get("sent_at", now_ts),
-                        "followup_status": "sent",
-                        "followup_sent_at": time.time()
+                        "sent_at": current_info.get("sent_at", now_ts),
+                        "followup_status": "sent"
                     }
                 else:
                     state[recipient_email] = {
                         "status": "sent",
-                        "sent_at": time.time(),
+                        "sent_at": now_ts,
                         "followup_status": "none"
                     }
-
                 save_state(state)
                 sent_count += 1
                 
-                # Delay before next email (mimic human behavior)
-                if idx < len(pending_leads) - 1 and sent_count < DAILY_LIMIT:
-                    delay = random.randint(MIN_DELAY_SECS, MAX_DELAY_SECS)
-                    print(f"-> Safety Delay: Waiting {delay} seconds (mimicking human typing) before the next send...")
-                    time.sleep(delay)
             except Exception as e:
                 error_msg = f"Error sending to {business_name} ({recipient_email}): {e}"
                 print(f"-> {error_msg}")
                 send_telegram_notification(tg_token, tg_chat_id, f"❌ {error_msg}")
-                if server:
-                    try:
-                        server.quit()
-                    except Exception:
-                        pass
                 # Sleep slightly on error to cool down
                 time.sleep(10)
                 
+        # Delay before next email (mimic human behavior)
+        if not is_dry_run and idx < len(work_queue) - 1 and sent_count < DAILY_LIMIT:
+            delay = random.randint(MIN_DELAY_SECS, MAX_DELAY_SECS)
+            print(f"-> Safety Delay: Waiting {delay} seconds before next send...")
+            time.sleep(delay)
+
+    if not is_dry_run and 'server' in locals() and server:
+        try:
+            server.quit()
+        except Exception:
+            pass
+
     print(f"\nSession complete. Total emails processed: {sent_count}")
     if not is_dry_run:
         print("State saved. You can run the script again tomorrow to process the next batch.")
