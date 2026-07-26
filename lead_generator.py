@@ -50,7 +50,7 @@ def generate_leads(query, location, limit=20):
     category = get_category_from_query(query)
     new_leads = []
     
-    for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+    for item in client.dataset(run.default_dataset_id).iterate_items():
         business_name = item.get("title", "")
         # Emails are usually returned in a list or within phoneAndEmail
         emails = item.get("emails", [])
