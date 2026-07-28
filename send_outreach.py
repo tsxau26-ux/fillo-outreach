@@ -328,6 +328,9 @@ def main():
     due_followups = []
     pending_initial = []
 
+    import datetime
+    is_weekend = datetime.datetime.now().weekday() >= 5  # 5=Saturday, 6=Sunday
+
     for lead in leads:
         email_addr = lead["Email"].strip()
         info = get_lead_info(state, email_addr)
@@ -341,8 +344,8 @@ def main():
         if status == "sent":
             # If initial email was sent >= 3 days ago and no follow-up sent yet
             if followup_status == "none":
-                # Check if 3 days have elapsed (or if sent_at was legacy 0, treat as due for follow-up)
-                if sent_at == 0 or (now_ts - sent_at >= THREE_DAYS_SECS):
+                # Only queue follow-ups on WEEKENDS
+                if is_weekend and (sent_at == 0 or (now_ts - sent_at >= THREE_DAYS_SECS)):
                     due_followups.append(lead)
         elif status == "pending":
             pending_initial.append(lead)
