@@ -392,18 +392,8 @@ def main():
         category = lead["Category"]
         location = lead["Location"]
 
-        # Real-time pre-send SMTP verification
-        try:
-            from bounce_cleaner import verify_email_inbox_smtp
-            is_valid, reason = verify_email_inbox_smtp(recipient_email)
-            if is_valid is False:
-                msg = f"Skipped non-existent email address for {business_name} ({recipient_email}): {reason}"
-                print(f"-> 🚫 {msg}")
-                state[recipient_email] = {"status": "email_not_found", "reason": reason}
-                save_state(state)
-                continue
-        except Exception as e:
-            print(f"Pre-send SMTP check warning: {e}")
+        # Pre-send verification is disabled because GitHub Actions IPs are blocked by SpamHaus.
+        # Emails are already verified when added to the leads pool.
 
         # Select template based on action type
         if action_type == "followup":

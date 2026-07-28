@@ -1,95 +1,462 @@
 {
-    "h6835@sofitel.com": "sent",
-    "proudtopray@hotmail.com": "sent",
-    "booking@sothaispabkk.com": "sent",
-    "bangkok@parrishjones.com": "sent",
-    "the.esquirebarberclub@gmail.com": "sent",
-    "auriga.bangkok@capellahotels.com": "sent",
-    "bangkok.spa@rosewoodhotels.com": "sent",
-    "res@oasisspa.net": "sent",
-    "mibangkokfb.rst.rsvn@marriotthotels.com": "sent",
-    "jamesmac@me.com": "sent",
-    "spapbk@peninsula.com": "sent",
-    "info@pilates.co.th": "sent",
-    "annie@thepilatesbangkok.com": "sent",
-    "polestarpilates.thailand@gmail.com": "sent",
-    "spa.kimptonmaalai@ihg.com": "sent",
-    "vanillanailspashop@gmail.com": "sent",
-    "reservation@healthland.co.th": "sent",
-    "springspa.reservation@gmail.com": "sent",
-    "info@arabianteahouse.com": "sent",
-    "branch04@arabianteahouse.com": "sent",
-    "branch01@arabianteahouse.com": "sent",
-    "cafebelgedifc@ritzcarlton.com": "sent",
-    "welcome@cafewayfarer.com": "sent",
-    "beans@roastercoffee.ae": "sent",
-    "info@coffeesaraya.com": "sent",
-    "info@teatimecafe.ae": "sent",
-    "spa@palazzoversace.ae": "sent",
-    "soulwellnessspa@sheratongranddubai.com": "sent",
-    "TheSpaAtBeachResort@addresshotels.com": "sent",
-    "Nysa.dxbhc@hyatt.com": "sent",
-    "info@cgbarbershop.com": "sent",
-    "info@dxbbarber.ae": "sent",
-    "info@thebarberscorner.com": "sent",
-    "skillsdxb@gmail.com": "sent",
-    "info@nbar.com": "sent",
-    "Bookings@wenails.ae": "sent",
-    "info@beautyiconsalon.com": "sent",
-    "fijiicutsbarbershop@gmail.com": "sent",
-    "cbbangkok@gmail.com": "sent",
-    "hairandstache@gmail.com": "sent",
-    "bodylab.th@gmail.com": "sent",
-    "bodyrefinery.pilates@gmail.com": "sent",
-    "gravitycorebkk@gmail.com": "sent",
-    "pilatesprop@gmail.com": "sent",
-    "revivepilatesbkk@gmail.com": "sent",
-    "vannipilatesbangkok@gmail.com": "sent",
-    "Gentsy.barber@gmail.com": "sent",
-    "muskbarbershop@gmail.com": "sent",
-    "bbilycutsbarbershop@gmail.com": "sent",
-    "ianwarrenthebarber@gmail.com": "sent",
-    "casadxbbarbershop@gmail.com": "sent",
-    "projecthairway@gmail.com": "sent",
-    "pastapavarotti@gmail.com": "sent",
-    "hookahlounge@gmail.com": "sent",
-    "flavorycoffeetunisia@gmail.com": "sent",
-    "galcoffee@gmail.com": "sent",
-    "leselysee.cafe@gmail.com": "sent",
-    "Hosnianis23@gmail.com": "sent",
-    "theroyce@gmail.com": "sent",
-    "don.cafe.2022@gmail.com": "sent",
-    "coffekala9@gmail.com": "sent",
-    "info@verareformerpilates.ae": "bounced",
-    "aminabarhoumi042@gmail.com": "bounced",
-    "contact.bebbhar@gmail.com": "bounced",
-    "yuka.creative@gmail.com": "bounced",
-    "info@exhaledubai.com": "bounced",
-    "hekayagoulette@gmail.com": "bounced",
-    "thecliff.shop@gmail.com": "bounced",
-    "ezzemniturkushfood@gmail.com": "bounced",
-    "contactfulltime98@gmail.com": "bounced",
-    "lebarontunis@gmail.com": "bounced",
-    "omoules.shop@gmail.com": "bounced",
-    "billycutsbarbershop@gmail.com": "bounced",
-    "cafekasbah@gmail.com": "bounced",
-    "cafejournal1999@gmail.com": "bounced",
-    "info@algopilates.com": "email_not_found",
-    "contact@el-ali.com": "email_not_found",
-    "plazacafetunis@gmail.com": "email_not_found",
-    "bungalowtunis@gmail.com": "email_not_found",
-    "movenpicklounge@gmail.com": "email_not_found",
-    "golfbrausousse@gmail.com": "email_not_found",
-    "ironbarsousse@gmail.com": "email_not_found",
-    "leprintempssfax@gmail.com": "email_not_found",
-    "leparissfax@gmail.com": "email_not_found",
-    "info@chopsbarbershop.com": "email_not_found",
-    "contact@blackamber.ae": "email_not_found",
-    "info@akibarber.com": "email_not_found",
-    "cabellolounge@gmail.com": "email_not_found",
-    "info@urbanmalelounge.com": "email_not_found",
-    "info@feetfirst.ae": "email_not_found",
-    "info@groomingco.com": "email_not_found",
-    "info@sensasiaspas.com": "email_not_found",
-    "info@heartandsoul.ae": "email_not_found"
+    "h6835@sofitel.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090896,
+        "followup_status": "sent"
+    },
+    "proudtopray@hotmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090898,
+        "followup_status": "sent"
+    },
+    "booking@sothaispabkk.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090899,
+        "followup_status": "sent"
+    },
+    "bangkok@parrishjones.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090899,
+        "followup_status": "sent"
+    },
+    "the.esquirebarberclub@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090899,
+        "followup_status": "sent"
+    },
+    "auriga.bangkok@capellahotels.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909,
+        "followup_status": "sent"
+    },
+    "bangkok.spa@rosewoodhotels.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909,
+        "followup_status": "sent"
+    },
+    "res@oasisspa.net": {
+        "status": "sent",
+        "sent_at": 1784891839.0909,
+        "followup_status": "sent"
+    },
+    "mibangkokfb.rst.rsvn@marriotthotels.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090901,
+        "followup_status": "sent"
+    },
+    "jamesmac@me.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090901,
+        "followup_status": "sent"
+    },
+    "spapbk@peninsula.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090901,
+        "followup_status": "sent"
+    },
+    "info@pilates.co.th": {
+        "status": "sent",
+        "sent_at": 1784891839.090901,
+        "followup_status": "sent"
+    },
+    "annie@thepilatesbangkok.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090902,
+        "followup_status": "sent"
+    },
+    "polestarpilates.thailand@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090902,
+        "followup_status": "sent"
+    },
+    "spa.kimptonmaalai@ihg.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090902,
+        "followup_status": "sent"
+    },
+    "vanillanailspashop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090902,
+        "followup_status": "sent"
+    },
+    "reservation@healthland.co.th": {
+        "status": "sent",
+        "sent_at": 1784891839.090903,
+        "followup_status": "sent"
+    },
+    "springspa.reservation@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090903,
+        "followup_status": "sent"
+    },
+    "info@arabianteahouse.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090903,
+        "followup_status": "sent"
+    },
+    "branch04@arabianteahouse.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090903,
+        "followup_status": "sent"
+    },
+    "branch01@arabianteahouse.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090904,
+        "followup_status": "sent"
+    },
+    "cafebelgedifc@ritzcarlton.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090904,
+        "followup_status": "sent"
+    },
+    "welcome@cafewayfarer.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090904,
+        "followup_status": "sent"
+    },
+    "beans@roastercoffee.ae": {
+        "status": "sent",
+        "sent_at": 1784891839.090904,
+        "followup_status": "sent"
+    },
+    "info@coffeesaraya.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909052,
+        "followup_status": "sent"
+    },
+    "info@teatimecafe.ae": {
+        "status": "sent",
+        "sent_at": 1784891839.0909052,
+        "followup_status": "sent"
+    },
+    "spa@palazzoversace.ae": {
+        "status": "sent",
+        "sent_at": 1784891839.0909052,
+        "followup_status": "sent"
+    },
+    "soulwellnessspa@sheratongranddubai.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909052,
+        "followup_status": "sent"
+    },
+    "TheSpaAtBeachResort@addresshotels.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909061,
+        "followup_status": "sent"
+    },
+    "Nysa.dxbhc@hyatt.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909061,
+        "followup_status": "sent"
+    },
+    "info@cgbarbershop.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909061,
+        "followup_status": "sent"
+    },
+    "info@dxbbarber.ae": {
+        "status": "sent",
+        "sent_at": 1784891839.0909061,
+        "followup_status": "sent"
+    },
+    "info@thebarberscorner.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909069,
+        "followup_status": "sent"
+    },
+    "skillsdxb@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909069,
+        "followup_status": "sent"
+    },
+    "info@nbar.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909069,
+        "followup_status": "sent"
+    },
+    "Bookings@wenails.ae": {
+        "status": "sent",
+        "sent_at": 1784891839.0909069,
+        "followup_status": "sent"
+    },
+    "info@beautyiconsalon.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909078,
+        "followup_status": "sent"
+    },
+    "fijiicutsbarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909078,
+        "followup_status": "sent"
+    },
+    "cbbangkok@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909078,
+        "followup_status": "sent"
+    },
+    "hairandstache@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.0909078,
+        "followup_status": "sent"
+    },
+    "bodylab.th@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090909,
+        "followup_status": "sent"
+    },
+    "bodyrefinery.pilates@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090909,
+        "followup_status": "sent"
+    },
+    "gravitycorebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090909,
+        "followup_status": "sent"
+    },
+    "pilatesprop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090909,
+        "followup_status": "sent"
+    },
+    "revivepilatesbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.09091,
+        "followup_status": "sent"
+    },
+    "vannipilatesbangkok@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.09091,
+        "followup_status": "sent"
+    },
+    "Gentsy.barber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.09091,
+        "followup_status": "sent"
+    },
+    "muskbarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.09091,
+        "followup_status": "sent"
+    },
+    "bbilycutsbarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090911,
+        "followup_status": "sent"
+    },
+    "ianwarrenthebarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090911,
+        "followup_status": "sent"
+    },
+    "casadxbbarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090911,
+        "followup_status": "sent"
+    },
+    "projecthairway@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090911,
+        "followup_status": "sent"
+    },
+    "pastapavarotti@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090912,
+        "followup_status": "sent"
+    },
+    "hookahlounge@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090912,
+        "followup_status": "sent"
+    },
+    "flavorycoffeetunisia@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090912,
+        "followup_status": "sent"
+    },
+    "galcoffee@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090912,
+        "followup_status": "sent"
+    },
+    "leselysee.cafe@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090912,
+        "followup_status": "sent"
+    },
+    "Hosnianis23@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090913,
+        "followup_status": "sent"
+    },
+    "theroyce@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090913,
+        "followup_status": "sent"
+    },
+    "don.cafe.2022@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090913,
+        "followup_status": "sent"
+    },
+    "coffekala9@gmail.com": {
+        "status": "sent",
+        "sent_at": 1784891839.090913,
+        "followup_status": "sent"
+    },
+    "info@verareformerpilates.ae": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "aminabarhoumi042@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "contact.bebbhar@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "yuka.creative@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@exhaledubai.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "hekayagoulette@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "thecliff.shop@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "ezzemniturkushfood@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "contactfulltime98@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "lebarontunis@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "omoules.shop@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "billycutsbarbershop@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "cafekasbah@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "cafejournal1999@gmail.com": {
+        "status": "bounced",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@algopilates.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "plazacafetunis@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "sheratontunis@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "lavillagammarth@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "bungalowtunis@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "movenpicklounge@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "leprintempssfax@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "leparissfax@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@chopsbarbershop.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "contact@blackamber.ae": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@akibarber.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "cabellolounge@gmail.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@urbanmalelounge.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@feetfirst.ae": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@groomingco.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@sensasiaspas.com": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    },
+    "info@heartandsoul.ae": {
+        "status": "email_not_found",
+        "sent_at": 0,
+        "followup_status": "none"
+    }
 }
