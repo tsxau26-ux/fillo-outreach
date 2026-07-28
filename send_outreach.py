@@ -342,11 +342,8 @@ def main():
             continue
 
         if status == "sent":
-            # If initial email was sent >= 3 days ago and no follow-up sent yet
-            if followup_status == "none":
-                # Only queue follow-ups on WEEKENDS
-                if is_weekend and (sent_at == 0 or (now_ts - sent_at >= THREE_DAYS_SECS)):
-                    due_followups.append(lead)
+            # FOLLOW-UPS ARE TEMPORARILY DISABLED PER USER REQUEST
+            pass
         elif status == "pending":
             pending_initial.append(lead)
 
