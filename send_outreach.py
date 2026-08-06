@@ -27,153 +27,107 @@ SMTP_PORT = 587
 # Email templates: professional, benefit-driven, natural tone with direct Telegram Mini App link
 TEMPLATES = {
     "barber": {
-        "subject": "Free for 1 month: fill empty chairs at {business_name}",
-        "body": """Hi {business_name} team,
+        "subject": "{business_name} — quick question",
+        "body": """Hi there,
 
-I noticed your barbershop in {location} and really like the work you put into your craft.
+Do you ever have last-minute cancellations where the chair just sits empty?
 
-I'm reaching out because we built something called Fillo that solves a problem every shop deals with: last-minute cancellations and quiet hours where chairs sit empty.
+We built Fillo for exactly this. When you have a free slot, one tap sends a flash alert to your clients on Telegram — they see it, they show up, the hour is filled.
 
-Here's what Fillo does for you:
-- When you have an open slot, you tap one button inside Fillo.
-- Fillo generates a branded promo for your shop automatically (visuals, QR code, booking link).
-- That promo goes straight to your clients on Telegram, where it gets 90%+ open rates (way higher than email or Instagram).
-- Clients book the slot directly. No calls, no back-and-forth.
+No reservation system, no new software. Just a way to make sure your quiet hours don't stay quiet.
 
-You don't need to change anything about how you currently manage appointments. Fillo just fills the gaps.
+Free for the first month. Takes 2 minutes:
+👉 https://t.me/Filloappbot
 
-We're offering {business_name} a free 1-month trial (no credit card, no commitment, cancel anytime). Setup takes about 2 minutes directly on Telegram:
-👉 Start your free trial here: https://t.me/Filloappbot
+Worth a look?
 
-Would you be open to trying it out this week?
-
-Best,
-The Fillo Team"""
+— Fillo Team"""
     },
     "salon_spa": {
-        "subject": "Free for 1 month: fill cancelled slots at {business_name}",
-        "body": """Hi {business_name} team,
+        "subject": "Quick question about {business_name}",
+        "body": """Hi there,
 
-I came across your salon and really admire the experience you've built for your clients.
+When a therapist or stylist has a last-minute gap — what happens to that hour?
 
-Quick question: how do you currently handle last-minute cancellations or quiet mornings when therapists and stylists are free?
+Fillo lets you fill it instantly. One tap sends a flash alert to your clients on Telegram — they see it and come in. No booking system, no back and forth.
 
-We built Fillo specifically for this. When a slot opens up, you tap one button and Fillo takes care of the rest:
-- It generates a branded flash promo with your salon's name (visuals, QR code, and a direct booking link).
-- That promo goes instantly to your clients on Telegram, where open rates are 90%+ (compared to ~20% for email).
-- Clients book the open slot directly. No phone calls needed.
+Free for the first month. Takes 2 minutes:
+👉 https://t.me/Filloappbot
 
-The whole point is that it works alongside whatever booking system you already use. Zero changes on your end, and setup takes under 2 minutes directly on Telegram:
-👉 Start your free trial here: https://t.me/Filloappbot
-
-Interested in giving it a try?
-
-Best,
-The Fillo Team"""
+— Fillo Team"""
     },
     "pilates": {
-        "subject": "Free for 1 month: fill empty reformer spots at {business_name}",
-        "body": """Hi {business_name} team,
+        "subject": "Empty spots at {business_name}?",
+        "body": """Hi there,
 
-I found your studio in {location} and love your approach to training.
+Late cancellations are painful — instructor ready, studio open, spot just sitting empty.
 
-One thing we've heard from studio owners is that reformer classes rarely run at full capacity: there's almost always a spot or two that goes unfilled, especially from late cancellations.
+Fillo fixes this. When a spot opens, you tap once. Your members on Telegram get a flash alert and show up to fill it.
 
-That's exactly what Fillo solves:
-- When a class has open spots, you tap one button in Fillo.
-- Fillo automatically generates a branded promo for your studio (visuals, QR code, and a direct reservation link).
-- That promo is sent instantly to your member list on Telegram, where 90%+ of people actually see it.
-- Members grab the spot in seconds. Done.
+Free for the first month. Takes 2 minutes:
+👉 https://t.me/Filloappbot
 
-It doesn't replace your scheduling system: it just fills the empty spots your existing setup can't reach in time.
-
-We're offering studios in {location} a free 1-month trial. No credit card, no commitment. Setup takes about 2 minutes directly on Telegram:
-👉 Start your free trial here: https://t.me/Filloappbot
-
-Would you like to try it?
-
-Best,
-The Fillo Team"""
+— Fillo Team"""
     },
-    "general": {
-        "subject": "Free for 1 month: fill quiet hours at {business_name}",
-        "body": """Hi {business_name} team,
+    "weedshop": {
+        "subject": "Quick question about {business_name}",
+        "body": """Hi there,
 
-I came across your business in {location} and like what you've built.
+Do you have slow hours during the day where the shop is quiet?
 
-I wanted to reach out because we created a tool called Fillo that helps local businesses like yours turn slow hours into paid bookings without any marketing effort on your part.
+Fillo lets you fill them instantly. One tap sends a flash alert to your existing customers on Telegram — they see it and come in.
 
-Here's how it works:
-- When you have a quiet period, you tap one button inside Fillo.
-- Fillo automatically creates a branded promo for {business_name} (graphics, QR code, and a direct booking link).
-- That promo goes straight to your clients on Telegram, where open rates are 90%+ (much higher than email or social posts).
-- Clients book directly. No friction.
+No app to download, no booking system. Just a simple way to make sure your quiet hours don't stay quiet.
 
-It works alongside your existing setup. Nothing to change, nothing to learn. Setup takes about 2 minutes directly on Telegram:
-👉 Start your free trial here: https://t.me/Filloappbot
+Free for the first month. Takes 2 minutes:
+👉 https://t.me/Filloappbot
 
-Want to give it a try?
+Worth a look?
 
-Best,
-The Fillo Team"""
+— Fillo Team"""
     },
     "restaurant_cafe": {
-        "subject": "Free for 1 month: fill empty tables at {business_name}",
-        "body": """Hi {business_name} team,
+        "subject": "Empty tables during quiet hours at {business_name}?",
+        "body": """Hi there,
 
-I came across your place in {location} and really love the atmosphere you've created.
+Slow afternoons, last-minute no-shows — every place deals with it.
 
-I wanted to reach out because we built a tool called Fillo that solves a problem almost every restaurant and cafe deals with: slow afternoons, last-minute cancellations, and empty tables during quiet hours.
+Fillo lets you instantly alert your regulars on Telegram when you have empty tables. They see it, they come in. No booking platform, no commission fees.
 
-Here's how Fillo helps:
-- When you have a slow period or empty tables, you tap one button inside Fillo.
-- Fillo automatically creates a branded flash promo for {business_name} (graphics, QR code, and a direct booking link).
-- That promo goes straight to your regular customers on Telegram, where open rates are 90%+ (much higher than email or social media).
-- Customers book the table directly. No friction.
+Free for a month. Takes 2 minutes:
+👉 https://t.me/Filloappbot
 
-It works right alongside your current reservation system. Nothing to change, nothing to learn.
+— Fillo Team"""
+    },
+    "general": {
+        "subject": "Quick question about {business_name}",
+        "body": """Hi there,
 
-We're offering {business_name} a free 1-month trial (no credit card, no commitment, cancel anytime). Setup takes about 2 minutes directly on Telegram:
-👉 Start your free trial here: https://t.me/Filloappbot
+Do you have slow hours or last-minute gaps that go unfilled?
 
-Would you be open to trying it out this week?
+Fillo lets you alert your existing clients on Telegram in one tap — they see it, they show up, the hour is filled.
 
-Best,
-The Fillo Team"""
+Free for one month. Setup takes 2 minutes:
+👉 https://t.me/Filloappbot
+
+— Fillo Team"""
     }
 }
 
-
-def get_template(category):
-    cat_lower = category.lower()
-    if "barber" in cat_lower:
-        return TEMPLATES["barber"]
-    elif any(word in cat_lower for word in ["spa", "salon", "nail"]):
-        return TEMPLATES["salon_spa"]
-    elif "pilates" in cat_lower:
-        return TEMPLATES["pilates"]
-    elif any(word in cat_lower for word in ["restaurant", "cafe", "food", "dining", "bar"]):
-        return TEMPLATES["restaurant_cafe"]
-    else:
-        return TEMPLATES["general"]
-
-# Follow-Up Email Template (Sent 3 days after Email #1 if no reply)
 FOLLOWUP_TEMPLATE = {
-    "subject": "Quick follow-up: {business_name}",
-    "body": """Hi {business_name} team,
+    "subject": "Re: {business_name}",
+    "body": """Hi,
 
-Quick bump on my previous email, wanted to make sure it didn't get buried!
+Just bumping this up in case my last email got buried.
 
-We're currently offering local businesses in {location} a 1-month free trial of Fillo to fill quiet hours and last-minute cancellations (no credit card or software changes needed).
+If empty hours are ever an issue, Fillo is worth 2 minutes of your time:
+👉 https://t.me/Filloappbot
 
-You can claim your free trial in under 2 minutes directly on Telegram:
-👉 Start your free trial here: https://t.me/Filloappbot
+No pressure either way.
 
-Would love to hear if you're open to trying it out this week!
-
-Best,
-The Fillo Team"""
+— Fillo Team"""
 }
+
 
 def load_state():
     if os.path.exists(STATE_FILE_PATH):
