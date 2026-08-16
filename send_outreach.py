@@ -129,7 +129,7 @@ No pressure either way.
 }
 
 def get_template(category):
-    return TEMPLATES.get(category, TEMPLATES["default"])
+    return TEMPLATES.get(category, TEMPLATES.get("general", list(TEMPLATES.values())[0]))
 
 
 def load_state():
