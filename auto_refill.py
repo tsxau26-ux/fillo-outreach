@@ -43,8 +43,37 @@ def main():
 
     print(f"Found {len(new_leads)} fresh leads available in the pool.")
 
+    if len(new_leads) < REFILL_COUNT:
+        print("Not enough new leads available to refill. The pool is running low.")
+        print("Auto-triggering the lead generator to replenish the pool...")
+        
+        import random
+        from lead_generator import generate_leads
+        
+        niches = ["Spa", "Barbershop", "Pilates", "Restaurant", "Cafe", "Nail Salon", "Hair Salon"]
+        locations = ["Dubai", "Abu Dhabi", "London", "Manchester", "New York", "Los Angeles", "Chicago", "Miami", "Toronto"]
+        
+        target_niche = random.choice(niches)
+        target_location = random.choice(locations)
+        
+        try:
+            generate_leads(target_niche, target_location, limit=40)
+        except Exception as e:
+            print(f"Failed to auto-generate leads: {e}")
+            
+        # Reload the pool after generation
+        new_leads = []
+        with open(POOL_FILE, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                email = row["Email"].strip().lower()
+                if email not in existing_emails:
+                    new_leads.append(row)
+                    
+        print(f"Found {len(new_leads)} fresh leads available after auto-replenishment.")
+
     if not new_leads:
-        print("No new leads available to refill. The pool is empty or all leads have already been added.")
+        print("Still no new leads available after generation attempt. Aborting refill.")
         return
 
     # Pick the next 50 (or less if not enough)
