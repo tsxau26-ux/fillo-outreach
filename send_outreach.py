@@ -128,6 +128,9 @@ No pressure either way.
 — Fillo Team"""
 }
 
+def get_template(category):
+    return TEMPLATES.get(category, TEMPLATES["default"])
+
 
 def load_state():
     if os.path.exists(STATE_FILE_PATH):
