@@ -27,110 +27,127 @@ SMTP_PORT = 587
 # Email templates: professional, benefit-driven, natural tone with direct Telegram Mini App link
 TEMPLATES = {
     "barber": {
-        "subject": "{business_name} — quick question",
-        "body": """Hi there,
+        "subject": "Free for 1 month: fill empty chairs at {business_name}",
+        "body": """Hi {business_name} team,
 
-Do you ever have last-minute cancellations where the chair just sits empty?
+I noticed your barbershop in {location} and really like the work you put into your craft.
 
-We built Fillo for exactly this. When you have a free slot, one tap sends a flash alert to your clients on Telegram — they see it, they show up, the hour is filled.
+I'm reaching out because we built something called Fillo that solves a problem every shop deals with: last-minute cancellations and quiet hours where chairs sit empty.
 
-No reservation system, no new software. Just a way to make sure your quiet hours don't stay quiet.
+Here's what Fillo does for you:
+- When you have an open slot, you tap one button inside Fillo.
+- Fillo generates a branded promo for your shop automatically (visuals, QR code, booking link).
+- That promo goes straight to your clients on Telegram, where it gets 90%+ open rates (way higher than email or Instagram).
+- Clients book the slot directly. No calls, no back-and-forth.
 
-Free for the first month. Takes 2 minutes:
-👉 https://t.me/Filloappbot
+You don't need to change anything about how you currently manage appointments. Fillo just fills the gaps.
 
-Worth a look?
+We're offering {business_name} a free 1-month trial (no credit card, no commitment, cancel anytime). Setup takes about 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
 
-— Fillo Team"""
+Would you be open to trying it out this week?
+
+Best,
+The Fillo Team"""
     },
     "salon_spa": {
-        "subject": "Quick question about {business_name}",
-        "body": """Hi there,
+        "subject": "Free for 1 month: fill cancelled slots at {business_name}",
+        "body": """Hi {business_name} team,
 
-When a therapist or stylist has a last-minute gap — what happens to that hour?
+I came across your salon and really admire the experience you've built for your clients.
 
-Fillo lets you fill it instantly. One tap sends a flash alert to your clients on Telegram — they see it and come in. No booking system, no back and forth.
+Quick question: how do you currently handle last-minute cancellations or quiet mornings when therapists and stylists are free?
 
-Free for the first month. Takes 2 minutes:
-👉 https://t.me/Filloappbot
+We built Fillo specifically for this. When a slot opens up, you tap one button and Fillo takes care of the rest:
+- It generates a branded flash promo with your salon's name (visuals, QR code, and a direct booking link).
+- That promo goes instantly to your clients on Telegram, where open rates are 90%+ (compared to ~20% for email).
+- Clients book the open slot directly. No phone calls needed.
 
-— Fillo Team"""
+The whole point is that it works alongside whatever booking system you already use. Zero changes on your end, and setup takes under 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
+
+Interested in giving it a try?
+
+Best,
+The Fillo Team"""
     },
     "pilates": {
-        "subject": "Empty spots at {business_name}?",
-        "body": """Hi there,
+        "subject": "Free for 1 month: fill empty reformer spots at {business_name}",
+        "body": """Hi {business_name} team,
 
-Late cancellations are painful — instructor ready, studio open, spot just sitting empty.
+I found your studio in {location} and love your approach to training.
 
-Fillo fixes this. When a spot opens, you tap once. Your members on Telegram get a flash alert and show up to fill it.
+One thing we've heard from studio owners is that reformer classes rarely run at full capacity: there's almost always a spot or two that goes unfilled, especially from late cancellations.
 
-Free for the first month. Takes 2 minutes:
-👉 https://t.me/Filloappbot
+That's exactly what Fillo solves:
+- When a class has open spots, you tap one button in Fillo.
+- Fillo automatically generates a branded promo for your studio (visuals, QR code, and a direct reservation link).
+- That promo is sent instantly to your member list on Telegram, where 90%+ of people actually see it.
+- Members grab the spot in seconds. Done.
 
-— Fillo Team"""
-    },
-    "weedshop": {
-        "subject": "Quick question about {business_name}",
-        "body": """Hi there,
+It doesn't replace your scheduling system: it just fills the empty spots your existing setup can't reach in time.
 
-Do you have slow hours during the day where the shop is quiet?
+We're offering studios in {location} a free 1-month trial. No credit card, no commitment. Setup takes about 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
 
-Fillo lets you fill them instantly. One tap sends a flash alert to your existing customers on Telegram — they see it and come in.
+Would you like to try it?
 
-No app to download, no booking system. Just a simple way to make sure your quiet hours don't stay quiet.
-
-Free for the first month. Takes 2 minutes:
-👉 https://t.me/Filloappbot
-
-Worth a look?
-
-— Fillo Team"""
-    },
-    "restaurant_cafe": {
-        "subject": "Empty tables during quiet hours at {business_name}?",
-        "body": """Hi there,
-
-Slow afternoons, last-minute no-shows — every place deals with it.
-
-Fillo lets you instantly alert your regulars on Telegram when you have empty tables. They see it, they come in. No booking platform, no commission fees.
-
-Free for a month. Takes 2 minutes:
-👉 https://t.me/Filloappbot
-
-— Fillo Team"""
+Best,
+The Fillo Team"""
     },
     "general": {
-        "subject": "Quick question about {business_name}",
-        "body": """Hi there,
+        "subject": "Free for 1 month: fill quiet hours at {business_name}",
+        "body": """Hi {business_name} team,
 
-Do you have slow hours or last-minute gaps that go unfilled?
+I came across your business in {location} and like what you've built.
 
-Fillo lets you alert your existing clients on Telegram in one tap — they see it, they show up, the hour is filled.
+I wanted to reach out because we created a tool called Fillo that helps local businesses like yours turn slow hours into paid bookings without any marketing effort on your part.
 
-Free for one month. Setup takes 2 minutes:
-👉 https://t.me/Filloappbot
+Here's how it works:
+- When you have a quiet period, you tap one button inside Fillo.
+- Fillo automatically creates a branded promo for {business_name} (graphics, QR code, and a direct booking link).
+- That promo goes straight to your clients on Telegram, where open rates are 90%+ (much higher than email or social posts).
+- Clients book directly. No friction.
 
-— Fillo Team"""
+It works alongside your existing setup. Nothing to change, nothing to learn. Setup takes about 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
+
+Want to give it a try?
+
+Best,
+The Fillo Team"""
     }
 }
 
-FOLLOWUP_TEMPLATE = {
-    "subject": "Re: {business_name}",
-    "body": """Hi,
-
-Just bumping this up in case my last email got buried.
-
-If empty hours are ever an issue, Fillo is worth 2 minutes of your time:
-👉 https://t.me/Filloappbot
-
-No pressure either way.
-
-— Fillo Team"""
-}
 
 def get_template(category):
-    return TEMPLATES.get(category, TEMPLATES.get("general", list(TEMPLATES.values())[0]))
+    cat_lower = category.lower()
+    if "barber" in cat_lower:
+        return TEMPLATES["barber"]
+    elif any(word in cat_lower for word in ["spa", "salon", "nail"]):
+        return TEMPLATES["salon_spa"]
+    elif "pilates" in cat_lower:
+        return TEMPLATES["pilates"]
+    else:
+        return TEMPLATES["general"]
 
+# Follow-Up Email Template (Sent 3 days after Email #1 if no reply)
+FOLLOWUP_TEMPLATE = {
+    "subject": "Quick follow-up: {business_name}",
+    "body": """Hi {business_name} team,
+
+Quick bump on my previous email, wanted to make sure it didn't get buried!
+
+We're currently offering local businesses in {location} a 1-month free trial of Fillo to fill quiet hours and last-minute cancellations (no credit card or software changes needed).
+
+You can claim your free trial in under 2 minutes directly on Telegram:
+👉 Start your free trial here: https://t.me/Filloappbot
+
+Would love to hear if you're open to trying it out this week!
+
+Best,
+The Fillo Team"""
+}
 
 def load_state():
     if os.path.exists(STATE_FILE_PATH):
@@ -154,7 +171,7 @@ def get_lead_info(state, email_addr):
     return {"status": "pending", "sent_at": 0, "followup": "none"}
 
 def send_email(server, sender_email, recipient_email, subject, body):
-    msg = MIMEMultipart("alternative")
+    msg = MIMEMultipart()
     msg["From"] = f"Fillo Team <{sender_email}>"
     msg["To"] = recipient_email
     msg["Subject"] = subject
@@ -163,27 +180,7 @@ def send_email(server, sender_email, recipient_email, subject, body):
     msg["X-Mailer"] = "Gmail Outlook Client"
     msg["X-Priority"] = "3"
     
-    # Plain text version
-    text_part = MIMEText(body, "plain")
-    msg.attach(text_part)
-    
-    # HTML version with open pixel and click tracking
-    tracking_url = os.environ.get("TRACKING_BASE_URL", "https://fillo.app")
-    try:
-        from email_analytics import encode_email_token
-        token = encode_email_token(recipient_email)
-        open_pixel_url = f"{tracking_url}/track/open?id={token}"
-        click_redirect_url = f"{tracking_url}/track/click?id={token}&target=https://t.me/Filloappbot"
-        
-        html_body = body.replace("\n", "<br>\n")
-        html_body = html_body.replace("https://t.me/Filloappbot", f'<a href="{click_redirect_url}">https://t.me/Filloappbot</a>')
-        html_body += f'<br><br><img src="{open_pixel_url}" width="1" height="1" style="display:none;" alt="" />'
-        
-        html_part = MIMEText(f"<html><body>{html_body}</body></html>", "html")
-        msg.attach(html_part)
-    except Exception as e:
-        print(f"Tracking attachment warning: {e}")
-        
+    msg.attach(MIMEText(body, "plain"))
     server.sendmail(sender_email, recipient_email, msg.as_string())
 
 def send_telegram_notification(token, chat_id, text):
@@ -285,9 +282,6 @@ def main():
     due_followups = []
     pending_initial = []
 
-    import datetime
-    is_weekend = datetime.datetime.now().weekday() >= 5  # 5=Saturday, 6=Sunday
-
     for lead in leads:
         email_addr = lead["Email"].strip()
         info = get_lead_info(state, email_addr)
@@ -299,8 +293,11 @@ def main():
             continue
 
         if status == "sent":
-            # FOLLOW-UPS ARE TEMPORARILY DISABLED PER USER REQUEST
-            pass
+            # If initial email was sent >= 3 days ago and no follow-up sent yet
+            if followup_status == "none":
+                # Check if 3 days have elapsed (or if sent_at was legacy 0, treat as due for follow-up)
+                if sent_at == 0 or (now_ts - sent_at >= THREE_DAYS_SECS):
+                    due_followups.append(lead)
         elif status == "pending":
             pending_initial.append(lead)
 
@@ -324,18 +321,6 @@ def main():
     if tg_token and tg_chat_id:
         print("Telegram notifications enabled.")
 
-    if not is_dry_run:
-        print("Connecting to Gmail SMTP server...")
-        try:
-            server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-            server.starttls()
-            server.login(sender_email, app_password)
-        except Exception as e:
-            msg = f"Failed to connect to SMTP server: {e}"
-            print(f"🚨 {msg}")
-            send_telegram_notification(tg_token, tg_chat_id, f"🚨 {msg}")
-            return
-
     sent_count = 0
     for idx, (lead, action_type) in enumerate(work_queue):
         if sent_count >= DAILY_LIMIT:
@@ -349,8 +334,18 @@ def main():
         category = lead["Category"]
         location = lead["Location"]
 
-        # Pre-send verification is disabled because GitHub Actions IPs are blocked by SpamHaus.
-        # Emails are already verified when added to the leads pool.
+        # Real-time pre-send SMTP verification
+        try:
+            from bounce_cleaner import verify_email_inbox_smtp
+            is_valid, reason = verify_email_inbox_smtp(recipient_email)
+            if is_valid is False:
+                msg = f"Skipped non-existent email address for {business_name} ({recipient_email}): {reason}"
+                print(f"-> 🚫 {msg}")
+                state[recipient_email] = {"status": "email_not_found", "reason": reason}
+                save_state(state)
+                continue
+        except Exception as e:
+            print(f"Pre-send SMTP check warning: {e}")
 
         # Select template based on action type
         if action_type == "followup":
@@ -371,59 +366,61 @@ def main():
             print("-" * 40)
             sent_count += 1
         else:
+            server = None
             try:
-                # Reconnect if connection was dropped
-                try:
-                    server.noop()
-                except Exception:
-                    print("Reconnecting to SMTP server...")
-                    server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-                    server.starttls()
-                    server.login(sender_email, app_password)
-                
+                print("Connecting to Gmail SMTP server...")
+                server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+                server.starttls()
+                server.login(sender_email, app_password)
+
                 # Send email
                 send_email(server, sender_email, recipient_email, subject, body)
                 success_msg = f"[{tag}] Email successfully sent to {business_name} ({recipient_email})"
                 print(f"-> {success_msg}")
                 send_telegram_notification(tg_token, tg_chat_id, f"✅ {success_msg}")
 
-                # Update State
-                now_ts = time.time()
-                current_info = get_lead_info(state, recipient_email)
+                try:
+                    server.quit()
+                    server = None
+                except Exception:
+                    pass
+
+                # Update rich state
+                existing_info = get_lead_info(state, recipient_email)
                 if action_type == "followup":
                     state[recipient_email] = {
                         "status": "sent",
-                        "sent_at": current_info.get("sent_at", now_ts),
-                        "followup_status": "sent"
+                        "sent_at": existing_info.get("sent_at", now_ts),
+                        "followup_status": "sent",
+                        "followup_sent_at": time.time()
                     }
                 else:
                     state[recipient_email] = {
                         "status": "sent",
-                        "sent_at": now_ts,
+                        "sent_at": time.time(),
                         "followup_status": "none"
                     }
+
                 save_state(state)
                 sent_count += 1
                 
+                # Delay before next email (mimic human behavior)
+                if idx < len(pending_leads) - 1 and sent_count < DAILY_LIMIT:
+                    delay = random.randint(MIN_DELAY_SECS, MAX_DELAY_SECS)
+                    print(f"-> Safety Delay: Waiting {delay} seconds (mimicking human typing) before the next send...")
+                    time.sleep(delay)
             except Exception as e:
                 error_msg = f"Error sending to {business_name} ({recipient_email}): {e}"
                 print(f"-> {error_msg}")
                 send_telegram_notification(tg_token, tg_chat_id, f"❌ {error_msg}")
+                if server:
+                    try:
+                        server.quit()
+                    except Exception:
+                        pass
                 # Sleep slightly on error to cool down
                 time.sleep(10)
                 
-        # Delay before next email (mimic human behavior)
-        if not is_dry_run and idx < len(work_queue) - 1 and sent_count < DAILY_LIMIT:
-            delay = random.randint(MIN_DELAY_SECS, MAX_DELAY_SECS)
-            print(f"-> Safety Delay: Waiting {delay} seconds before next send...")
-            time.sleep(delay)
-
-    if not is_dry_run and 'server' in locals() and server:
-        try:
-            server.quit()
-        except Exception:
-            pass
-
     print(f"\nSession complete. Total emails processed: {sent_count}")
     if not is_dry_run:
         print("State saved. You can run the script again tomorrow to process the next batch.")
