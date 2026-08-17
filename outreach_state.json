@@ -458,5 +458,229 @@
         "status": "email_not_found",
         "sent_at": 0,
         "followup_status": "none"
+    },
+    "contacttwiggyclub@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956318.1225164,
+        "followup_status": "none"
+    },
+    "contact.essaraya@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956331.2295756,
+        "followup_status": "none"
+    },
+    "cassfred242@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956344.324166,
+        "followup_status": "none"
+    },
+    "massazitunis@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956357.1459122,
+        "followup_status": "none"
+    },
+    "hamdyletaief@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956369.9373922,
+        "followup_status": "none"
+    },
+    "thebarbershopuae@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956383.147012,
+        "followup_status": "none"
+    },
+    "vasterassalon@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956396.1317146,
+        "followup_status": "none"
+    },
+    "info@shakercobarber.com": {
+        "status": "sent",
+        "sent_at": 1786956414.1260555,
+        "followup_status": "none"
+    },
+    "professionallookgentssaloon@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956427.3997304,
+        "followup_status": "none"
+    },
+    "adrianmuresan2000@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956440.2845712,
+        "followup_status": "none"
+    },
+    "info@pilatesacademydubai.com": {
+        "status": "sent",
+        "sent_at": 1786956453.502041,
+        "followup_status": "none"
+    },
+    "info@pilatesuae.com": {
+        "status": "sent",
+        "sent_at": 1786956469.53699,
+        "followup_status": "none"
+    },
+    "info@purepilatesdubai.com": {
+        "status": "sent",
+        "sent_at": 1786956483.0796936,
+        "followup_status": "none"
+    },
+    "info@korpilatesdubai.com": {
+        "status": "sent",
+        "sent_at": 1786956496.3981974,
+        "followup_status": "none"
+    },
+    "info@oakpilates.ae": {
+        "status": "sent",
+        "sent_at": 1786956509.6253476,
+        "followup_status": "none"
+    },
+    "zcutzbarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956522.851141,
+        "followup_status": "none"
+    },
+    "truefittandhillbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956535.8671186,
+        "followup_status": "none"
+    },
+    "jkbarber.fics@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956548.7889314,
+        "followup_status": "none"
+    },
+    "46studiobangkok@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956561.6325355,
+        "followup_status": "none"
+    },
+    "Reservation.BBlossom@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956574.4472883,
+        "followup_status": "none"
+    },
+    "tsukibyyumoto@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956587.398846,
+        "followup_status": "none"
+    },
+    "chandeesalon@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956600.4479141,
+        "followup_status": "none"
+    },
+    "thehillsbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956613.2038743,
+        "followup_status": "none"
+    },
+    "wardsaloonmen@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956625.9834123,
+        "followup_status": "none"
+    },
+    "info.salonscript@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956638.6842322,
+        "followup_status": "none"
+    },
+    "volnabeautysalon.dubai@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956651.6080441,
+        "followup_status": "none"
+    },
+    "info.belovedsalon@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956664.4516394,
+        "followup_status": "none"
+    },
+    "wyattbeautysalon@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956677.5725377,
+        "followup_status": "none"
+    },
+    "naturalskothari@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956690.716419,
+        "followup_status": "none"
+    },
+    "contact@lamenara.tn": {
+        "status": "sent",
+        "sent_at": 1786956709.6892953,
+        "followup_status": "none"
+    },
+    "lecap.reservations@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956723.5840278,
+        "followup_status": "none"
+    },
+    "chezfranky.gammarth@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956736.5167656,
+        "followup_status": "none"
+    },
+    "clubgammarth@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956749.8700697,
+        "followup_status": "none"
+    },
+    "hassensfar@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956762.8460283,
+        "followup_status": "none"
+    },
+    "contact@tunavis.com": {
+        "status": "sent",
+        "sent_at": 1786956776.2980146,
+        "followup_status": "none"
+    },
+    "goldentulipgammarth@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956789.5629873,
+        "followup_status": "none"
+    },
+    "sindbadgammarth@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956802.3139222,
+        "followup_status": "none"
+    },
+    "maisondesarts.sousse@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956815.3746772,
+        "followup_status": "none"
+    },
+    "movenpicksousse@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956828.2415605,
+        "followup_status": "none"
+    },
+    "saloonsousse@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956841.8027346,
+        "followup_status": "none"
+    },
+    "mosaiquesfax@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956854.70135,
+        "followup_status": "none"
+    },
+    "lasirenesfax@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956867.6864393,
+        "followup_status": "none"
+    },
+    "info@beatsandcuts.com": {
+        "status": "sent",
+        "sent_at": 1786956885.2967196,
+        "followup_status": "none"
+    },
+    "info@jazzloungespa.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Client host rejected: cannot find your reverse hostname, [20.168.119.18]"
+    },
+    "cleopatraspa@gmail.com": {
+        "status": "sent",
+        "sent_at": 1786956899.5026793,
+        "followup_status": "none"
     }
 }
