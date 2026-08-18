@@ -405,7 +405,7 @@ def main():
                 sent_count += 1
                 
                 # Delay before next email (mimic human behavior)
-                if idx < len(pending_leads) - 1 and sent_count < DAILY_LIMIT:
+                if idx < len(work_queue) - 1 and sent_count < DAILY_LIMIT:
                     delay = random.randint(MIN_DELAY_SECS, MAX_DELAY_SECS)
                     print(f"-> Safety Delay: Waiting {delay} seconds (mimicking human typing) before the next send...")
                     time.sleep(delay)
