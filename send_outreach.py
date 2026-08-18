@@ -252,7 +252,7 @@ def main():
 
     # Run Lead Cleaner & Bounce Verification before starting campaign
     try:
-        from bounce_cleaner import run_lead_cleaning, check_mx_record
+        from bounce_cleaner import run_lead_cleaning
         print("Running pre-campaign lead cleaning & bounce verification...")
         clean_stats = run_lead_cleaning()
         print(f"Cleaner Stats: Clean Leads: {clean_stats['clean_leads_count']}, Bounced: {clean_stats['bounced']}, Pending Valid: {clean_stats['pending_valid']}")
