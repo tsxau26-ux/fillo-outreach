@@ -39,11 +39,7 @@
         "sent_at": 1784891839.0909,
         "followup_status": "sent"
     },
-    "mibangkokfb.rst.rsvn@marriotthotels.com": {
-        "status": "sent",
-        "sent_at": 1784891839.090901,
-        "followup_status": "sent"
-    },
+    "mibangkokfb.rst.rsvn@marriotthotels.com": "bounced",
     "jamesmac@me.com": {
         "status": "sent",
         "sent_at": 1784891839.090901,
@@ -304,76 +300,20 @@
         "sent_at": 1784891839.090913,
         "followup_status": "sent"
     },
-    "info@verareformerpilates.ae": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "aminabarhoumi042@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "contact.bebbhar@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "yuka.creative@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "info@exhaledubai.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "hekayagoulette@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "thecliff.shop@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "ezzemniturkushfood@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "contactfulltime98@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "lebarontunis@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "omoules.shop@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "billycutsbarbershop@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "cafekasbah@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "cafejournal1999@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
+    "info@verareformerpilates.ae": "bounced",
+    "aminabarhoumi042@gmail.com": "bounced",
+    "contact.bebbhar@gmail.com": "bounced",
+    "yuka.creative@gmail.com": "bounced",
+    "info@exhaledubai.com": "bounced",
+    "hekayagoulette@gmail.com": "bounced",
+    "thecliff.shop@gmail.com": "bounced",
+    "ezzemniturkushfood@gmail.com": "bounced",
+    "contactfulltime98@gmail.com": "bounced",
+    "lebarontunis@gmail.com": "bounced",
+    "omoules.shop@gmail.com": "bounced",
+    "billycutsbarbershop@gmail.com": "bounced",
+    "cafekasbah@gmail.com": "bounced",
+    "cafejournal1999@gmail.com": "bounced",
     "info@algopilates.com": {
         "status": "email_not_found",
         "sent_at": 0,
@@ -509,11 +449,7 @@
         "sent_at": 1786956440.2845712,
         "followup_status": "none"
     },
-    "info@pilatesacademydubai.com": {
-        "status": "sent",
-        "sent_at": 1786956453.502041,
-        "followup_status": "none"
-    },
+    "info@pilatesacademydubai.com": "bounced",
     "info@pilatesuae.com": {
         "status": "sent",
         "sent_at": 1786956469.53699,
@@ -659,11 +595,7 @@
         "sent_at": 1786956841.8027346,
         "followup_status": "none"
     },
-    "mosaiquesfax@gmail.com": {
-        "status": "sent",
-        "sent_at": 1786956854.70135,
-        "followup_status": "none"
-    },
+    "mosaiquesfax@gmail.com": "bounced",
     "lasirenesfax@gmail.com": {
         "status": "sent",
         "sent_at": 1786956867.6864393,
@@ -681,6 +613,272 @@
     "cleopatraspa@gmail.com": {
         "status": "sent",
         "sent_at": 1786956899.5026793,
+        "followup_status": "none"
+    },
+    "jwbangkokthailandsrrestaurantmanager@marriott.com": "bounced",
+    "mhrs.bkkdt.asst.chisana.nami.mgr@marriotthotels.com": "bounced",
+    "mhrs.bkkdt.manho.bistro.mgr@marriotthotels.com": "bounced",
+    "golfbrausousse@gmail.com": "bounced",
+    "info@pastels-salon.com": "bounced",
+    "mhrs.bkkdt.asst.tsu@marriotthotels.com": "bounced",
+    "ironbarsousse@gmail.com": "bounced",
+    "mhrs.bkkdt.chisana.nami.mgr@marriotthotels.com": "bounced",
+    "mhrs.bkkdt.adfb@marriotthotels.com": "bounced",
+    "mhrs.bkkdt.asst.mhb.mgr@marriotthotels.com": "bounced",
+    "info@tipsandtoes.com": "email_not_found",
+    "softbkk@gmail.com": "email_not_found",
+    "info@slam.ae": "email_not_found",
+    "info@greendayproducts.com": "email_not_found",
+    "hello@houseofpot.com": "email_not_found",
+    "info@medmenthailand.com": "email_not_found",
+    "contact@el-ali.com": {
+        "status": "sent",
+        "sent_at": 1787128866.185816,
+        "followup_status": "none"
+    },
+    "info@thenailspa.com": {
+        "status": "sent",
+        "sent_at": 1787128995.472064,
+        "followup_status": "none"
+    },
+    "info@jetset.ae": {
+        "status": "sent",
+        "sent_at": 1787129129.5662096,
+        "followup_status": "none"
+    },
+    "info@naya.ae": {
+        "status": "sent",
+        "sent_at": 1787129237.147012,
+        "followup_status": "none"
+    },
+    "info@karmayogadubai.com": {
+        "status": "sent",
+        "sent_at": 1787129345.2702618,
+        "followup_status": "none"
+    },
+    "info@optimalfitness.ae": {
+        "status": "sent",
+        "sent_at": 1787129423.0107265,
+        "followup_status": "none"
+    },
+    "barberford@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787129511.5023665,
+        "followup_status": "none"
+    },
+    "threebrothers@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787129638.9735646,
+        "followup_status": "none"
+    },
+    "neversaycutz@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787129766.3942637,
+        "followup_status": "none"
+    },
+    "blueharbour@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787129887.7031636,
+        "followup_status": "none"
+    },
+    "tewsbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787129984.3206592,
+        "followup_status": "none"
+    },
+    "blackamber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130077.1265297,
+        "followup_status": "none"
+    },
+    "smileclub@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130226.3941593,
+        "followup_status": "none"
+    },
+    "pheenbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130350.833479,
+        "followup_status": "none"
+    },
+    "outcastbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130466.383625,
+        "followup_status": "none"
+    },
+    "ironstache@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130602.2997758,
+        "followup_status": "none"
+    },
+    "barbersmith@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130716.1597033,
+        "followup_status": "none"
+    },
+    "groomingstation@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130889.0470533,
+        "followup_status": "none"
+    },
+    "classicbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787130963.739008,
+        "followup_status": "none"
+    },
+    "thegroomer@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131034.5434473,
+        "followup_status": "none"
+    },
+    "elitecuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131110.9741402,
+        "followup_status": "none"
+    },
+    "citybarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131198.4595063,
+        "followup_status": "none"
+    },
+    "primecuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131341.4404483,
+        "followup_status": "none"
+    },
+    "metrogents@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131460.8388574,
+        "followup_status": "none"
+    },
+    "studiocuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131589.1516442,
+        "followup_status": "none"
+    },
+    "starcuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131671.9124548,
+        "followup_status": "none"
+    },
+    "firstclassbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787131850.5171893,
+        "followup_status": "none"
+    },
+    "gentrybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132013.083651,
+        "followup_status": "none"
+    },
+    "legacybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132150.519561,
+        "followup_status": "none"
+    },
+    "noblebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132270.11801,
+        "followup_status": "none"
+    },
+    "apexbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132406.683852,
+        "followup_status": "none"
+    },
+    "zenithbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132524.0259457,
+        "followup_status": "none"
+    },
+    "pinnaclebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132698.8413303,
+        "followup_status": "none"
+    },
+    "crestbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132835.513445,
+        "followup_status": "none"
+    },
+    "ridgebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787132915.3776598,
+        "followup_status": "none"
+    },
+    "valleybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133027.0316691,
+        "followup_status": "none"
+    },
+    "havenbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133130.7987046,
+        "followup_status": "none"
+    },
+    "oasisbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133310.3098636,
+        "followup_status": "none"
+    },
+    "sanctuarybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133410.7655547,
+        "followup_status": "none"
+    },
+    "hideawaybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133561.7229884,
+        "followup_status": "none"
+    },
+    "denbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133668.4876277,
+        "followup_status": "none"
+    },
+    "cavebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133786.262169,
+        "followup_status": "none"
+    },
+    "cabinbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133858.7637072,
+        "followup_status": "none"
+    },
+    "roombkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787133960.3068626,
+        "followup_status": "none"
+    },
+    "cornerbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787134060.1301048,
+        "followup_status": "none"
+    },
+    "squarebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787134150.7153494,
+        "followup_status": "none"
+    },
+    "loopbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787134242.334404,
+        "followup_status": "none"
+    },
+    "linebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787134380.0821335,
+        "followup_status": "none"
+    },
+    "pointbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787134488.9063642,
+        "followup_status": "none"
+    },
+    "spotbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787134648.400107,
         "followup_status": "none"
     }
 }
