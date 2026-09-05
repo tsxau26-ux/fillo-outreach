@@ -2,8 +2,8 @@ name: Fillo Outreach Campaign
 
 on:
   schedule:
-    # Runs every day at 08:00 UTC (15:00 in Bangkok/Vietnam, 12:00 in Dubai)
-    - cron: '0 8 * * *'
+    # Runs every day at 01:00 UTC (08:00 AM Bangkok/Indochina Time)
+    - cron: '0 1 * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub website
 
 permissions:
