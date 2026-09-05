@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ANALYTICS_FILE = os.path.join(BASE_DIR, "email_analytics.json")
 STATE_FILE = os.path.join(BASE_DIR, "outreach_state.json")
 
-TG_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8827856631:AAGTJvC7UkOqVHtTEgbV4WxK_Ir8kE0IDAQ")
+TG_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8827856631:AAGKFE3QPS2O1a_oSu0l8Nt71iuKAt8vgYY")
 TG_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "5219669099")
 
 # Transparent 1x1 GIF image bytes (35 bytes)

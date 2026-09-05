@@ -51,7 +51,14 @@ def main():
         from lead_generator import generate_leads
         
         niches = ["Spa", "Barbershop", "Pilates", "Restaurant", "Cafe", "Nail Salon", "Hair Salon"]
-        locations = ["Dubai", "Abu Dhabi", "London", "Manchester", "New York", "Los Angeles", "Chicago", "Miami", "Toronto"]
+        locations = [
+            # Asia
+            "Tokyo", "Singapore", "Hong Kong", "Bangkok", "Kuala Lumpur", "Seoul", "Taipei",
+            # Europe
+            "London", "Paris", "Berlin", "Rome", "Madrid", "Amsterdam", "Stockholm", "Dublin", "Manchester",
+            # North America (US/Canada)
+            "New York", "Los Angeles", "Chicago", "Miami", "San Francisco", "Austin", "Toronto", "Vancouver", "Montreal"
+        ]
         
         target_niche = random.choice(niches)
         target_location = random.choice(locations)

@@ -11,7 +11,7 @@ import email
 from email.header import decode_header
 
 # Configuration
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8827856631:AAGTJvC7UkOqVHtTEgbV4WxK_Ir8kE0IDAQ")
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8827856631:AAGKFE3QPS2O1a_oSu0l8Nt71iuKAt8vgYY")
 ALLOWED_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "5219669099")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO = "tsxau26-ux/fillo-outreach"

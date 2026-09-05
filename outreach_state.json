@@ -39,11 +39,7 @@
         "sent_at": 1784891839.0909,
         "followup_status": "sent"
     },
-    "mibangkokfb.rst.rsvn@marriotthotels.com": {
-        "status": "sent",
-        "sent_at": 1784891839.090901,
-        "followup_status": "sent"
-    },
+    "mibangkokfb.rst.rsvn@marriotthotels.com": "bounced",
     "jamesmac@me.com": {
         "status": "sent",
         "sent_at": 1784891839.090901,
@@ -304,76 +300,20 @@
         "sent_at": 1784891839.090913,
         "followup_status": "sent"
     },
-    "info@verareformerpilates.ae": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "aminabarhoumi042@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "contact.bebbhar@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "yuka.creative@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "info@exhaledubai.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "hekayagoulette@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "thecliff.shop@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "ezzemniturkushfood@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "contactfulltime98@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "lebarontunis@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "omoules.shop@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "billycutsbarbershop@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "cafekasbah@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
-    "cafejournal1999@gmail.com": {
-        "status": "bounced",
-        "sent_at": 0,
-        "followup_status": "none"
-    },
+    "info@verareformerpilates.ae": "bounced",
+    "aminabarhoumi042@gmail.com": "bounced",
+    "contact.bebbhar@gmail.com": "bounced",
+    "yuka.creative@gmail.com": "bounced",
+    "info@exhaledubai.com": "bounced",
+    "hekayagoulette@gmail.com": "bounced",
+    "thecliff.shop@gmail.com": "bounced",
+    "ezzemniturkushfood@gmail.com": "bounced",
+    "contactfulltime98@gmail.com": "bounced",
+    "lebarontunis@gmail.com": "bounced",
+    "omoules.shop@gmail.com": "bounced",
+    "billycutsbarbershop@gmail.com": "bounced",
+    "cafekasbah@gmail.com": "bounced",
+    "cafejournal1999@gmail.com": "bounced",
     "info@algopilates.com": {
         "status": "email_not_found",
         "sent_at": 0,
@@ -462,32 +402,38 @@
     "contacttwiggyclub@gmail.com": {
         "status": "sent",
         "sent_at": 1786956318.1225164,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1788649206.533115
     },
     "contact.essaraya@gmail.com": {
         "status": "sent",
         "sent_at": 1786956331.2295756,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1788649339.668223
     },
     "cassfred242@gmail.com": {
         "status": "sent",
         "sent_at": 1786956344.324166,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1788649484.177661
     },
     "massazitunis@gmail.com": {
         "status": "sent",
         "sent_at": 1786956357.1459122,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1788649648.8603132
     },
     "hamdyletaief@gmail.com": {
         "status": "sent",
         "sent_at": 1786956369.9373922,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1788649910.917741
     },
     "thebarbershopuae@gmail.com": {
         "status": "sent",
         "sent_at": 1786956383.147012,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1788650113.0368588
     },
     "vasterassalon@gmail.com": {
         "status": "sent",
@@ -509,11 +455,7 @@
         "sent_at": 1786956440.2845712,
         "followup_status": "none"
     },
-    "info@pilatesacademydubai.com": {
-        "status": "sent",
-        "sent_at": 1786956453.502041,
-        "followup_status": "none"
-    },
+    "info@pilatesacademydubai.com": "bounced",
     "info@pilatesuae.com": {
         "status": "sent",
         "sent_at": 1786956469.53699,
@@ -659,11 +601,7 @@
         "sent_at": 1786956841.8027346,
         "followup_status": "none"
     },
-    "mosaiquesfax@gmail.com": {
-        "status": "sent",
-        "sent_at": 1786956854.70135,
-        "followup_status": "none"
-    },
+    "mosaiquesfax@gmail.com": "bounced",
     "lasirenesfax@gmail.com": {
         "status": "sent",
         "sent_at": 1786956867.6864393,
@@ -682,5 +620,471 @@
         "status": "sent",
         "sent_at": 1786956899.5026793,
         "followup_status": "none"
-    }
+    },
+    "mhrs.bkkdt.manho.bistro.mgr@marriotthotels.com": "bounced",
+    "mhrs.bkkdt.adfb@marriotthotels.com": "bounced",
+    "mhrs.bkkdt.chisana.nami.mgr@marriotthotels.com": "bounced",
+    "mhrs.bkkdt.asst.mhb.mgr@marriotthotels.com": "bounced",
+    "ironbarsousse@gmail.com": "bounced",
+    "golfbrausousse@gmail.com": "bounced",
+    "mhrs.bkkdt.asst.tsu@marriotthotels.com": "bounced",
+    "jwbangkokthailandsrrestaurantmanager@marriott.com": "bounced",
+    "mhrs.bkkdt.asst.chisana.nami.mgr@marriotthotels.com": "bounced",
+    "ironstache@gmail.com": "email_not_found",
+    "coolbkk@gmail.com": "email_not_found",
+    "softbkk@gmail.com": "email_not_found",
+    "contact@el-ali.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (554): 5.7.1 Service unavailable; Client host [58.11.156.242] blocked using b.barracuda"
+    },
+    "info@tipsandtoes.com": {
+        "status": "sent",
+        "sent_at": 1787071447.243573,
+        "followup_status": "none"
+    },
+    "info@thenailspa.com": {
+        "status": "sent",
+        "sent_at": 1787071558.857603,
+        "followup_status": "none"
+    },
+    "info@jetset.ae": {
+        "status": "sent",
+        "sent_at": 1787071742.679018,
+        "followup_status": "none"
+    },
+    "info@pastels-salon.com": "bounced",
+    "info@naya.ae": {
+        "status": "sent",
+        "sent_at": 1787072010.942235,
+        "followup_status": "none"
+    },
+    "info@karmayogadubai.com": {
+        "status": "sent",
+        "sent_at": 1787072181.792151,
+        "followup_status": "none"
+    },
+    "info@optimalfitness.ae": {
+        "status": "sent",
+        "sent_at": 1787072332.720049,
+        "followup_status": "none"
+    },
+    "barberford@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787072413.100141,
+        "followup_status": "none"
+    },
+    "threebrothers@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787072508.9744298,
+        "followup_status": "none"
+    },
+    "neversaycutz@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787072661.2263858,
+        "followup_status": "none"
+    },
+    "blueharbour@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787072743.4791539,
+        "followup_status": "none"
+    },
+    "tewsbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787072823.930186,
+        "followup_status": "none"
+    },
+    "blackamber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787072924.9672608,
+        "followup_status": "none"
+    },
+    "smileclub@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073088.387619,
+        "followup_status": "none"
+    },
+    "pheenbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073175.339187,
+        "followup_status": "none"
+    },
+    "outcastbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073299.845349,
+        "followup_status": "none"
+    },
+    "barbersmith@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073391.195838,
+        "followup_status": "none"
+    },
+    "groomingstation@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073524.797856,
+        "followup_status": "none"
+    },
+    "classicbarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073684.953902,
+        "followup_status": "none"
+    },
+    "thegroomer@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073760.617069,
+        "followup_status": "none"
+    },
+    "elitecuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787073919.026477,
+        "followup_status": "none"
+    },
+    "citybarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074045.537889,
+        "followup_status": "none"
+    },
+    "primecuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074142.644295,
+        "followup_status": "none"
+    },
+    "metrogents@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074219.333083,
+        "followup_status": "none"
+    },
+    "studiocuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074395.051258,
+        "followup_status": "none"
+    },
+    "starcuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074536.92116,
+        "followup_status": "none"
+    },
+    "firstclassbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074614.94082,
+        "followup_status": "none"
+    },
+    "gentrybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074715.089477,
+        "followup_status": "none"
+    },
+    "legacybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074829.35342,
+        "followup_status": "none"
+    },
+    "noblebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787074917.9117591,
+        "followup_status": "none"
+    },
+    "apexbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075068.754014,
+        "followup_status": "none"
+    },
+    "zenithbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075166.776969,
+        "followup_status": "none"
+    },
+    "pinnaclebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075328.99364,
+        "followup_status": "none"
+    },
+    "crestbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075481.55665,
+        "followup_status": "none"
+    },
+    "ridgebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075567.733566,
+        "followup_status": "none"
+    },
+    "valleybkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075635.8619578,
+        "followup_status": "none"
+    },
+    "havenbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075739.656746,
+        "followup_status": "none"
+    },
+    "oasisbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787075810.454911,
+        "followup_status": "none"
+    },
+    "sanctuarybkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "hideawaybkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "denbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "cavebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "cabinbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "roombkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "cornerbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "squarebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "loopbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "linebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "pointbkk@gmail.com": "bounced",
+    "spotbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "zonebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "areabkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "hubbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "centerbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "stationbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "terminalbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "harborbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "dockbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "pierbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "wharfbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "quaybkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "covebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "tidebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "streambkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "riverbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "brookbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "springbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "sourcebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "rootbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "seedbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "sproutbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "budbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "leafbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "branchbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "stembkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "trunkbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "barkbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "woodbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "forestbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "grovebkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "parkbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "fieldbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "gardenbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "greenbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "lushbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "hotbkk@gmail.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "mildbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787077951.012074,
+        "followup_status": "none"
+    },
+    "hardbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787080521.527553,
+        "followup_status": "none"
+    },
+    "toughbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787080598.4918962,
+        "followup_status": "none"
+    },
+    "strongbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787080710.976077,
+        "followup_status": "none"
+    },
+    "boldbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787080793.715797,
+        "followup_status": "none"
+    },
+    "bravebkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787080900.01564,
+        "followup_status": "none"
+    },
+    "herobkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787081054.889823,
+        "followup_status": "none"
+    },
+    "championbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787081191.958467,
+        "followup_status": "none"
+    },
+    "winnerbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787081283.530462,
+        "followup_status": "none"
+    },
+    "chiefbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787081382.343072,
+        "followup_status": "none"
+    },
+    "leaderbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1787081531.998455,
+        "followup_status": "none"
+    },
+    "vanguardbkk@gmail.com": "bounced",
+    "urspa@theruma.com": "email_not_found",
+    "hello@la-pilatesstudio.com": "email_not_found",
+    "info@dewakan.my": "email_not_found",
+    "info@nadodikl.com": "email_not_found",
+    "customerservice@dininginthedarkkl.com": "email_not_found",
+    "admin@bijanrestaurant.com": "email_not_found",
+    "reservations@marvils.com": "email_not_found",
+    "info@feekacoffeeroasters.com": "email_not_found",
+    "info@pppcoffee.com": "email_not_found",
+    "hello@merchantslane.com": "email_not_found",
+    "info@yellowbrickroad.com.my": "email_not_found",
+    "hello@threeyearsold.com.my": "email_not_found",
+    "hello@theowlscafe.com": "email_not_found",
+    "info@nikonekomatcha.com": "email_not_found",
+    "hello@wizards.com.my": "email_not_found",
+    "baronbkk@gmail.com": "email_not_found",
+    "info@slam.ae": "email_not_found",
+    "info@greendayproducts.com": "email_not_found",
+    "info@medmenthailand.com": "email_not_found"
 }

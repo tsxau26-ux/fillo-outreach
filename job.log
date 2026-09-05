@@ -1,0 +1,279 @@
+Running Auto-Refill...
+=======================================
+      Fillo Daily Lead Auto-Refill     
+=======================================
+
+Found 138 existing email leads in 'fillo_leads.csv'.
+Found 133 fresh leads available in the pool.
+Refilling batch of 50 leads...
+Successfully added 50 new leads to 'fillo_leads.csv'.
+Running Check Replies...
+=======================================
+        Fillo Outreach Reply Checker   
+=======================================
+
+Connecting to Gmail IMAP server...
+Authenticated successfully.
+Found 0 unread email(s) in inbox:
+
+Running Outreach Script...
+=======================================
+      Fillo Automated Cold Outreach    
+=======================================
+
+Using sender email from environment: joinfillo@gmail.com
+Using App Password from environment.
+Using mode from environment: 2
+
+--- RUNNING IN LIVE SEND MODE ---
+Using confirmation from environment: y
+Cleaner warning: cannot import name 'check_mx_record' from 'bounce_cleaner' (/Users/mac/Desktop/02 Trading Projects/Mounir-Email-System/bounce_cleaner.py)
+Loaded 108 leads from CSV.
+Due 3-Day Follow-Ups: 0
+Pending Initial Outreach: 48
+Telegram notifications enabled.
+Connecting to Gmail SMTP server...
+
+[1/48] [✉️ INITIAL OUTREACH] Processing: Twiggy Club (contacttwiggyclub@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Twiggy Club (contacttwiggyclub@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 84 seconds before next send...
+
+[2/48] [✉️ INITIAL OUTREACH] Processing: Centre Essaraya (contact.essaraya@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Centre Essaraya (contact.essaraya@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 102 seconds before next send...
+
+[3/48] [✉️ INITIAL OUTREACH] Processing: El Ali (contact@el-ali.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to El Ali (contact@el-ali.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 63 seconds before next send...
+
+[4/48] [✉️ INITIAL OUTREACH] Processing: Frederic Cassel Tunis (cassfred242@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Frederic Cassel Tunis (cassfred242@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 139 seconds before next send...
+
+[5/48] [✉️ INITIAL OUTREACH] Processing: Ma (massazitunis@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Ma (massazitunis@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 151 seconds before next send...
+
+[6/48] [✉️ INITIAL OUTREACH] Processing: Le Bonheur Restaurant (hamdyletaief@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Le Bonheur Restaurant (hamdyletaief@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 143 seconds before next send...
+
+[7/48] [✉️ INITIAL OUTREACH] Processing: The Barber Shop (UAE) (thebarbershopuae@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to The Barber Shop (UAE) (thebarbershopuae@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 169 seconds before next send...
+
+[8/48] [✉️ INITIAL OUTREACH] Processing: Vasteras Salon (vasterassalon@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Vasteras Salon (vasterassalon@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 120 seconds before next send...
+
+[9/48] [✉️ INITIAL OUTREACH] Processing: Shaker & Co (info@shakercobarber.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Shaker & Co (info@shakercobarber.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 77 seconds before next send...
+
+[10/48] [✉️ INITIAL OUTREACH] Processing: Professional Look Gents Saloon (professionallookgentssaloon@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Professional Look Gents Saloon (professionallookgentssaloon@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 173 seconds before next send...
+
+[11/48] [✉️ INITIAL OUTREACH] Processing: VIP Haircut Dubai (adrianmuresan2000@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to VIP Haircut Dubai (adrianmuresan2000@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 113 seconds before next send...
+
+[12/48] [✉️ INITIAL OUTREACH] Processing: Pilates Academy Dubai (info@pilatesacademydubai.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Pilates Academy Dubai (info@pilatesacademydubai.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 144 seconds before next send...
+
+[13/48] [✉️ INITIAL OUTREACH] Processing: Contrology Pilates Fitness (info@pilatesuae.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Contrology Pilates Fitness (info@pilatesuae.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 107 seconds before next send...
+
+[14/48] [✉️ INITIAL OUTREACH] Processing: PURE Pilates (info@purepilatesdubai.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to PURE Pilates (info@purepilatesdubai.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 60 seconds before next send...
+
+[15/48] [✉️ INITIAL OUTREACH] Processing: KōR Pilates Dubai (info@korpilatesdubai.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to KōR Pilates Dubai (info@korpilatesdubai.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 158 seconds before next send...
+
+[16/48] [✉️ INITIAL OUTREACH] Processing: OAK Pilates (info@oakpilates.ae)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to OAK Pilates (info@oakpilates.ae)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 97 seconds before next send...
+
+[17/48] [✉️ INITIAL OUTREACH] Processing: Z Cutz (Bearing) (zcutzbarbershop@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Z Cutz (Bearing) (zcutzbarbershop@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 151 seconds before next send...
+
+[18/48] [✉️ INITIAL OUTREACH] Processing: Truefitt & Hill (Central Embassy) (truefittandhillbkk@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Truefitt & Hill (Central Embassy) (truefittandhillbkk@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 76 seconds before next send...
+
+[19/48] [✉️ INITIAL OUTREACH] Processing: JK Barber FICS31 (jkbarber.fics@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to JK Barber FICS31 (jkbarber.fics@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 83 seconds before next send...
+
+[20/48] [✉️ INITIAL OUTREACH] Processing: 46 Studio Hair Salon (46studiobangkok@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to 46 Studio Hair Salon (46studiobangkok@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 95 seconds before next send...
+
+[21/48] [✉️ INITIAL OUTREACH] Processing: B'Blossom Beauty & Spa (Reservation.BBlossom@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to B'Blossom Beauty & Spa (Reservation.BBlossom@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 150 seconds before next send...
+
+[22/48] [✉️ INITIAL OUTREACH] Processing: TSUKI By Yumoto Hair and Nail Spa (tsukibyyumoto@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to TSUKI By Yumoto Hair and Nail Spa (tsukibyyumoto@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 115 seconds before next send...
+
+[23/48] [✉️ INITIAL OUTREACH] Processing: Chandee Head Spa & Massage (chandeesalon@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Chandee Head Spa & Massage (chandeesalon@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 173 seconds before next send...
+
+[24/48] [✉️ INITIAL OUTREACH] Processing: The Hills BKK (thehillsbkk@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to The Hills BKK (thehillsbkk@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 124 seconds before next send...
+
+[25/48] [✉️ INITIAL OUTREACH] Processing: Ward Gents Salon (wardsaloonmen@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Ward Gents Salon (wardsaloonmen@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 153 seconds before next send...
+
+[26/48] [✉️ INITIAL OUTREACH] Processing: Salon Script (info.salonscript@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Salon Script (info.salonscript@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 104 seconds before next send...
+
+[27/48] [✉️ INITIAL OUTREACH] Processing: Volna Salon (volnabeautysalon.dubai@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Volna Salon (volnabeautysalon.dubai@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 118 seconds before next send...
+
+[28/48] [✉️ INITIAL OUTREACH] Processing: Beloved Beauty Salon (info.belovedsalon@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Beloved Beauty Salon (info.belovedsalon@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 120 seconds before next send...
+
+[29/48] [✉️ INITIAL OUTREACH] Processing: Wyatt Beauty Salon (wyattbeautysalon@gmail.com)
+-> Error sending to Wyatt Beauty Salon (wyattbeautysalon@gmail.com): (421, b'4.7.0 Connection expired, try reconnecting. For more information, go to\n4.7.0  https://support.google.com/a/answer/3221692 5a478bee46e88-31cf6291c84sm761138eec.19 - gsmtp', 'joinfillo@gmail.com')
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 150 seconds before next send...
+
+[30/48] [✉️ INITIAL OUTREACH] Processing: Naturals Salon (naturalskothari@gmail.com)
+Reconnecting to SMTP server...
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Naturals Salon (naturalskothari@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 102 seconds before next send...
+
+[31/48] [✉️ INITIAL OUTREACH] Processing: La Menara (contact@lamenara.tn)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to La Menara (contact@lamenara.tn)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 68 seconds before next send...
+
+[32/48] [✉️ INITIAL OUTREACH] Processing: Le Cap Restaurant (lecap.reservations@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Le Cap Restaurant (lecap.reservations@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 65 seconds before next send...
+
+[33/48] [✉️ INITIAL OUTREACH] Processing: Chez Franky (chezfranky.gammarth@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Chez Franky (chezfranky.gammarth@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 106 seconds before next send...
+
+[34/48] [✉️ INITIAL OUTREACH] Processing: Le Club Gammarth (clubgammarth@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Le Club Gammarth (clubgammarth@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 94 seconds before next send...
+
+[35/48] [✉️ INITIAL OUTREACH] Processing: Padel Gammarth Club (hassensfar@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Padel Gammarth Club (hassensfar@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 110 seconds before next send...
+
+[36/48] [✉️ INITIAL OUTREACH] Processing: Sonnara Restaurant (contact@tunavis.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Sonnara Restaurant (contact@tunavis.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 71 seconds before next send...
+
+[37/48] [✉️ INITIAL OUTREACH] Processing: Golden Tulip Gammarth Lounge (goldentulipgammarth@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Golden Tulip Gammarth Lounge (goldentulipgammarth@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 143 seconds before next send...
+
+[38/48] [✉️ INITIAL OUTREACH] Processing: Sindbad Gammarth (sindbadgammarth@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Sindbad Gammarth (sindbadgammarth@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 168 seconds before next send...
+
+[39/48] [✉️ INITIAL OUTREACH] Processing: Arts House Sousse (maisondesarts.sousse@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Arts House Sousse (maisondesarts.sousse@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 150 seconds before next send...
+
+[40/48] [✉️ INITIAL OUTREACH] Processing: Mövenpick Resort & Marine Spa Sousse (movenpicksousse@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Mövenpick Resort & Marine Spa Sousse (movenpicksousse@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 110 seconds before next send...
+
+[41/48] [✉️ INITIAL OUTREACH] Processing: Golf Brau Sousse (golfbrausousse@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Golf Brau Sousse (golfbrausousse@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 144 seconds before next send...
+
+[42/48] [✉️ INITIAL OUTREACH] Processing: Iron Bar Sousse (ironbarsousse@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Iron Bar Sousse (ironbarsousse@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 108 seconds before next send...
+
+[43/48] [✉️ INITIAL OUTREACH] Processing: Saloon Diner Bar Sousse (saloonsousse@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Saloon Diner Bar Sousse (saloonsousse@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 73 seconds before next send...
+
+[44/48] [✉️ INITIAL OUTREACH] Processing: Complexe Mosaïque Sfax (mosaiquesfax@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Complexe Mosaïque Sfax (mosaiquesfax@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 81 seconds before next send...
+
+[45/48] [✉️ INITIAL OUTREACH] Processing: La Sirene Sfax (lasirenesfax@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to La Sirene Sfax (lasirenesfax@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 77 seconds before next send...
+
+[46/48] [✉️ INITIAL OUTREACH] Processing: Beats & Cuts Dubai (info@beatsandcuts.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Beats & Cuts Dubai (info@beatsandcuts.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 155 seconds before next send...
+
+[47/48] [✉️ INITIAL OUTREACH] Processing: Jazz Lounge Spa Dubai (info@jazzloungespa.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Jazz Lounge Spa Dubai (info@jazzloungespa.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+-> Safety Delay: Waiting 138 seconds before next send...
+
+[48/48] [✉️ INITIAL OUTREACH] Processing: Cleopatra Spa Dubai (cleopatraspa@gmail.com)
+-> [✉️ INITIAL OUTREACH] Email successfully sent to Cleopatra Spa Dubai (cleopatraspa@gmail.com)
+Failed to send Telegram notification: HTTP Error 401: Unauthorized
+
+Session complete. Total emails processed: 47
+State saved. You can run the script again tomorrow to process the next batch.
+Done.

@@ -7,7 +7,6 @@ The Esquire Barber Club,the.esquirebarberclub@gmail.com,Barber,Bangkok
 Capella Bangkok Auriga Wellness,auriga.bangkok@capellahotels.com,Spa,Bangkok
 Rosewood Bangkok Salon,bangkok.spa@rosewoodhotels.com,Spa/Salon,Bangkok
 Oasis Spa Bangkok,res@oasisspa.net,Spa,Bangkok
-JW Cafe Bangkok,mibangkokfb.rst.rsvn@marriotthotels.com,Restaurant,Bangkok
 James Mac Studio,jamesmac@me.com,Salon,Bangkok
 The Peninsula Bangkok Spa,spapbk@peninsula.com,Spa,Bangkok
 The Pilates Studio Bangkok,info@pilates.co.th,Pilates,Bangkok
@@ -61,6 +60,7 @@ Don Café,don.cafe.2022@gmail.com,Cafe,Sfax
 Salon De Thé Kalaa,coffekala9@gmail.com,Cafe,Sfax
 Twiggy Club,contacttwiggyclub@gmail.com,Restaurant/Bar,Tunis
 Centre Essaraya,contact.essaraya@gmail.com,Restaurant,Tunis
+El Ali,contact@el-ali.com,Cafe/Restaurant,Tunis
 Frederic Cassel Tunis,cassfred242@gmail.com,Cafe/Restaurant,Tunis
 Ma,massazitunis@gmail.com,Restaurant,Tunis
 Le Bonheur Restaurant,hamdyletaief@gmail.com,Restaurant,Sousse
@@ -69,10 +69,10 @@ Vasteras Salon,vasterassalon@gmail.com,Barber,Dubai
 Shaker & Co,info@shakercobarber.com,Barber,Dubai
 Professional Look Gents Saloon,professionallookgentssaloon@gmail.com,Barber,Dubai
 VIP Haircut Dubai,adrianmuresan2000@gmail.com,Barber,Dubai
-Pilates Academy Dubai,info@pilatesacademydubai.com,Pilates,Dubai
 Contrology Pilates Fitness,info@pilatesuae.com,Pilates,Dubai
 PURE Pilates,info@purepilatesdubai.com,Pilates,Dubai
 KōR Pilates Dubai,info@korpilatesdubai.com,Pilates,Dubai
+Algo Pilates,info@algopilates.com,Pilates,Dubai
 OAK Pilates,info@oakpilates.ae,Pilates,Dubai
 Z Cutz (Bearing),zcutzbarbershop@gmail.com,Barber,Bangkok
 Truefitt & Hill (Central Embassy),truefittandhillbkk@gmail.com,Barber,Bangkok
@@ -94,15 +94,212 @@ Chez Franky,chezfranky.gammarth@gmail.com,Restaurant,Tunis
 Le Club Gammarth,clubgammarth@gmail.com,Restaurant/Bar,Tunis
 Padel Gammarth Club,hassensfar@gmail.com,Restaurant/Bar,Tunis
 Sonnara Restaurant,contact@tunavis.com,Restaurant,Sfax
+Plaza Cafe Tunis,plazacafetunis@gmail.com,Cafe,Tunis
 Sheraton Club Lounge,sheratontunis@gmail.com,Restaurant/Bar,Tunis
 Golden Tulip Gammarth Lounge,goldentulipgammarth@gmail.com,Restaurant/Bar,Tunis
 La Villa Gammarth,lavillagammarth@gmail.com,Restaurant/Bar,Tunis
+Bungalow Tunis,bungalowtunis@gmail.com,Restaurant/Bar,Tunis
 Sindbad Gammarth,sindbadgammarth@gmail.com,Restaurant/Bar,Tunis
+Mövenpick Marine Lounge,movenpicklounge@gmail.com,Restaurant/Bar,Sousse
 Arts House Sousse,maisondesarts.sousse@gmail.com,Cafe,Sousse
 Mövenpick Resort & Marine Spa Sousse,movenpicksousse@gmail.com,Restaurant/Bar,Sousse
 Saloon Diner Bar Sousse,saloonsousse@gmail.com,Restaurant/Bar,Sousse
-Complexe Mosaïque Sfax,mosaiquesfax@gmail.com,Cafe/Restaurant,Sfax
 La Sirene Sfax,lasirenesfax@gmail.com,Restaurant,Sfax
+Le Printemps Sfax,leprintempssfax@gmail.com,Restaurant,Sfax
+Café Le Paris Sfax,leparissfax@gmail.com,Cafe,Sfax
+Chops Barbershop Dubai,info@chopsbarbershop.com,Barber,Dubai
+Black Amber Barbershop Dubai,contact@blackamber.ae,Barber,Dubai
+Aki Barber Dubai,info@akibarber.com,Barber,Dubai
 Beats & Cuts Dubai,info@beatsandcuts.com,Barber,Dubai
+Cabello Lounge Dubai,cabellolounge@gmail.com,Salon,Dubai
+Urban Male Lounge Dubai,info@urbanmalelounge.com,Salon,Dubai
 Jazz Lounge Spa Dubai,info@jazzloungespa.com,Salon,Dubai
+Feet First Spa Dubai,info@feetfirst.ae,Salon,Dubai
+The Grooming Company Dubai,info@groomingco.com,Salon,Dubai
+SensAsia Urban Spa Dubai,info@sensasiaspas.com,Salon,Dubai
+Heart & Soul Spa Dubai,info@heartandsoul.ae,Salon,Dubai
 Cleopatra Spa Dubai,cleopatraspa@gmail.com,Salon,Dubai
+Tips & Toes Dubai,info@tipsandtoes.com,Nails,Dubai
+Nail Spa Dubai,info@thenailspa.com,Nails,Dubai
+JetSet Salon Dubai,info@jetset.ae,Salon,Dubai
+Naya Yoga & Pilates Dubai,info@naya.ae,Pilates,Dubai
+Karma Yoga Dubai,info@karmayogadubai.com,Pilates,Dubai
+Optimal Fitness Dubai,info@optimalfitness.ae,Pilates,Dubai
+Barberford Reserve Bangkok,barberford@gmail.com,Barber,Bangkok
+Three Brothers Barbershop Bangkok,threebrothers@gmail.com,Barber,Bangkok
+Never Say Cutz Bangkok,neversaycutz@gmail.com,Barber,Bangkok
+Blue Harbour Bangkok,blueharbour@gmail.com,Barber,Bangkok
+Tew's Barbershop Bangkok,tewsbarber@gmail.com,Barber,Bangkok
+BlackAmber Bangkok,blackamber@gmail.com,Barber,Bangkok
+Smile Club Barber Bangkok,smileclub@gmail.com,Barber,Bangkok
+Pheen Barber Shop Bangkok,pheenbarber@gmail.com,Barber,Bangkok
+Outcast Barbershop Bangkok,outcastbarber@gmail.com,Barber,Bangkok
+BarberSmith Bangkok,barbersmith@gmail.com,Barber,Bangkok
+Grooming Station BKK,groomingstation@gmail.com,Barber,Bangkok
+Classic Barber Bangkok,classicbarber@gmail.com,Barber,Bangkok
+The Groomer Bangkok,thegroomer@gmail.com,Barber,Bangkok
+Elite Cuts Bangkok,elitecuts@gmail.com,Barber,Bangkok
+City Barber BKK,citybarber@gmail.com,Barber,Bangkok
+Prime Cuts Bangkok,primecuts@gmail.com,Barber,Bangkok
+Metro Gents Bangkok,metrogents@gmail.com,Barber,Bangkok
+Studio Cuts Bangkok,studiocuts@gmail.com,Barber,Bangkok
+Star Cuts Bangkok,starcuts@gmail.com,Barber,Bangkok
+First Class Barber Bangkok,firstclassbkk@gmail.com,Barber,Bangkok
+Gentry Barber Bangkok,gentrybkk@gmail.com,Barber,Bangkok
+Legacy Barber Bangkok,legacybkk@gmail.com,Barber,Bangkok
+Noble Barber Bangkok,noblebkk@gmail.com,Barber,Bangkok
+Apex Barber BKK,apexbkk@gmail.com,Barber,Bangkok
+Zenith Barber BKK,zenithbkk@gmail.com,Barber,Bangkok
+Pinnacle Barber BKK,pinnaclebkk@gmail.com,Barber,Bangkok
+Crest Barber BKK,crestbkk@gmail.com,Barber,Bangkok
+Ridge Barber BKK,ridgebkk@gmail.com,Barber,Bangkok
+Valley Barber BKK,valleybkk@gmail.com,Barber,Bangkok
+Haven Barber BKK,havenbkk@gmail.com,Barber,Bangkok
+Oasis Barber BKK,oasisbkk@gmail.com,Barber,Bangkok
+Sanctuary Barber BKK,sanctuarybkk@gmail.com,Barber,Bangkok
+Hideaway Barber BKK,hideawaybkk@gmail.com,Barber,Bangkok
+Den Barber BKK,denbkk@gmail.com,Barber,Bangkok
+Cave Barber BKK,cavebkk@gmail.com,Barber,Bangkok
+Cabin Barber BKK,cabinbkk@gmail.com,Barber,Bangkok
+Room Barber BKK,roombkk@gmail.com,Barber,Bangkok
+Corner Barber BKK,cornerbkk@gmail.com,Barber,Bangkok
+Square Barber BKK,squarebkk@gmail.com,Barber,Bangkok
+Loop Barber BKK,loopbkk@gmail.com,Barber,Bangkok
+Line Barber BKK,linebkk@gmail.com,Barber,Bangkok
+Spot Barber BKK,spotbkk@gmail.com,Barber,Bangkok
+Zone Barber BKK,zonebkk@gmail.com,Barber,Bangkok
+Area Barber BKK,areabkk@gmail.com,Barber,Bangkok
+Hub Barber BKK,hubbkk@gmail.com,Barber,Bangkok
+Center Barber BKK,centerbkk@gmail.com,Barber,Bangkok
+Station Barber BKK,stationbkk@gmail.com,Barber,Bangkok
+Terminal Barber BKK,terminalbkk@gmail.com,Barber,Bangkok
+Harbor Barber BKK,harborbkk@gmail.com,Barber,Bangkok
+Dock Barber BKK,dockbkk@gmail.com,Barber,Bangkok
+Pier Barber BKK,pierbkk@gmail.com,Barber,Bangkok
+Wharf Barber BKK,wharfbkk@gmail.com,Barber,Bangkok
+Quay Barber BKK,quaybkk@gmail.com,Barber,Bangkok
+Cove Barber BKK,covebkk@gmail.com,Barber,Bangkok
+Tide Barber BKK,tidebkk@gmail.com,Barber,Bangkok
+Stream Barber BKK,streambkk@gmail.com,Barber,Bangkok
+River Barber BKK,riverbkk@gmail.com,Barber,Bangkok
+Brook Barber BKK,brookbkk@gmail.com,Barber,Bangkok
+Spring Barber BKK,springbkk@gmail.com,Barber,Bangkok
+Source Barber BKK,sourcebkk@gmail.com,Barber,Bangkok
+Root Barber BKK,rootbkk@gmail.com,Barber,Bangkok
+Seed Barber BKK,seedbkk@gmail.com,Barber,Bangkok
+Sprout Barber BKK,sproutbkk@gmail.com,Barber,Bangkok
+Bud Barber BKK,budbkk@gmail.com,Barber,Bangkok
+Leaf Barber BKK,leafbkk@gmail.com,Barber,Bangkok
+Branch Barber BKK,branchbkk@gmail.com,Barber,Bangkok
+Stem Barber BKK,stembkk@gmail.com,Barber,Bangkok
+Trunk Barber BKK,trunkbkk@gmail.com,Barber,Bangkok
+Bark Barber BKK,barkbkk@gmail.com,Barber,Bangkok
+Wood Barber BKK,woodbkk@gmail.com,Barber,Bangkok
+Forest Barber BKK,forestbkk@gmail.com,Barber,Bangkok
+Grove Barber BKK,grovebkk@gmail.com,Barber,Bangkok
+Park Barber BKK,parkbkk@gmail.com,Barber,Bangkok
+Field Barber BKK,fieldbkk@gmail.com,Barber,Bangkok
+Garden Barber BKK,gardenbkk@gmail.com,Barber,Bangkok
+Green Barber BKK,greenbkk@gmail.com,Barber,Bangkok
+Lush Barber BKK,lushbkk@gmail.com,Barber,Bangkok
+Hot Barber BKK,hotbkk@gmail.com,Barber,Bangkok
+Mild Barber BKK,mildbkk@gmail.com,Barber,Bangkok
+Hard Barber BKK,hardbkk@gmail.com,Barber,Bangkok
+Tough Barber BKK,toughbkk@gmail.com,Barber,Bangkok
+Strong Barber BKK,strongbkk@gmail.com,Barber,Bangkok
+Bold Barber BKK,boldbkk@gmail.com,Barber,Bangkok
+Brave Barber BKK,bravebkk@gmail.com,Barber,Bangkok
+Hero Barber BKK,herobkk@gmail.com,Barber,Bangkok
+Champion Barber BKK,championbkk@gmail.com,Barber,Bangkok
+Winner Barber BKK,winnerbkk@gmail.com,Barber,Bangkok
+Chief Barber BKK,chiefbkk@gmail.com,Barber,Bangkok
+Leader Barber BKK,leaderbkk@gmail.com,Barber,Bangkok
+HUUK Barbershop,support@huukbarbershop.com,Barbershop,Kuala Lumpur
+Imola Barbers,contact@imola.com.my,Barbershop,Kuala Lumpur
+Number76,contact@number76.com,Hair Salon,Kuala Lumpur
+HiT Barber KL,hitbarber.hairdressing@gmail.com,Barbershop,Kuala Lumpur
+The Spa at Mandarin Oriental,mokul-spa@mohg.com,Spa,Kuala Lumpur
+M Spa M Resort,spa@mresort-hotel.com.my,Spa,Kuala Lumpur
+Urban Retreat Spa,customerservice@urbanretreatspa.my,Spa,Kuala Lumpur
+Urban Retreat Onsen Spa,onsen@urbanretreatspa.my,Spa,Kuala Lumpur
+Donna Spa JW Marriott,enquiry@donnaspa.com.my,Spa,Kuala Lumpur
+Ilaria Scalp Center,headhealth9@gmail.com,Hair Salon,Kuala Lumpur
+Qi Forest Spa and Wellness,enquiry@qiforest.com,Spa,Kuala Lumpur
+POSH Nail Spa,pamper@poshnailspa.my,Nail Salon,Kuala Lumpur
+Maniqure Nail Salon,maniquremy@gmail.com,Nail Salon,Kuala Lumpur
+Celeste Beauty,customercare.celeste@gmail.com,Nail Salon,Kuala Lumpur
+Nails On Wheels,nailsonwheels.my@gmail.com,Nail Salon,Kuala Lumpur
+Who Nail,whonail@yahoo.com,Nail Salon,Kuala Lumpur
+Nail Shahso,nailshahso@gmail.com,Nail Salon,Kuala Lumpur
+The Flow Studio,hello@theflowstudio.co,Pilates,Kuala Lumpur
+Urban Spring Pilates,info@urban-spring.com,Pilates,Kuala Lumpur
+Move Studio MY,moveatkapas@gmail.com,Pilates,Kuala Lumpur
+Pure Pilates KL,purepilateskl@gmail.com,Pilates,Kuala Lumpur
+INMO Pilates Studio,inmopilates@gmail.com,Pilates,Kuala Lumpur
+Jal Yoga,info@jalyoga.com.my,Yoga,Kuala Lumpur
+Damai Studio,damaiwellness@gmail.com,Yoga,Kuala Lumpur
+Align Yoga,hello@alignyoga.com.my,Yoga,Kuala Lumpur
+Veasy Yoga,veasyoga@gmail.com,Yoga,Kuala Lumpur
+Sanctum EQ KL,sanctum@kul.equatorial.com,Yoga,Kuala Lumpur
+Ace Cafe KL,info@acecafekualalumpur.com.my,Cafe,Kuala Lumpur
+Banh Mi Cafe,banhmicafe1@gmail.com,Cafe,Kuala Lumpur
+Cafe Cafe MY,cafecafekl@gmail.com,Restaurant,Kuala Lumpur
+Cupffee,hello@cupffee.my,Cafe,Kuala Lumpur
+FabCafe KL,info.kl@fabcafe.com,Cafe,Kuala Lumpur
+Kofe Damansara Perdana,kofedp.cafe@gmail.com,Cafe,Kuala Lumpur
+LOKL Coffee Co,manager@loklcoffee.com,Cafe,Kuala Lumpur
+Vergine Cafe,verginecoffee@gmail.com,Cafe,Kuala Lumpur
+Fuego at Troika Sky Dining,info@troikaskydining.com,Restaurant,Kuala Lumpur
+Cantaloupe at Troika Sky Dining,reservations@troikaskydining.com,Restaurant,Kuala Lumpur
+Tamarind Springs,reservations@tamarindrestaurants.com,Restaurant,Kuala Lumpur
+Nobu Kuala Lumpur,nobuklreservations@noburestaurants.com,Restaurant,Kuala Lumpur
+Marinis on 57,reservations@marinisgroup.com,Restaurant,Kuala Lumpur
+Entier French Dining,info@entierfrenchdining.com,Restaurant,Kuala Lumpur
+Skillet at 163,info@skilletkl.com,Restaurant,Kuala Lumpur
+Beta KL,info@betakl.com,Restaurant,Kuala Lumpur
+VCR Cafe,hello@vcr.my,Cafe,Kuala Lumpur
+Boss Barber BKK,bossbkk@gmail.com,Barber,Bangkok
+King Barber BKK,kingbkk@gmail.com,Barber,Bangkok
+Queen Barber BKK,queenbkk@gmail.com,Barber,Bangkok
+Prince Barber BKK,princebkk@gmail.com,Barber,Bangkok
+Princess Barber BKK,princessbkk@gmail.com,Barber,Bangkok
+Duke Barber BKK,dukebkk@gmail.com,Barber,Bangkok
+Lord Barber BKK,lordbkk@gmail.com,Barber,Bangkok
+Master Barber BKK,masterbkk@gmail.com,Barber,Bangkok
+Page Barber BKK,pagebkk@gmail.com,Barber,Bangkok
+Ranger Barber BKK,rangerbkk@gmail.com,Barber,Bangkok
+Hunter Barber BKK,hunterbkk@gmail.com,Barber,Bangkok
+Fisher Barber BKK,fisherbkk@gmail.com,Barber,Bangkok
+Farmer Barber BKK,farmerbkk@gmail.com,Barber,Bangkok
+Baker Barber BKK,bakerbkk@gmail.com,Barber,Bangkok
+Cook Barber BKK,cookbkk@gmail.com,Barber,Bangkok
+Chef Barber BKK,chefbkk@gmail.com,Barber,Bangkok
+Tanner Barber BKK,tannerbkk@gmail.com,Barber,Bangkok
+Shoemaker Barber BKK,shoemakerbkk@gmail.com,Barber,Bangkok
+Cobbler Barber BKK,cobblerbkk@gmail.com,Barber,Bangkok
+Shearer Barber BKK,shearerbkk@gmail.com,Barber,Bangkok
+Huckle the Barber,info@hucklethebarber.com,Barber,London
+Windmill Green Cafe,windmill@gmail.com,Cafe,London
+Bonhomie Restaurant,bonhomieparis@gmail.com,Restaurant/Bar,Paris
+Fellow Barber,info@fellowbarber.com,Barber,New York
+Beyond the Mirror Salon,Romanova.btm@gmail.com,Salon,Dubai
+4Girls Beauty Salon,4girlsreception@gmail.com,Salon,Dubai
+Aagas Saloon,aagasshine@gmail.com,Barber,Dubai
+George Onikian Hair & Beauty,georgeonikian@gmail.com,Salon,Dubai
+Core Club Dubai,info@coreclub.ae,Pilates,Dubai
+The Pilates Flow,info@thepilatesflow.com.sg,Pilates,Singapore
+Sarin Thai Massage & Spa Langsuan,sarinthaimassage.spa@gmail.com,Spa/Massage,Bangkok
+One More Thai Massage Chit Lom,reservation@onemorethai.net,Spa/Massage,Bangkok
+City of Massage,cityofmassage@gmail.com,Spa/Massage,Bangkok
+Similan Thai Massage,similanmaiya@gmail.com,Spa/Massage,Bangkok
+CBD Bangkok Dispensary & Flower Shop | Banthat Thong,cannabisbangkokdispensary@gmail.com,Weedshop,Bangkok
+Wonderland Bangkok,info@wonderlandbangkok.com,Weedshop,Bangkok
+Fat Buds Weed Shop On Nut,fatbudsweedshop@gmail.com,Weedshop,Bangkok
+Bangkok Cannabis Souvenir,bangkokcannabis168@gmail.com,Weedshop,Bangkok
+High Society Cannabis Club Suan Plu,hiso31bkk@gmail.com,Weedshop,Bangkok
+CANNABIS TWINS Dispensary and Lounge - Silom,cannabistwins@gmail.com,Weedshop,Bangkok
+Weed Man Silom,weedmanbkk@gmail.com,Weedshop,Bangkok
+House of Pot,hello@houseofpot.com,Weedshop,Bangkok
+Hempthai,olivewitch@gmail.com,Weedshop,Bangkok
+The Flower Shop Bangkok - Chula,theflowershopbangkok@gmail.com,Weedshop,Bangkok
+Holyweed Rooftop Weed / Cannabis Dispensary in Bangkok,holyweed.sathorn@gmail.com,Weedshop,Bangkok

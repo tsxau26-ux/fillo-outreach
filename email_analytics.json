@@ -1,0 +1,39 @@
+{
+    "opens": {
+        "unittest.store@example.com": {
+            "count": 1,
+            "first_open": 1784811320.922248,
+            "last_open": 1784811320.922248,
+            "history": [
+                {
+                    "ts": 1784811320.922248,
+                    "ip": "127.0.0.1",
+                    "ua": "PyTest Agent"
+                }
+            ]
+        }
+    },
+    "clicks": {
+        "unittest.store@example.com": {
+            "count": 1,
+            "first_click": 1784811321.745256,
+            "last_click": 1784811321.745256,
+            "url": "https://t.me/Filloappbot"
+        }
+    },
+    "events": [
+        {
+            "type": "open",
+            "email": "unittest.store@example.com",
+            "ts": 1784811320.922248,
+            "ip": "127.0.0.1",
+            "ua": "PyTest Agent"
+        },
+        {
+            "type": "click",
+            "email": "unittest.store@example.com",
+            "url": "https://t.me/Filloappbot",
+            "ts": 1784811321.745256
+        }
+    ]
+}

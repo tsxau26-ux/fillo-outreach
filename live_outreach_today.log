@@ -1,0 +1,28 @@
+Running Auto-Refill...
+=======================================
+      Fillo Daily Lead Auto-Refill     
+=======================================
+
+Found 347 existing email leads in 'fillo_leads.csv'.
+Found 0 fresh leads available in the pool.
+Not enough new leads available to refill. The pool is running low.
+Auto-triggering the lead generator to replenish the pool...
+=======================================
+      Fillo Lead Generator Engine      
+=======================================
+
+🔍 Searching Google Maps for: 'Hair Salon in London' (Target: 40 places)
+⏳ Starting Apify Scraper... (This may take a few minutes)
+❌ Failed to run Apify actor: Authentication token was not provided
+Found 0 fresh leads available after auto-replenishment.
+Still no new leads available after generation attempt. Aborting refill.
+Running Check Replies...
+=======================================
+        Fillo Outreach Reply Checker   
+=======================================
+
+Connecting to Gmail IMAP server...
+Authenticated successfully.
+Found 0 unread email(s) in inbox:
+
+Running Outreach Script...
