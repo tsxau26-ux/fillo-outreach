@@ -50,7 +50,14 @@ def main():
         import random
         from lead_generator import generate_leads
         
-        niches = ["Spa", "Barbershop", "Pilates", "Restaurant", "Cafe", "Nail Salon", "Hair Salon"]
+        niches = [
+            # 70% Food & Beverage (Top Priority)
+            "Restaurant", "Coffee Shop", "Cafe", "Fine Dining", "Bar", "Pub", "Bistro", "Cocktail Bar",
+            "Restaurant", "Coffee Shop", "Cafe", "Fine Dining", "Bar", "Pub", "Bistro", "Cocktail Bar",
+            # 30% Other High-Value Niches
+            "Medspa", "Aesthetics Clinic", "Dental Clinic", "Chiropractor",
+            "High-end Barbershop", "Luxury Hair Salon", "Boutique Gym", "Pilates Studio"
+        ]
         locations = [
             # Asia
             "Tokyo", "Singapore", "Hong Kong", "Bangkok", "Kuala Lumpur", "Seoul", "Taipei",

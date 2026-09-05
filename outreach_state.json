@@ -1086,5 +1086,31 @@
     "baronbkk@gmail.com": "email_not_found",
     "info@slam.ae": "email_not_found",
     "info@greendayproducts.com": "email_not_found",
-    "info@medmenthailand.com": "email_not_found"
+    "info@medmenthailand.com": "email_not_found",
+    "hello@houseofpot.com": "email_not_found",
+    "support@huukbarbershop.com": {
+        "status": "sent",
+        "sent_at": 1788650772.446773,
+        "followup_status": "none"
+    },
+    "contact@imola.com.my": {
+        "status": "sent",
+        "sent_at": 1788650844.410816,
+        "followup_status": "none"
+    },
+    "contact@number76.com": {
+        "status": "sent",
+        "sent_at": 1788651028.353573,
+        "followup_status": "none"
+    },
+    "hitbarber.hairdressing@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788651134.008047,
+        "followup_status": "none"
+    },
+    "mokul-spa@mohg.com": {
+        "status": "sent",
+        "sent_at": 1788651325.518991,
+        "followup_status": "none"
+    }
 }

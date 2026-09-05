@@ -143,7 +143,7 @@ def get_template(category):
     cat_lower = category.lower()
     if "barber" in cat_lower:
         return TEMPLATES["barber"]
-    elif any(word in cat_lower for word in ["restaurant", "cafe", "coffee", "dining", "food"]):
+    elif any(word in cat_lower for word in ["restaurant", "cafe", "coffee", "dining", "food", "bar", "pub", "bistro"]):
         return TEMPLATES["f_and_b"]
     elif any(word in cat_lower for word in ["clinic", "medspa", "chiropractor", "massage", "medical", "dental"]):
         return TEMPLATES["clinic"]
