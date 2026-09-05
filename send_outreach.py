@@ -30,66 +30,90 @@ TEMPLATES = {
         "subject": "Last-minute cancellations at {business_name}",
         "body": """Hi {business_name} team,
 
-I'm one of the founders of a project called Fillo, and I was checking out your barbershop in {location}. Really love the brand you've built!
+I'm reaching out to you directly because I've been talking to a lot of shop owners recently, and they all hate the exact same thing: last-minute cancellations. When a chair sits empty, that's just lost money you can't get back.
 
-I'm reaching out to you directly because I've been talking to a lot of shop owners recently, and they all hate the exact same thing: last-minute cancellations. When a chair sits empty for an hour, that's lost revenue you just never get back.
+I'm the founder of Fillo, a new tool built specifically to fix this. When you have an unexpected empty chair, you tap one button on your phone. Fillo instantly generates a branded flash-discount for {business_name} and sends it directly to your clients on Telegram. 
 
-We built Fillo specifically to fix this. When you get a sudden cancellation or have a quiet morning, you just tap one button on Fillo. It instantly creates a beautiful flash promo for your shop and broadcasts it directly to your clients on Telegram. 
+Because Telegram is instant, your clients see it immediately and can grab the open slot in seconds. No friction, no marketing effort required on your end.
 
-Because it's on Telegram, 90%+ of your clients actually see it instantly (unlike Instagram where the algorithm hides it). They can book that empty slot directly through the app in seconds. No phone calls, no friction.
-
-It runs completely in the background and doesn't replace your current booking system. 
-
-Since we are expanding in {location}, I'd love to give you a full month completely free so you can see the extra revenue it brings in. No credit cards, no commitments. It takes 2 minutes to set up right here:
+I'm giving local shops in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
 👉 Start your free trial: https://t.me/Filloappbot
 
-Would you be open to testing it out this week?
+Would love to hear if you're open to testing it out!
 
-Cheers,
+Best,
 The Fillo Team"""
     },
     "salon_spa": {
-        "subject": "Filling empty slots at {business_name}",
+        "subject": "Filling empty appointments at {business_name}",
         "body": """Hi {business_name} team,
 
-I'm the founder of a project called Fillo. I came across your salon in {location} and really admire the experience you provide.
+I'm reaching out to you directly because I've been talking to a lot of salon and spa owners recently, and they all hate the exact same thing: last-minute cancellations and quiet hours. When an appointment goes unfilled, that's lost revenue.
 
-I'm reaching out because almost every salon owner I speak to deals with the same frustration: late cancellations and quiet mornings where therapists or stylists are sitting idle. That's just lost revenue for the business.
+I'm the founder of Fillo, a new tool built specifically to fix this. When you have unexpected downtime, you tap one button. Fillo instantly generates a branded flash-promo for {business_name} and sends it directly to your clients on Telegram. 
 
-We built Fillo to solve exactly this. If a slot suddenly opens up, you tap one button. Fillo instantly generates a branded flash promo and sends it straight to your clients on Telegram. 
+Because Telegram is instant, your clients see it immediately and can book the open slot in seconds. It works alongside your existing booking system seamlessly.
 
-Since Telegram notifications go straight to their phones, 90%+ of your clients see it instantly. They can book the open slot directly from the message in seconds. No back-and-forth phone calls needed.
-
-It doesn't replace your current software, it just sits alongside it to catch the revenue that usually slips through the cracks.
-
-I'd love to give {business_name} a full month completely free to test it out. No credit cards, no commitments. Setup takes 2 minutes directly on Telegram:
+I'm giving local businesses in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
 👉 Start your free trial: https://t.me/Filloappbot
 
-Let me know if you'd be open to trying it out!
+Let me know if you'd be open to testing it out!
 
-Cheers,
+Best,
 The Fillo Team"""
     },
     "pilates": {
         "subject": "Empty reformer spots at {business_name}?",
         "body": """Hi {business_name} team,
 
-I'm one of the founders of Fillo, and I was looking at your studio in {location}. Love your approach to training!
+I'm reaching out to you directly because I've been talking to studio owners recently, and they all struggle with the exact same thing: classes running with empty mats or reformers. 
 
-I wanted to reach out because we've noticed a massive pain point for studio owners: classes almost always have 1 or 2 empty spots due to late cancellations. When those spots go unfilled, it's lost revenue.
+I'm the founder of Fillo, a new tool built specifically to fill those empty spots. When you have a class that isn't full, you tap one button. Fillo instantly generates a branded last-minute drop-in promo for {business_name} and sends it directly to your clients on Telegram. 
 
-We built Fillo to fix this. When a class has an unexpected opening, you tap one button. Fillo automatically creates a branded promo for your studio and broadcasts it instantly to your member list on Telegram. 
+Because Telegram is instant, your clients see it immediately and can grab the spot in seconds. It's the easiest way to maximize revenue per class with zero marketing effort.
 
-Because it's Telegram, open rates are 90%+ (way higher than email). Your members see the alert instantly and can grab the open spot in seconds. 
-
-It doesn't replace your main scheduling system—it just acts as a safety net to fill the empty spots your existing setup can't reach in time.
-
-I'd love to offer your studio a full month completely free to see how much extra revenue it captures. No credit card required. You can set it up in 2 minutes right here:
+I'm giving studios in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
 👉 Start your free trial: https://t.me/Filloappbot
 
-Would you be open to testing it this week?
+Would love to hear if you're open to testing it out!
 
-Cheers,
+Best,
+The Fillo Team"""
+    },
+    "f_and_b": {
+        "subject": "Empty tables at {business_name}",
+        "body": """Hi {business_name} team,
+
+I'm reaching out because I've been talking to a lot of restaurant and cafe owners recently, and they all struggle with the same thing: quiet hours and dead periods. When tables are sitting empty, that's just lost revenue.
+
+I'm the founder of Fillo, a new tool built specifically to drive foot traffic during those slow hours. When things get quiet, you tap one button. Fillo instantly generates a branded flash-promo for {business_name} (like a 2-hour happy hour special) and sends it directly to your regular customers on Telegram. 
+
+Because Telegram is instant, your customers see the push notification immediately and can reserve a table or drop by. It brings people through the door exactly when you need them.
+
+I'm giving local spots in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
+👉 Start your free trial: https://t.me/Filloappbot
+
+Let me know if you'd be open to testing it out!
+
+Best,
+The Fillo Team"""
+    },
+    "clinic": {
+        "subject": "Last-minute cancellations at {business_name}",
+        "body": """Hi {business_name} team,
+
+I'm reaching out because I've been talking to clinic and practice managers recently, and they all hate the exact same thing: last-minute cancellations and no-shows. 
+
+I'm the founder of Fillo, a new tool built specifically to recover that lost revenue. When a patient cancels unexpectedly, you tap one button. Fillo instantly generates a branded alert for the newly available slot at {business_name} and sends it directly to your waitlist/patients on Telegram. 
+
+Because Telegram is instant, patients see the notification immediately and can claim the appointment in seconds. 
+
+I'm giving clinics in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
+👉 Start your free trial: https://t.me/Filloappbot
+
+Let me know if you'd be open to testing it out this week!
+
+Best,
 The Fillo Team"""
     },
     "general": {
@@ -119,30 +143,17 @@ def get_template(category):
     cat_lower = category.lower()
     if "barber" in cat_lower:
         return TEMPLATES["barber"]
-    elif any(word in cat_lower for word in ["spa", "salon", "nail"]):
+    elif any(word in cat_lower for word in ["restaurant", "cafe", "coffee", "dining", "food"]):
+        return TEMPLATES["f_and_b"]
+    elif any(word in cat_lower for word in ["clinic", "medspa", "chiropractor", "massage", "medical", "dental"]):
+        return TEMPLATES["clinic"]
+    elif any(word in cat_lower for word in ["spa", "salon", "nail", "tattoo"]):
         return TEMPLATES["salon_spa"]
-    elif "pilates" in cat_lower:
+    elif any(word in cat_lower for word in ["pilates", "gym", "fitness", "yoga"]):
         return TEMPLATES["pilates"]
     else:
         return TEMPLATES["general"]
 
-# Follow-Up Email Template (Sent 3 days after Email #1 if no reply)
-FOLLOWUP_TEMPLATE = {
-    "subject": "Quick follow-up: {business_name}",
-    "body": """Hi {business_name} team,
-
-Quick bump on my previous email, wanted to make sure it didn't get buried!
-
-We're currently offering local businesses in {location} a 1-month free trial of Fillo to fill quiet hours and last-minute cancellations (no credit card or software changes needed).
-
-You can claim your free trial in under 2 minutes directly on Telegram:
-👉 Start your free trial here: https://t.me/Filloappbot
-
-Would love to hear if you're open to trying it out this week!
-
-Best,
-The Fillo Team"""
-}
 
 def load_state():
     if os.path.exists(STATE_FILE_PATH):
