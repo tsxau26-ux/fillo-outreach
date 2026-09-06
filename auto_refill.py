@@ -54,8 +54,8 @@ def main():
             # 70% Food & Beverage (Top Priority)
             "Restaurant", "Coffee Shop", "Cafe", "Fine Dining", "Bar", "Pub", "Bistro", "Cocktail Bar",
             "Restaurant", "Coffee Shop", "Cafe", "Fine Dining", "Bar", "Pub", "Bistro", "Cocktail Bar",
-            # 30% Other High-Value Niches
-            "Medspa", "Aesthetics Clinic", "Dental Clinic", "Chiropractor",
+            # 30% Other High-Value Niches (No Nails/Spas)
+            "Aesthetics Clinic", "Dental Clinic", "Chiropractor", "Physiotherapy",
             "High-end Barbershop", "Luxury Hair Salon", "Boutique Gym", "Pilates Studio"
         ]
         locations = [
