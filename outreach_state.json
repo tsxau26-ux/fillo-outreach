@@ -1113,9 +1113,9 @@
         "sent_at": 1788651325.518991,
         "followup_status": "none"
     },
-    "info@entierfrenchdining.com": "email_not_found",
-    "info@skilletkl.com": "email_not_found",
-    "info@betakl.com": "email_not_found",
+    "info@entierfrenchdining.com": "bounced",
+    "info@skilletkl.com": "bounced",
+    "info@betakl.com": "bounced",
     "spa@mresort-hotel.com.my": {
         "status": "sent",
         "sent_at": 1788673542.7091334,
@@ -1364,6 +1364,111 @@
     "bakerbkk@gmail.com": {
         "status": "sent",
         "sent_at": 1788679472.1961937,
+        "followup_status": "none"
+    },
+    "cookbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788760419.8913004,
+        "followup_status": "none"
+    },
+    "chefbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788760559.366129,
+        "followup_status": "none"
+    },
+    "tannerbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788760691.742165,
+        "followup_status": "none"
+    },
+    "shoemakerbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788760770.9799693,
+        "followup_status": "none"
+    },
+    "cobblerbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788760864.4458265,
+        "followup_status": "none"
+    },
+    "shearerbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788760939.3079715,
+        "followup_status": "none"
+    },
+    "info@hucklethebarber.com": {
+        "status": "sent",
+        "sent_at": 1788761102.0899146,
+        "followup_status": "none"
+    },
+    "windmill@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788761227.424827,
+        "followup_status": "none"
+    },
+    "bonhomieparis@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788761343.993633,
+        "followup_status": "none"
+    },
+    "info@fellowbarber.com": {
+        "status": "sent",
+        "sent_at": 1788761455.6806931,
+        "followup_status": "none"
+    },
+    "aagasshine@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788761552.7177348,
+        "followup_status": "none"
+    },
+    "cannabisbangkokdispensary@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788761618.5474908,
+        "followup_status": "none"
+    },
+    "info@wonderlandbangkok.com": {
+        "status": "sent",
+        "sent_at": 1788761686.168913,
+        "followup_status": "none"
+    },
+    "fatbudsweedshop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788761844.501869,
+        "followup_status": "none"
+    },
+    "bangkokcannabis168@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788761970.6701214,
+        "followup_status": "none"
+    },
+    "hiso31bkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788762068.8378987,
+        "followup_status": "none"
+    },
+    "cannabistwins@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788762161.9584756,
+        "followup_status": "none"
+    },
+    "weedmanbkk@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788762333.038969,
+        "followup_status": "none"
+    },
+    "olivewitch@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788762491.348012,
+        "followup_status": "none"
+    },
+    "theflowershopbangkok@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788762590.531927,
+        "followup_status": "none"
+    },
+    "holyweed.sathorn@gmail.com": {
+        "status": "sent",
+        "sent_at": 1788762732.7570436,
         "followup_status": "none"
     }
 }
