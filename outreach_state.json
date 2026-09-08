@@ -1211,11 +1211,7 @@
         "sent_at": 1788675931.7316566,
         "followup_status": "none"
     },
-    "hello@alignyoga.com.my": {
-        "status": "sent",
-        "sent_at": 1788676004.6043437,
-        "followup_status": "none"
-    },
+    "hello@alignyoga.com.my": "bounced",
     "veasyoga@gmail.com": {
         "status": "sent",
         "sent_at": 1788676087.005323,
