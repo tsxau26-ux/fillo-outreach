@@ -7,6 +7,24 @@ POOL_FILE = "leads_pool.csv"
 LEADS_FILE = "fillo_leads.csv"
 REFILL_COUNT = 50
 
+
+def alert(text):
+    """Ping the owner on Telegram. Silent if no token/chat id is configured."""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    print(text)
+    if not token or not chat_id:
+        return
+    import ssl
+    import urllib.request
+    import urllib.parse
+    data = urllib.parse.urlencode({"chat_id": chat_id, "text": text}).encode("utf-8")
+    try:
+        req = urllib.request.Request(f"https://api.telegram.org/bot{token}/sendMessage", data=data)
+        urllib.request.urlopen(req, context=ssl._create_unverified_context(), timeout=15)
+    except Exception as e:
+        print(f"Telegram alert failed: {e}")
+
 def load_existing_emails(leads_file):
     emails = set()
     if os.path.exists(leads_file):
@@ -70,10 +88,12 @@ def main():
         target_niche = random.choice(niches)
         target_location = random.choice(locations)
         
+        if not os.environ.get("APIFY_TOKEN"):
+            alert("🚨 Fillo refill: APIFY_TOKEN is missing, so no new leads can be found. Add it in GitHub repo Settings > Secrets and variables > Actions.")
         try:
             generate_leads(target_niche, target_location, limit=40)
         except Exception as e:
-            print(f"Failed to auto-generate leads: {e}")
+            alert(f"🚨 Fillo refill: lead finder failed for '{target_niche} in {target_location}'.\nReason: {e}")
             
         # Reload the pool after generation
         new_leads = []
@@ -87,7 +107,8 @@ def main():
         print(f"Found {len(new_leads)} fresh leads available after auto-replenishment.")
 
     if not new_leads:
-        print("Still no new leads available after generation attempt. Aborting refill.")
+        alert("⚠️ Fillo refill: no new leads found, so the send list did not grow. "
+              "Check the Apify account (key valid? credit left?).")
         return
 
     # Pick the next 50 (or less if not enough)

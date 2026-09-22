@@ -155,6 +155,17 @@ def get_template(category):
         return TEMPLATES["general"]
 
 
+def email_footer():
+    """Opt-out line + postal address. US CAN-SPAM requires both in a commercial email."""
+    out = "\n\n--\nNot interested? Reply \"no thanks\" and I won't write again.\n"
+    addr = os.environ.get("SENDER_POSTAL_ADDRESS", "").strip()
+    if addr:
+        out += addr + "\n"
+    else:
+        print("WARNING: SENDER_POSTAL_ADDRESS is not set. US law (CAN-SPAM) asks for a postal address in every commercial email.")
+    return out
+
+
 def load_state():
     if os.path.exists(STATE_FILE_PATH):
         try:
@@ -261,7 +272,7 @@ def main():
         from bounce_cleaner import run_lead_cleaning
         print("Running pre-campaign lead cleaning & bounce verification...")
         clean_stats = run_lead_cleaning()
-        print(f"Cleaner Stats: Clean Leads: {clean_stats['clean_leads_count']}, Bounced: {clean_stats['bounced']}, Pending Valid: {clean_stats['pending_valid']}")
+        print(f"Cleaner Stats: Clean Leads: {clean_stats['clean_leads_count']}, Bounced/not found: {clean_stats['bounced_or_not_found']}, Pending Valid: {clean_stats['pending_valid']}")
     except Exception as e:
         print(f"Cleaner warning: {e}")
         def check_mx_record(d): return True
@@ -305,8 +316,14 @@ def main():
         work_queue.append((l, "initial"))
 
     if not work_queue:
-        print("No outreach actions due at this time!")
-        return
+        msg = ("🚨 Fillo outreach: 0 leads left to email. Nothing was sent.\n"
+               f"The list holds {len(leads)} addresses and every one is already contacted or marked bad.\n"
+               "Add new leads to restart sending.")
+        print(msg)
+        send_telegram_notification(os.environ.get("TELEGRAM_BOT_TOKEN"),
+                                   os.environ.get("TELEGRAM_CHAT_ID"), msg)
+        # Fail loudly: a green run with 0 emails is what hid this for two weeks.
+        raise SystemExit(1)
 
     # Telegram settings
     tg_token = os.environ.get("TELEGRAM_BOT_TOKEN")
@@ -350,6 +367,8 @@ def main():
             subject = template["subject"].format(business_name=business_name)
             body = template["body"].format(business_name=business_name, location=location)
             tag = "✉️ INITIAL OUTREACH"
+
+        body = body + email_footer()
 
         print(f"\n[{idx+1}/{len(work_queue)}] [{tag}] Processing: {business_name} ({recipient_email})")
 

@@ -14,7 +14,7 @@ CSV_FILE = os.path.join(BASE_DIR, "fillo_leads.csv")
 CLEANED_CSV_FILE = os.path.join(BASE_DIR, "fillo_leads_clean.csv")
 
 SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "joinfillo@gmail.com")
-APP_PASSWORD = os.environ.get("APP_PASSWORD", "vfvqocxsqrxdpttf")
+APP_PASSWORD = os.environ.get("APP_PASSWORD", "")
 IMAP_SERVER = "imap.gmail.com"
 
 def get_mx_server(domain):
@@ -34,6 +34,22 @@ def get_mx_server(domain):
         pass
     return None
 
+_PORT25 = None
+
+def port25_available():
+    """Outbound port 25 is blocked on GitHub-hosted runners. Probe once, cache."""
+    global _PORT25
+    if _PORT25 is None:
+        try:
+            s = smtplib.SMTP(timeout=6)
+            s.connect("gmail-smtp-in.l.google.com", 25)
+            s.quit()
+            _PORT25 = True
+        except Exception:
+            _PORT25 = False
+        print(f"[verify] inbox checks available (port 25): {_PORT25}")
+    return _PORT25
+
 def verify_email_inbox_smtp(email_addr):
     """
     Performs real-time SMTP RCPT TO handshake to verify if an inbox actually exists.
@@ -49,6 +65,12 @@ def verify_email_inbox_smtp(email_addr):
     mx = get_mx_server(domain)
     if not mx:
         return False, "No MX server found"
+
+    # Where port 25 is blocked (GitHub runners) an inbox check is impossible.
+    # A domain with a working MX is then UNKNOWN, never dead, so real leads
+    # are kept instead of being silently thrown away.
+    if not port25_available():
+        return None, "Port 25 blocked here - MX ok, inbox unverified"
 
     try:
         server = smtplib.SMTP(timeout=5)

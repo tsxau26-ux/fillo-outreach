@@ -67,8 +67,8 @@ def generate_leads(query, location, limit=20):
         print(f"Verifying: {target_email} for {business_name}...")
         is_valid, reason = verify_email_inbox_smtp(target_email)
         
-        if is_valid is True:
-            print(f"  -> ✅ VALID: Added to pool!")
+        if is_valid is not False:
+            print(f"  -> ✅ KEPT ({reason}): Added to pool!")
             new_leads.append({
                 "Business": business_name,
                 "Email": target_email,
