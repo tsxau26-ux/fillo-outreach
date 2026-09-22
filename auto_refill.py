@@ -5,6 +5,7 @@ import csv
 # Configuration
 POOL_FILE = "leads_pool.csv"
 LEADS_FILE = "fillo_leads.csv"
+RESERVE_FILE = "leads_reserve.csv"   # hand-verified spare tank, drained before paying Apify
 REFILL_COUNT = 50
 
 
@@ -61,13 +62,42 @@ def main():
 
     print(f"Found {len(new_leads)} fresh leads available in the pool.")
 
+    # Spare tank: hand-verified leads. Drain these before paying Apify for more.
+    reserve_taken = []
+    if len(new_leads) < REFILL_COUNT and os.path.exists(RESERVE_FILE):
+        batch_emails = {l["Email"].strip().lower() for l in new_leads}
+        taken, kept = [], []
+        with open(RESERVE_FILE, "r", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                email = row.get("Email", "").strip().lower()
+                if not email or email in existing_emails or email in batch_emails:
+                    continue  # already in the system; drop it from the reserve
+                if len(new_leads) + len(taken) < REFILL_COUNT:
+                    taken.append(row)
+                else:
+                    kept.append(row)
+        if taken:
+            reserve_taken = taken
+            new_leads.extend(taken)
+            with open(RESERVE_FILE, "w", encoding="utf-8", newline="") as f:
+                writer = csv.DictWriter(f, fieldnames=["Business", "Email", "Category", "Location"])
+                writer.writeheader()
+                for row in kept:
+                    writer.writerow({k: row.get(k, "") for k in writer.fieldnames})
+            print(f"Took {len(taken)} lead(s) from the reserve. {len(kept)} left in reserve.")
+
     if len(new_leads) < REFILL_COUNT:
         print("Not enough new leads available to refill. The pool is running low.")
         print("Auto-triggering the lead generator to replenish the pool...")
         
         import random
-        from lead_generator import generate_leads
-        
+        try:
+            from lead_generator import generate_leads
+        except Exception as e:
+            # Never let an import problem kill the whole run before sending.
+            alert(f"🚨 Fillo refill: lead generator could not load ({e}). Sending continues with the leads already in the list.")
+            generate_leads = None
+
         niches = [
             # 70% Food & Beverage (Top Priority)
             "Restaurant", "Coffee Shop", "Cafe", "Fine Dining", "Bar", "Pub", "Bistro", "Cocktail Bar",
@@ -91,20 +121,25 @@ def main():
         if not os.environ.get("APIFY_TOKEN"):
             alert("🚨 Fillo refill: APIFY_TOKEN is missing, so no new leads can be found. Add it in GitHub repo Settings > Secrets and variables > Actions.")
         try:
-            generate_leads(target_niche, target_location, limit=40)
+            if generate_leads:
+                generate_leads(target_niche, target_location, limit=40)
         except Exception as e:
             alert(f"🚨 Fillo refill: lead finder failed for '{target_niche} in {target_location}'.\nReason: {e}")
             
-        # Reload the pool after generation
-        new_leads = []
+        # Reload the pool after generation. Keep what the reserve already gave us:
+        # rebuilding this list from the pool alone would silently drop those leads.
+        new_leads = list(reserve_taken)
+        seen = {l["Email"].strip().lower() for l in new_leads}
         with open(POOL_FILE, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 email = row["Email"].strip().lower()
-                if email not in existing_emails:
+                if email not in existing_emails and email not in seen:
                     new_leads.append(row)
-                    
-        print(f"Found {len(new_leads)} fresh leads available after auto-replenishment.")
+                    seen.add(email)
+
+        print(f"Found {len(new_leads)} fresh leads available after auto-replenishment "
+              f"({len(reserve_taken)} of them from the reserve).")
 
     if not new_leads:
         alert("⚠️ Fillo refill: no new leads found, so the send list did not grow. "

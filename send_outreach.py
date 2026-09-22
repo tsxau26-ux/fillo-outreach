@@ -310,6 +310,15 @@ def main():
 
     print(f"Pending Initial Outreach: {len(pending_initial)}")
 
+    # Warn while there is still time to act, not on the day it runs dry.
+    low_water = DAILY_LIMIT * 2
+    if 0 < len(pending_initial) < low_water:
+        warn = (f"⚠️ Fillo outreach: {len(pending_initial)} leads left. "
+                f"That is under 2 days at {DAILY_LIMIT}/day. Top up the list.")
+        print(warn)
+        send_telegram_notification(os.environ.get("TELEGRAM_BOT_TOKEN"),
+                                   os.environ.get("TELEGRAM_CHAT_ID"), warn)
+
     # Create work queue
     work_queue = []
     for l in pending_initial:

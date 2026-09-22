@@ -51,13 +51,14 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DAILY_LIMIT: ${{ vars.DAILY_LIMIT }}
+          SENDER_POSTAL_ADDRESS: ${{ vars.SENDER_POSTAL_ADDRESS }}
         run: python3 send_outreach.py
 
       - name: Commit and Push Progress
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outreach_state.json fillo_leads.csv
+          git add outreach_state.json fillo_leads.csv leads_reserve.csv
           # Only commit if there are changes
           if ! git diff --cached --quiet; then
             git commit -m "Update outreach progress and leads list [skip ci]"

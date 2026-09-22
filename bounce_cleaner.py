@@ -17,22 +17,45 @@ SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "joinfillo@gmail.com")
 APP_PASSWORD = os.environ.get("APP_PASSWORD", "")
 IMAP_SERVER = "imap.gmail.com"
 
-def get_mx_server(domain):
-    """Retrieve primary MX mail server for a domain."""
+def get_mx_server(domain, return_status=False):
+    """Primary MX mail server for a domain.
+
+    With return_status=True also reports whether the lookup itself answered:
+      ("mx.host", "ok")  - MX record found
+      (None, "none")     - the resolver answered: no MX / no such domain
+      (None, "error")    - the lookup failed (timeout, resolver trouble)
+
+    A failed lookup must never be read as a dead address. On GitHub runners
+    that mistake killed 7 verified leads in a single run.
+    """
+    def result(mx, status):
+        return (mx, status) if return_status else mx
+
     if not domain or "." not in domain:
-        return None
-    try:
-        out = subprocess.check_output(
-            ["nslookup", "-type=MX", domain],
-            stderr=subprocess.STDOUT,
-            timeout=4
-        ).decode()
+        return result(None, "none")
+
+    for _ in range(2):  # one retry: runner DNS is flaky
+        try:
+            out = subprocess.check_output(
+                ["nslookup", "-type=MX", domain],
+                stderr=subprocess.STDOUT,
+                timeout=10
+            ).decode(errors="ignore")
+        except subprocess.CalledProcessError as e:
+            out = (e.output or b"").decode(errors="ignore")
+            if "NXDOMAIN" in out or "can't find" in out:
+                return result(None, "none")  # a real answer: domain does not exist
+            continue
+        except Exception:
+            continue
+
         for line in out.splitlines():
             if "mail exchanger =" in line:
-                return line.split("mail exchanger =")[-1].strip().split()[-1].rstrip(".")
-    except Exception:
-        pass
-    return None
+                host = line.split("mail exchanger =")[-1].strip().split()[-1].rstrip(".")
+                return result(host, "ok")
+        return result(None, "none")  # answered, but the domain has no MX
+
+    return result(None, "error")
 
 _PORT25 = None
 
@@ -62,8 +85,10 @@ def verify_email_inbox_smtp(email_addr):
         return False, "Invalid email format"
         
     domain = email_addr.split("@")[-1].lower()
-    mx = get_mx_server(domain)
+    mx, mx_status = get_mx_server(domain, return_status=True)
     if not mx:
+        if mx_status == "error":
+            return None, "MX lookup failed here - kept as unknown"
         return False, "No MX server found"
 
     # Where port 25 is blocked (GitHub runners) an inbox check is impossible.
