@@ -1467,13 +1467,34 @@
         "sent_at": 1788762732.7570436,
         "followup_status": "none"
     },
-    "info@the-hi-lo.com": "pending",
-    "info@ipsento.com": "pending",
-    "information@bigshoulderscoffee.com": "pending",
-    "info@versaillesrestaurant.com": "pending",
-    "info@cremagourmet.com": "pending",
-    "info@HeritageClubBarbershop.com": "pending",
-    "info@westsidebarbershop.com": "pending",
+    "info@the-hi-lo.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [20.169.100.162] blocked using Spamhaus. "
+    },
+    "info@ipsento.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [20.169.100.162] blocked using Spamhaus. "
+    },
+    "information@bigshoulderscoffee.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [20.169.100.162] blocked using Spamhaus. "
+    },
+    "info@versaillesrestaurant.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [20.169.100.162] blocked using Spamhaus. "
+    },
+    "info@cremagourmet.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [20.169.100.162] blocked using Spamhaus. "
+    },
+    "info@HeritageClubBarbershop.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [20.169.100.162] blocked using Spamhaus. "
+    },
+    "info@westsidebarbershop.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [20.169.100.162] blocked using Spamhaus. "
+    },
     "madison@epochcoffee.com": {
         "status": "sent",
         "sent_at": 1790106843.5254605,
@@ -1722,6 +1743,76 @@
     "info@kingofbladestampa.co": {
         "status": "sent",
         "sent_at": 1790112899.4988813,
+        "followup_status": "none"
+    },
+    "info@dopemensocial.com": {
+        "status": "sent",
+        "sent_at": 1790142242.2600152,
+        "followup_status": "none"
+    },
+    "Theoriginalfadeologybarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790142325.633393,
+        "followup_status": "none"
+    },
+    "barrelhousebarber@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790142411.4027836,
+        "followup_status": "none"
+    },
+    "sohoshaveco@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790142583.1616375,
+        "followup_status": "none"
+    },
+    "cigarcitybarbers@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790142659.4418213,
+        "followup_status": "none"
+    },
+    "prestigebarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790142835.1915083,
+        "followup_status": "none"
+    },
+    "Gscuts@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790142991.7580705,
+        "followup_status": "none"
+    },
+    "thebrixbarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790143122.2263017,
+        "followup_status": "none"
+    },
+    "elbarbershoptampa@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790143292.2024035,
+        "followup_status": "none"
+    },
+    "info@kjbarbershop.com": {
+        "status": "sent",
+        "sent_at": 1790143434.1098166,
+        "followup_status": "none"
+    },
+    "avipbarbershop@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790143572.5470512,
+        "followup_status": "none"
+    },
+    "Hasanalabod617@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790143735.236411,
+        "followup_status": "none"
+    },
+    "tomascotto1977@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790143860.9707131,
+        "followup_status": "none"
+    },
+    "info@acmbarberstudio.com": {
+        "status": "sent",
+        "sent_at": 1790143980.6845431,
         "followup_status": "none"
     }
 }
