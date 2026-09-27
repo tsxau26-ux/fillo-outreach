@@ -86,10 +86,23 @@ def main():
                     writer.writerow({k: row.get(k, "") for k in writer.fieldnames})
             print(f"Took {len(taken)} lead(s) from the reserve. {len(kept)} left in reserve.")
 
+    osm_added = 0
     if len(new_leads) < REFILL_COUNT:
         print("Not enough new leads available to refill. The pool is running low.")
-        print("Auto-triggering the lead generator to replenish the pool...")
-        
+
+        # Free source first: OpenStreetMap needs no key, no credit, and works
+        # from a GitHub runner. Apify is only worth paying for if this falls short.
+        try:
+            from osm_leads import generate_leads as osm_generate
+            osm_added = osm_generate(limit=max(REFILL_COUNT * 2, 60))
+        except Exception as e:
+            alert(f"⚠️ Fillo refill: the free lead finder (OpenStreetMap) failed. Reason: {e}")
+        print(f"OpenStreetMap added {osm_added} lead(s) to the pool.")
+
+    # Paid fallback: only when the free source came up short.
+    if len(new_leads) + osm_added < REFILL_COUNT:
+        print("Free source came up short. Trying the paid lead generator (Apify)...")
+
         import random
         try:
             from lead_generator import generate_leads
@@ -126,24 +139,25 @@ def main():
         except Exception as e:
             alert(f"🚨 Fillo refill: lead finder failed for '{target_niche} in {target_location}'.\nReason: {e}")
             
-        # Reload the pool after generation. Keep what the reserve already gave us:
-        # rebuilding this list from the pool alone would silently drop those leads.
-        new_leads = list(reserve_taken)
-        seen = {l["Email"].strip().lower() for l in new_leads}
-        with open(POOL_FILE, "r", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                email = row["Email"].strip().lower()
-                if email not in existing_emails and email not in seen:
-                    new_leads.append(row)
-                    seen.add(email)
+    # Reload the pool after either source ran. Keep what the reserve already
+    # gave us: rebuilding from the pool alone would silently drop those leads.
+    new_leads = list(reserve_taken)
+    seen = {l["Email"].strip().lower() for l in new_leads}
+    with open(POOL_FILE, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            email = row["Email"].strip().lower()
+            if email not in existing_emails and email not in seen:
+                new_leads.append(row)
+                seen.add(email)
 
-        print(f"Found {len(new_leads)} fresh leads available after auto-replenishment "
-              f"({len(reserve_taken)} of them from the reserve).")
+    print(f"{len(new_leads)} lead(s) ready to move into the send list "
+          f"({len(reserve_taken)} from the reserve, {osm_added} new from OpenStreetMap).")
 
     if not new_leads:
-        alert("⚠️ Fillo refill: no new leads found, so the send list did not grow. "
-              "Check the Apify account (key valid? credit left?).")
+        alert("⚠️ Fillo refill: no new leads found by either source, so the send list "
+              "did not grow. OpenStreetMap returned nothing new and Apify did not fill "
+              "the gap. Worth checking the Apify key/credit, or adding cities.")
         return
 
     # Pick the next 50 (or less if not enough)
