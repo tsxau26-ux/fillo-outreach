@@ -22,8 +22,12 @@ ENDPOINTS = [
     "https://overpass.kumi.systems/api/interpreter",
     "https://overpass.osm.ch/api/interpreter",
 ]
-ATTEMPTS = 3          # these are free public servers: 429 and 504 are normal
-BACKOFF_SECONDS = 20
+ATTEMPTS = 2           # these are free public servers: 429 and 504 are normal
+BACKOFF_SECONDS = 15
+REQUEST_TIMEOUT = 45
+# Hard ceiling on the whole hunt. Without it, retries against throttled
+# mirrors can grind for hours and hold up the send that follows.
+BUDGET_SECONDS = 480
 # A real User-Agent is required: Overpass answers 406 without one.
 HEADERS = {"User-Agent": "fillo-lead-finder/1.0 (small business outreach)"}
 EMAIL_RE = re.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$")
@@ -36,9 +40,10 @@ CORPORATE_DOMAINS = {
     "thestanthonyhotel.com", "aol.com",
 }
 
-# US cities only: CAN-SPAM allows business-to-business cold email with an
-# opt-out and a postal address. Germany, Spain and Canada require consent
-# first, so they stay out of the rotation.
+# US and Philippine cities. CAN-SPAM allows business-to-business cold email
+# with an opt-out and a postal address; the Philippine Data Privacy Act wants
+# the sender identified and an easy way out, which the footer provides.
+# Germany, Spain and Canada require consent first, so they stay out.
 CITIES = {
     "Austin":       (30.15, -97.95, 30.52, -97.60),
     "Miami":        (25.70, -80.32, 25.86, -80.13),
@@ -56,6 +61,16 @@ CITIES = {
     "Atlanta":      (33.70, -84.45, 33.85, -84.32),
     "Dallas":       (32.70, -96.90, 32.90, -96.70),
     "Seattle":      (47.55, -122.42, 47.70, -122.28),
+    # Philippines
+    "Manila":       (14.55, 120.95, 14.65, 121.03),
+    "Quezon City":  (14.60, 121.00, 14.76, 121.13),
+    "Makati":       (14.53, 121.00, 14.58, 121.05),
+    "Taguig":       (14.50, 121.03, 14.58, 121.09),
+    "Pasig":        (14.55, 121.05, 14.62, 121.11),
+    "Cebu City":    (10.27, 123.85, 10.40, 123.95),
+    "Davao City":   (7.03, 125.55, 7.15, 125.65),
+    "Baguio":       (16.38, 120.57, 16.45, 120.62),
+    "Iloilo City":  (10.68, 122.52, 10.76, 122.60),
 }
 
 # OSM tag -> the Category string send_outreach uses to pick a template.
@@ -91,32 +106,40 @@ def _clean_email(raw):
     return first
 
 
-def fetch_city(city, per_group_limit=400):
+def fetch_city(city, deadline=None):
     """Return lead dicts for one city. Never raises: a dead endpoint returns []."""
     bbox = CITIES[city]
     found, seen = [], set()
+
+    def out_of_time():
+        return deadline is not None and time.time() > deadline
+
     for group, category in GROUPS:
+        if out_of_time():
+            print(f"  time budget reached, leaving {city} early")
+            break
         body = _query(bbox, group)
         data = None
         for attempt in range(ATTEMPTS):
             for endpoint in ENDPOINTS:
+                if out_of_time():
+                    break
                 try:
                     r = requests.post(endpoint, data={"data": body},
-                                      headers=HEADERS, timeout=90)
+                                      headers=HEADERS, timeout=REQUEST_TIMEOUT)
                     if r.status_code == 200:
                         data = r.json()
                         break
-                    print(f"  {endpoint} answered {r.status_code}")
+                    print(f"  {endpoint} answered {r.status_code}", flush=True)
                 except Exception as e:
-                    print(f"  {endpoint} failed: {type(e).__name__}")
-            if data:
+                    print(f"  {endpoint} failed: {type(e).__name__}", flush=True)
+            if data or out_of_time():
                 break
             if attempt < ATTEMPTS - 1:
-                wait = BACKOFF_SECONDS * (attempt + 1)
-                print(f"  all mirrors busy, waiting {wait}s")
-                time.sleep(wait)
+                print(f"  all mirrors busy, waiting {BACKOFF_SECONDS}s", flush=True)
+                time.sleep(BACKOFF_SECONDS)
         if not data:
-            print(f"  giving up on this group in {city}")
+            print(f"  no answer for this group in {city}", flush=True)
             continue
 
         for el in data.get("elements", []):
@@ -142,7 +165,17 @@ def fetch_city(city, per_group_limit=400):
     return found
 
 
-def generate_leads(limit=60, cities=None, pool_file=POOL_FILE):
+def _append(pool_file, rows):
+    """Write as we go: a slow mirror must not cost us the cities already done."""
+    exists = os.path.exists(pool_file)
+    with open(pool_file, "a", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["Business", "Email", "Category", "Location"])
+        if not exists:
+            writer.writeheader()
+        writer.writerows(rows)
+
+
+def generate_leads(limit=60, cities=None, pool_file=POOL_FILE, budget_seconds=BUDGET_SECONDS):
     """Fill the pool from OSM. Returns how many new rows were written."""
     print("=======================================")
     print("   Fillo Lead Finder - OpenStreetMap   ")
@@ -160,30 +193,32 @@ def generate_leads(limit=60, cities=None, pool_file=POOL_FILE):
                     known.add((row.get("Email") or "").strip().lower())
 
     order = cities or random.sample(list(CITIES), len(CITIES))
-    picked = []
+    deadline = time.time() + budget_seconds
+    written = 0
     for city in order:
-        print(f"Looking up {city}...")
-        rows = [r for r in fetch_city(city) if r["Email"].lower() not in known]
+        if time.time() > deadline:
+            print(f"\nTime budget of {budget_seconds}s used up. Stopping with "
+                  f"{written} lead(s) saved.", flush=True)
+            break
+        print(f"Looking up {city}...", flush=True)
+        rows = [r for r in fetch_city(city, deadline) if r["Email"].lower() not in known]
         for r in rows:
             known.add(r["Email"].lower())
-        picked.extend(rows)
-        print(f"  {len(rows)} new lead(s) from {city} (running total {len(picked)})")
-        if len(picked) >= limit:
+        if written + len(rows) > limit:
+            rows = rows[:limit - written]
+        if rows:
+            _append(pool_file, rows)   # saved now, not at the end
+            written += len(rows)
+        print(f"  {len(rows)} new lead(s) from {city} (saved so far {written})", flush=True)
+        if written >= limit:
             break
 
-    picked = picked[:limit]
-    if not picked:
+    if not written:
         print("No new leads found in OpenStreetMap this time.")
         return 0
 
-    exists = os.path.exists(pool_file)
-    with open(pool_file, "a", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=["Business", "Email", "Category", "Location"])
-        if not exists:
-            writer.writeheader()
-        writer.writerows(picked)
-    print(f"\nAdded {len(picked)} new lead(s) to {pool_file}.")
-    return len(picked)
+    print(f"\nAdded {written} new lead(s) to {pool_file}.")
+    return written
 
 
 if __name__ == "__main__":

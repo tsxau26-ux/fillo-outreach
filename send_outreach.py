@@ -155,6 +155,36 @@ def get_template(category):
         return TEMPLATES["general"]
 
 
+# A Gmail account that keeps sending to dead addresses gets throttled, then
+# blocked. Stopping early costs a day; a blocked account costs everything.
+BOUNCE_LIMIT = 0.08
+BOUNCE_WINDOW_DAYS = 14
+BOUNCE_MIN_SAMPLE = 25
+# Errors that mean "stop now", not "try the next address".
+FATAL_SMTP = ("535", "534", "username and password not accepted", "5.4.5",
+              "daily user sending limit exceeded", "account has been disabled",
+              "5.7.0", "quota exceeded", "too many login attempts")
+MAX_CONSECUTIVE_FAILURES = 5
+
+
+def recent_bounce_rate(state, days=BOUNCE_WINDOW_DAYS):
+    """Bounce rate over recent sends. Only rows carrying a date can count."""
+    cutoff = time.time() - days * 86400
+    sent = bounced = 0
+    for value in state.values():
+        if not isinstance(value, dict):
+            continue
+        stamp = value.get("sent_at") or value.get("bounced_at")
+        if not stamp or stamp < cutoff:
+            continue
+        if value.get("status") == "sent":
+            sent += 1
+        elif value.get("status") == "bounced":
+            bounced += 1
+    total = sent + bounced
+    return (bounced / total if total else 0.0), total
+
+
 def email_footer():
     """Opt-out line + postal address. US CAN-SPAM requires both in a commercial email."""
     out = "\n\n--\nNot interested? Reply \"no thanks\" and I won't write again.\n"
@@ -340,7 +370,20 @@ def main():
     if tg_token and tg_chat_id:
         print("Telegram notifications enabled.")
 
+    # Guard the sender account: too many bounces and Gmail starts blocking.
+    rate, sample = recent_bounce_rate(state)
+    print(f"Recent bounce rate: {rate:.0%} of {sample} dated send(s) in the last {BOUNCE_WINDOW_DAYS} days.")
+    if sample >= BOUNCE_MIN_SAMPLE and rate > BOUNCE_LIMIT:
+        msg = (f"🛑 Fillo outreach: PAUSED, nothing sent.\n"
+               f"{rate:.0%} of the last {sample} emails bounced (limit {BOUNCE_LIMIT:.0%}).\n"
+               f"Sending more from {sender_email} now risks the account being blocked. "
+               f"Clean the list before the next run.")
+        print(msg)
+        send_telegram_notification(tg_token, tg_chat_id, msg)
+        raise SystemExit(1)
+
     sent_count = 0
+    consecutive_failures = 0
     for idx, (lead, action_type) in enumerate(work_queue):
         if sent_count >= DAILY_LIMIT:
             msg = f"Daily safety limit of {DAILY_LIMIT} emails reached. Stopping outreach campaign."
@@ -439,12 +482,47 @@ def main():
                         server.quit()
                     except Exception:
                         pass
+
+                # Some errors mean the account itself is in trouble. Grinding
+                # through 50 more attempts makes that worse, not better.
+                text = str(e).lower()
+                if any(sig in text for sig in FATAL_SMTP):
+                    stop = (f"🛑 Fillo outreach: STOPPED after {sent_count} email(s).\n"
+                            f"Gmail refused the account: {e}\n"
+                            f"That is a login or sending-limit problem, not a bad address. "
+                            f"Check {sender_email} before the next run.")
+                    print(stop)
+                    send_telegram_notification(tg_token, tg_chat_id, stop)
+                    save_state(state)
+                    raise SystemExit(1)
+
+                consecutive_failures += 1
+                if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                    stop = (f"🛑 Fillo outreach: STOPPED after {sent_count} email(s). "
+                            f"{consecutive_failures} sends failed in a row. Last error: {e}")
+                    print(stop)
+                    send_telegram_notification(tg_token, tg_chat_id, stop)
+                    save_state(state)
+                    raise SystemExit(1)
+
                 # Sleep slightly on error to cool down
                 time.sleep(10)
                 
     print(f"\nSession complete. Total emails processed: {sent_count}")
     if not is_dry_run:
         print("State saved. You can run the script again tomorrow to process the next batch.")
+
+        # Daily wrap-up: one message a day so silence means something is wrong.
+        left = sum(1 for lead in leads
+                   if get_lead_info(state, lead["Email"].strip()).get("status") == "pending")
+        rate, sample = recent_bounce_rate(state)
+        days_left = left / DAILY_LIMIT if DAILY_LIMIT else 0
+        summary = (f"📊 Fillo outreach, run finished.\n"
+                   f"Sent now: {sent_count}\n"
+                   f"Leads left: {left} (about {days_left:.1f} day(s) at {DAILY_LIMIT}/day)\n"
+                   f"Bounces, last {BOUNCE_WINDOW_DAYS} days: {rate:.0%} of {sample}")
+        print(summary)
+        send_telegram_notification(tg_token, tg_chat_id, summary)
 
 if __name__ == "__main__":
     main()

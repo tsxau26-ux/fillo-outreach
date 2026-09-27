@@ -7,6 +7,7 @@ import smtplib
 import imaplib
 import email
 import subprocess
+import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(BASE_DIR, "outreach_state.json")
@@ -114,6 +115,13 @@ def verify_email_inbox_smtp(email_addr):
     except Exception as e:
         return None, str(e)
 
+def status_of(value):
+    """State rows are a bare string on old entries and a dict on newer ones."""
+    if isinstance(value, dict):
+        return value.get("status")
+    return value
+
+
 def load_state():
     if os.path.exists(STATE_FILE):
         try:
@@ -188,16 +196,28 @@ def run_lead_cleaning():
     state = load_state()
     bounced_from_imap = scan_imap_bounces()
 
-    # Update state with IMAP bounces
+    # Update state with IMAP bounces.
+    # Keep sent_at and record bounced_at: overwriting the row with the bare
+    # string "bounced" destroyed the dates, which made a recent bounce rate
+    # impossible to measure - and that rate is what protects the sender account.
     bounced_marked = 0
+    now = time.time()
     for bounced_addr in bounced_from_imap:
+        matched = False
         for key in list(state.keys()):
             if key.lower() == bounced_addr:
-                if state[key] != "bounced":
-                    state[key] = "bounced"
+                matched = True
+                prev = state[key]
+                was_bounced = prev == "bounced" or (isinstance(prev, dict) and prev.get("status") == "bounced")
+                if not was_bounced:
+                    state[key] = {
+                        "status": "bounced",
+                        "sent_at": prev.get("sent_at") if isinstance(prev, dict) else None,
+                        "bounced_at": now,
+                    }
                     bounced_marked += 1
-        if bounced_addr not in [k.lower() for k in state.keys()]:
-            state[bounced_addr] = "bounced"
+        if not matched:
+            state[bounced_addr] = {"status": "bounced", "sent_at": None, "bounced_at": now}
             bounced_marked += 1
 
     # Load CSV leads
@@ -221,9 +241,10 @@ def run_lead_cleaning():
 
         email_lower = email_addr.lower()
 
-        # Check if already marked as bounced or invalid in state
-        if state.get(email_addr) in ["bounced", "email_not_found", "invalid_domain"] or \
-           state.get(email_lower) in ["bounced", "email_not_found", "invalid_domain"]:
+        # Check if already marked as bounced or invalid in state.
+        # Rows can be a bare string or a dict, so read the status either way.
+        if status_of(state.get(email_addr)) in ["bounced", "email_not_found", "invalid_domain"] or \
+           status_of(state.get(email_lower)) in ["bounced", "email_not_found", "invalid_domain"]:
             continue
 
         # If pending (not yet sent or verified), run real-time SMTP verification
@@ -246,8 +267,9 @@ def run_lead_cleaning():
         writer.writerows(clean_leads)
 
     total_leads = len(leads)
-    sent_count = sum(1 for v in state.values() if v == "sent")
-    bounced_count = sum(1 for v in state.values() if v in ["bounced", "email_not_found", "invalid_domain"])
+    sent_count = sum(1 for v in state.values() if status_of(v) == "sent")
+    bounced_count = sum(1 for v in state.values()
+                        if status_of(v) in ["bounced", "email_not_found", "invalid_domain"])
     pending_valid = sum(1 for l in clean_leads if state.get(l.get("Email", "").strip()) is None)
 
     return {
