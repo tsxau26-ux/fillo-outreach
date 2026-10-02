@@ -2736,9 +2736,9 @@
         "followup_status": "none"
     },
     "info.fillingstationbarcafe@gmail.com": {
-        "status": "sent",
+        "status": "bounced",
         "sent_at": 1790753608.7985103,
-        "followup_status": "none"
+        "bounced_at": 1790923999.6532886
     },
     "norbert.godani@hotmail.com": {
         "status": "sent",
@@ -3115,6 +3115,189 @@
     "daddydoogieskitchenbistro@gmail.com": {
         "status": "sent",
         "sent_at": 1790844908.9960206,
+        "followup_status": "none"
+    },
+    "info@lafondaonmain.com": "email_not_found",
+    "getadrink@thebaselinebar.com": "email_not_found",
+    "business@clearlightcoffeecompany.com": "email_not_found",
+    "angelicaloz1496@icloud.com": "email_not_found",
+    "reggie@reggiestexmex.com": "email_not_found",
+    "jesse@turnupfitnesssa.com": "email_not_found",
+    "northsanantonio@usaninjachallenge.com": "email_not_found",
+    "hello@ensowinery.com": "email_not_found",
+    "caffeyaffe@gmail.com": "email_not_found",
+    "Info@MadGreekDeli.com": "email_not_found",
+    "yoon@mocksbottomcafe.com": "email_not_found",
+    "marketing@carlitasttw.com": "email_not_found",
+    "annette@brixtavern.com": "email_not_found",
+    "info@teardroplounge.com": "email_not_found",
+    "ovenandshaker@gmail.com": "email_not_found",
+    "contact@sushifukami.com": "email_not_found",
+    "info@paddys.com": "email_not_found",
+    "hello@superjoy.coffee": "email_not_found",
+    "fikacafelounge@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790924032.9877622,
+        "followup_status": "none"
+    },
+    "infosanantonio@kungfusaloon.com": {
+        "status": "sent",
+        "sent_at": 1790924097.0728102,
+        "followup_status": "none"
+    },
+    "veroscafe@yahoo.com": {
+        "status": "sent",
+        "sent_at": 1790924256.4163501,
+        "followup_status": "none"
+    },
+    "hhboiledbagels@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790924333.6967845,
+        "followup_status": "none"
+    },
+    "info@sushisapporopdx.com": {
+        "status": "sent",
+        "sent_at": 1790924454.2058847,
+        "followup_status": "none"
+    },
+    "info@puffcoffee.com": {
+        "status": "sent",
+        "sent_at": 1790924574.535952,
+        "followup_status": "none"
+    },
+    "Javelina.PDX@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790924698.8847,
+        "followup_status": "none"
+    },
+    "hello@atlaspizzapdx.com": {
+        "status": "sent",
+        "sent_at": 1790924767.1936622,
+        "followup_status": "none"
+    },
+    "enatpdx@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790924831.1633258,
+        "followup_status": "none"
+    },
+    "thaichampapdx@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790924914.4104939,
+        "followup_status": "none"
+    },
+    "info@rusebrewing.com": {
+        "status": "sent",
+        "sent_at": 1790925032.1322865,
+        "followup_status": "none"
+    },
+    "hola@lapatroncitapdx.com": {
+        "status": "sent",
+        "sent_at": 1790925202.5259178,
+        "followup_status": "none"
+    },
+    "bellwetherbar@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790925306.7774048,
+        "followup_status": "none"
+    },
+    "slowpourcoffee@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790925439.3495412,
+        "followup_status": "none"
+    },
+    "hi@honeylatte.cafe": {
+        "status": "sent",
+        "sent_at": 1790925612.5844834,
+        "followup_status": "none"
+    },
+    "info@themidnightsocietypdx.net": {
+        "status": "sent",
+        "sent_at": 1790925692.0670977,
+        "followup_status": "none"
+    },
+    "barloonportland@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790925816.2465627,
+        "followup_status": "none"
+    },
+    "offthegriddlepdx@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790925924.4102113,
+        "followup_status": "none"
+    },
+    "poshines@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790926063.5088868,
+        "followup_status": "none"
+    },
+    "sidestreetpdx@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790926189.559243,
+        "followup_status": "none"
+    },
+    "info@ardenpdx.com": {
+        "status": "sent",
+        "sent_at": 1790926304.9604218,
+        "followup_status": "none"
+    },
+    "hello@heylovepdx.com": {
+        "status": "sent",
+        "sent_at": 1790926481.226631,
+        "followup_status": "none"
+    },
+    "hello@oldpalpdx.com": {
+        "status": "sent",
+        "sent_at": 1790926621.506318,
+        "followup_status": "none"
+    },
+    "ort1.indiaoven@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790926711.8445303,
+        "followup_status": "none"
+    },
+    "kichinto.pdx@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790926863.0327115,
+        "followup_status": "none"
+    },
+    "restaurantdarcy@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790927032.2595298,
+        "followup_status": "none"
+    },
+    "makomatchaco@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790927120.3494098,
+        "followup_status": "none"
+    },
+    "contact@cassidysrestaurant.com": {
+        "status": "sent",
+        "sent_at": 1790927221.8559105,
+        "followup_status": "none"
+    },
+    "spella@spellacaffe.com": {
+        "status": "sent",
+        "sent_at": 1790927303.635668,
+        "followup_status": "none"
+    },
+    "info@redrobeteahouse.com": {
+        "status": "sent",
+        "sent_at": 1790927459.6836221,
+        "followup_status": "none"
+    },
+    "suavecitopdx@gmail.com": {
+        "status": "sent",
+        "sent_at": 1790927561.0022345,
+        "followup_status": "none"
+    },
+    "info@fullertonwines.com": {
+        "status": "sent",
+        "sent_at": 1790927661.6470466,
+        "followup_status": "none"
+    },
+    "info@gadogadopdx.com": {
+        "status": "sent",
+        "sent_at": 1790927732.3713984,
         "followup_status": "none"
     }
 }
