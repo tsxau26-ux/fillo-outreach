@@ -1,9 +1,10 @@
 name: Fillo Outreach Campaign
 
 on:
-  schedule:
-    # Runs every day at 01:00 UTC (08:00 AM Bangkok/Indochina Time)
-    - cron: '0 1 * * *'
+  # PAUSED 2026-10-03 (owner's call): no daily sends until he says resume.
+  # To resume, put these two lines back under "on:":
+  #   schedule:
+  #     - cron: '0 1 * * *'   # 01:00 UTC = 08:00 Bangkok
   workflow_dispatch: # Allows manual trigger from the GitHub website
 
 permissions:
