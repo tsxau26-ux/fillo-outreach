@@ -24,135 +24,242 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 # ========================================================
 
-# Email templates: professional, benefit-driven, natural tone with direct Telegram Mini App link
+# Email templates. Short, plain text, no links: the only ask is a reply to
+# this email. Signed by the team, never a person. No Telegram anywhere.
+_CLOSE = """The first month is free, and we'll help you set it up. It takes about 5 minutes.
+
+Interested? Just reply "yes" to this email and we'll send you the details.
+
+The Fillo Team"""
+
 TEMPLATES = {
     "barber": {
-        "subject": "Last-minute cancellations at {business_name}",
+        "subject": "empty chairs at {business_name}",
         "body": """Hi {business_name} team,
 
-I'm reaching out to you directly because I've been talking to a lot of shop owners recently, and they all hate the exact same thing: last-minute cancellations. When a chair sits empty, that's just lost money you can't get back.
+When a client cancels last minute, does that chair just stay empty?
 
-I'm the founder of Fillo, a new tool built specifically to fix this. When you have an unexpected empty chair, you tap one button on your phone. Fillo instantly generates a branded flash-discount for {business_name} and sends it directly to your clients on Telegram. 
+Fillo helps you fill it. You post the free slot in 3 taps. Your customers get an alert on their phone and book it.
 
-Because Telegram is instant, your clients see it immediately and can grab the open slot in seconds. No friction, no marketing effort required on your end.
-
-I'm giving local shops in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
-👉 Start your free trial: https://t.me/Filloappbot
-
-Would love to hear if you're open to testing it out!
-
-Best,
-The Fillo Team"""
+""" + _CLOSE,
     },
     "salon_spa": {
-        "subject": "Filling empty appointments at {business_name}",
+        "subject": "last-minute cancellations at {business_name}",
         "body": """Hi {business_name} team,
 
-I'm reaching out to you directly because I've been talking to a lot of salon and spa owners recently, and they all hate the exact same thing: last-minute cancellations and quiet hours. When an appointment goes unfilled, that's lost revenue.
+When a client cancels last minute, does that appointment just go to waste?
 
-I'm the founder of Fillo, a new tool built specifically to fix this. When you have unexpected downtime, you tap one button. Fillo instantly generates a branded flash-promo for {business_name} and sends it directly to your clients on Telegram. 
+Fillo helps you fill it. You post the free slot in 3 taps. Your customers get an alert on their phone and book it.
 
-Because Telegram is instant, your clients see it immediately and can book the open slot in seconds. It works alongside your existing booking system seamlessly.
-
-I'm giving local businesses in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
-👉 Start your free trial: https://t.me/Filloappbot
-
-Let me know if you'd be open to testing it out!
-
-Best,
-The Fillo Team"""
-    },
-    "pilates": {
-        "subject": "Empty reformer spots at {business_name}?",
-        "body": """Hi {business_name} team,
-
-I'm reaching out to you directly because I've been talking to studio owners recently, and they all struggle with the exact same thing: classes running with empty mats or reformers. 
-
-I'm the founder of Fillo, a new tool built specifically to fill those empty spots. When you have a class that isn't full, you tap one button. Fillo instantly generates a branded last-minute drop-in promo for {business_name} and sends it directly to your clients on Telegram. 
-
-Because Telegram is instant, your clients see it immediately and can grab the spot in seconds. It's the easiest way to maximize revenue per class with zero marketing effort.
-
-I'm giving studios in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
-👉 Start your free trial: https://t.me/Filloappbot
-
-Would love to hear if you're open to testing it out!
-
-Best,
-The Fillo Team"""
-    },
-    "f_and_b": {
-        "subject": "Empty tables at {business_name}",
-        "body": """Hi {business_name} team,
-
-I'm reaching out because I've been talking to a lot of restaurant and cafe owners recently, and they all struggle with the same thing: quiet hours and dead periods. When tables are sitting empty, that's just lost revenue.
-
-I'm the founder of Fillo, a new tool built specifically to drive foot traffic during those slow hours. When things get quiet, you tap one button. Fillo instantly generates a branded flash-promo for {business_name} (like a 2-hour happy hour special) and sends it directly to your regular customers on Telegram. 
-
-Because Telegram is instant, your customers see the push notification immediately and can reserve a table or drop by. It brings people through the door exactly when you need them.
-
-I'm giving local spots in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
-👉 Start your free trial: https://t.me/Filloappbot
-
-Let me know if you'd be open to testing it out!
-
-Best,
-The Fillo Team"""
+""" + _CLOSE,
     },
     "clinic": {
-        "subject": "Last-minute cancellations at {business_name}",
+        "subject": "empty appointments at {business_name}",
         "body": """Hi {business_name} team,
 
-I'm reaching out because I've been talking to clinic and practice managers recently, and they all hate the exact same thing: last-minute cancellations and no-shows. 
+When a patient cancels last minute, does that appointment just stay empty?
 
-I'm the founder of Fillo, a new tool built specifically to recover that lost revenue. When a patient cancels unexpectedly, you tap one button. Fillo instantly generates a branded alert for the newly available slot at {business_name} and sends it directly to your waitlist/patients on Telegram. 
+Fillo helps you fill it. You post the free slot in 3 taps. People who follow {business_name} get an alert on their phone and book it.
 
-Because Telegram is instant, patients see the notification immediately and can claim the appointment in seconds. 
+""" + _CLOSE,
+    },
+    "fitness": {
+        "subject": "empty spots in your classes at {business_name}",
+        "body": """Hi {business_name} team,
 
-I'm giving clinics in {location} a full month completely free to prove it works. No credit cards, no commitments. It takes about 2 minutes to set up:
-👉 Start your free trial: https://t.me/Filloappbot
+Do some classes at {business_name} run with empty spots?
 
-Let me know if you'd be open to testing it out this week!
+Fillo helps you fill them. You post the open spots in 3 taps, like a drop-in deal for tonight's class. Your members get an alert on their phone and book.
 
-Best,
-The Fillo Team"""
+""" + _CLOSE,
+    },
+    "f_and_b": {
+        "subject": "quiet hours at {business_name}",
+        "body": """Hi {business_name} team,
+
+Are there hours when {business_name} is quiet and the tables sit empty?
+
+Fillo helps you fill them. When it's slow, you post a quick deal in 3 taps, like "2-for-1 coffee until 4 pm". Customers who follow you get an alert on their phone and come in.
+
+""" + _CLOSE,
     },
     "general": {
-        "subject": "Quick question about {business_name}",
+        "subject": "quiet hours at {business_name}",
         "body": """Hi {business_name} team,
 
-I'm the founder of a project called Fillo, and I was checking out your business in {location}. Really like what you guys are doing!
+Do you have quiet hours or last-minute cancellations at {business_name}?
 
-I'm reaching out because I've been talking to local business owners who all struggle with the same thing: quiet hours and last-minute cancellations. When you have downtime, it's just lost revenue.
+Fillo helps you fill them. When it's slow, you post a deal in 3 taps. Customers who follow you get an alert on their phone and come in or book.
 
-We built Fillo to solve this. When things are slow, you tap one button. Fillo instantly generates a branded flash promo for {business_name} and sends it directly to your clients on Telegram. 
-
-Because Telegram is instant, 90%+ of your clients see the message immediately, and they can book directly through the app in seconds. No friction, no marketing effort required on your end.
-
-It works alongside whatever system you already use. I'd love to give you a full month completely free to see if it brings you extra bookings. No credit cards, no commitments. It takes about 2 minutes to set up:
-👉 Start your free trial: https://t.me/Filloappbot
-
-Let me know if you'd be open to testing it out!
-
-Cheers,
-The Fillo Team"""
-    }
+""" + _CLOSE,
+    },
 }
+
+# Follow-ups stand on their own: older leads got a different first email.
+FOLLOWUPS = {
+    1: {
+        "subject": "{business_name} + Fillo",
+        "body": """Hi {business_name} team,
+
+A quick follow-up. Fillo helps local businesses turn empty slots and quiet hours into paying customers. You post a deal in 3 taps, and your customers get it on their phone.
+
+The first month is free, and we'll help you set it up.
+
+Should we send you the details? A one-word reply is enough.
+
+The Fillo Team""",
+    },
+    2: {
+        "subject": "last note for {business_name}",
+        "body": """Hi {business_name} team,
+
+This is our last email. We don't want to fill your inbox.
+
+If empty slots or quiet hours ever cost you money, just reply "Fillo" and we'll set you up with a free month.
+
+Wishing you a busy season,
+The Fillo Team""",
+    },
+}
+
+# Days to wait: follow-up 1 after the first email, follow-up 2 after follow-up 1.
+FOLLOWUP_GAPS_DAYS = {1: 3, 2: 4}
+DAY_SECS = 86400
 
 
 def get_template(category):
     cat_lower = category.lower()
     if "barber" in cat_lower:
         return TEMPLATES["barber"]
-    elif any(word in cat_lower for word in ["restaurant", "cafe", "coffee", "dining", "food", "bar", "pub", "bistro"]):
+    elif any(word in cat_lower for word in ["restaurant", "cafe", "café", "coffee", "dining", "food", "bar", "pub",
+                                            "bistro", "bakery", "tea", "juice", "ice cream", "lounge"]):
         return TEMPLATES["f_and_b"]
-    elif any(word in cat_lower for word in ["clinic", "medspa", "chiropractor", "massage", "medical", "dental"]):
+    elif any(word in cat_lower for word in ["clinic", "medspa", "chiropractor", "medical", "dental", "dentist",
+                                            "physio"]):
         return TEMPLATES["clinic"]
-    elif any(word in cat_lower for word in ["spa", "salon", "nail", "tattoo"]):
+    elif any(word in cat_lower for word in ["spa", "salon", "nail", "tattoo", "beauty", "massage", "hair"]):
         return TEMPLATES["salon_spa"]
-    elif any(word in cat_lower for word in ["pilates", "gym", "fitness", "yoga"]):
-        return TEMPLATES["pilates"]
+    elif any(word in cat_lower for word in ["pilates", "gym", "fitness", "yoga", "studio"]):
+        return TEMPLATES["fitness"]
     else:
         return TEMPLATES["general"]
+
+
+def render_email(lead, action):
+    """(subject, body) for one lead, footer not included."""
+    if action == "followup1":
+        template = FOLLOWUPS[1]
+    elif action == "followup2":
+        template = FOLLOWUPS[2]
+    else:
+        template = get_template(lead.get("Category", ""))
+    values = {"business_name": lead["Business"], "location": lead.get("Location", "")}
+    return template["subject"].format(**values), template["body"].format(**values)
+
+
+# Shared mailbox providers: a reply from someone@gmail.com says nothing about
+# another gmail.com lead. Matched on the first label (hotmail.fr, yahoo.co.th).
+SHARED_PROVIDERS = {"gmail", "googlemail", "yahoo", "ymail", "hotmail", "outlook", "live", "msn",
+                    "icloud", "me", "mac", "aol", "proton", "protonmail", "gmx", "yandex", "mail",
+                    "zoho", "qq", "163", "naver"}
+
+
+def has_replied(email_addr, replied_emails, replied_domains):
+    """True if this lead, or a colleague on the same business domain, wrote to us."""
+    addr = email_addr.strip().lower()
+    if addr in replied_emails:
+        return True
+    domain = addr.rsplit("@", 1)[-1]
+    return domain in replied_domains and domain.split(".")[0] not in SHARED_PROVIDERS
+
+
+def followup_step(info):
+    """How many follow-ups this lead already got: 0, 1 or 2."""
+    return {"sent": 1, "done": 2}.get(info.get("followup_status"), 0)
+
+
+def build_work_queue(leads, state, now, limit, replied=(set(), set())):
+    """Today's sends: new leads plus follow-ups that are due.
+
+    replied=None means the inbox could not be checked, so no follow-ups go out.
+    While new leads wait, follow-ups take at most half the day.
+    """
+    new, due, seen = [], [], set()
+    for lead in leads:
+        addr = lead["Email"].strip()
+        if addr.lower() in seen:
+            continue
+        seen.add(addr.lower())
+        info = get_lead_info(state, addr)
+        status = info.get("status")
+        if status == "pending":
+            new.append((lead, "initial"))
+            continue
+        if status != "sent" or replied is None or info.get("replied") or has_replied(addr, *replied):
+            continue
+        step = followup_step(info)
+        if step == 0:
+            last = info.get("sent_at")
+        elif step == 1:
+            last = info.get("followup_sent_at")
+        else:
+            continue
+        if last and now - last >= FOLLOWUP_GAPS_DAYS[step + 1] * DAY_SECS:
+            due.append((lead, f"followup{step + 1}"))
+
+    follow = due[: (limit // 2 if new else limit)]
+    fresh = new[: limit - len(follow)]
+    queue = []
+    for i in range(max(len(follow), len(fresh))):
+        queue.extend(pair[i] for pair in (fresh, follow) if i < len(pair))
+    return queue
+
+
+BOUNCE_FROM = ("mailer-daemon", "postmaster")
+
+
+def fetch_replied(sender_email, app_password):
+    """Every address (and business domain) that ever wrote to the sender.
+
+    Read-only: messages are not marked as read. Returns None on any failure,
+    which turns follow-ups off for the run.
+    """
+    import imaplib
+    from email.utils import parseaddr
+    try:
+        mail = imaplib.IMAP4_SSL("imap.gmail.com")
+        mail.login(sender_email, app_password)
+        # "All Mail" is renamed in non-English Gmail; find it by its \\All flag.
+        folder = "INBOX"
+        status, boxes = mail.list()
+        for box in boxes or []:
+            line = box.decode("utf-8", "ignore") if isinstance(box, bytes) else str(box)
+            if "\\All" in line:
+                folder = line.rsplit(' "/" ', 1)[-1]
+                break
+        status, _ = mail.select(folder, readonly=True)
+        if status != "OK":
+            return None
+        status, data = mail.search(None, "NOT", "FROM", sender_email)
+        if status != "OK":
+            return None
+        ids = data[0].split()
+        emails = set()
+        for i in range(0, len(ids), 200):
+            chunk = b",".join(ids[i:i + 200])
+            status, rows = mail.fetch(chunk, "(BODY.PEEK[HEADER.FIELDS (FROM)])")
+            if status != "OK":
+                return None
+            for row in rows:
+                if isinstance(row, tuple):
+                    addr = parseaddr(row[1].decode("utf-8", "ignore").split(":", 1)[-1].strip())[1].lower()
+                    if addr and "@" in addr and not addr.startswith(BOUNCE_FROM):
+                        emails.add(addr)
+        mail.logout()
+        return emails, {a.rsplit("@", 1)[1] for a in emails}
+    except Exception as e:
+        print(f"Could not read the inbox for replies ({e}). Follow-ups are off for this run.")
+        return None
 
 
 # A Gmail account that keeps sending to dead addresses gets throttled, then
@@ -187,7 +294,7 @@ def recent_bounce_rate(state, days=BOUNCE_WINDOW_DAYS):
 
 def email_footer():
     """Opt-out line + postal address. US CAN-SPAM requires both in a commercial email."""
-    out = "\n\n--\nNot interested? Reply \"no thanks\" and I won't write again.\n"
+    out = "\n\n--\nNot interested? Reply \"no thanks\" and we won't write again.\n"
     addr = os.environ.get("SENDER_POSTAL_ADDRESS", "").strip()
     if addr:
         out += addr + "\n"
@@ -223,9 +330,6 @@ def send_email(server, sender_email, recipient_email, subject, body):
     msg["To"] = recipient_email
     msg["Subject"] = subject
     
-    # Custom headers to look like a standard, manual email
-    msg["X-Mailer"] = "Gmail Outlook Client"
-    msg["X-Priority"] = "3"
     
     msg.attach(MIMEText(body, "plain"))
     server.sendmail(sender_email, recipient_email, msg.as_string())
@@ -349,14 +453,25 @@ def main():
         send_telegram_notification(os.environ.get("TELEGRAM_BOT_TOKEN"),
                                    os.environ.get("TELEGRAM_CHAT_ID"), warn)
 
-    # Create work queue
-    work_queue = []
-    for l in pending_initial:
-        work_queue.append((l, "initial"))
+    # Who already wrote back: they get no follow-up, ever.
+    replied = fetch_replied(sender_email, app_password)
+    if replied is not None:
+        for lead in leads:
+            addr = lead["Email"].strip()
+            info = state.get(addr)
+            if isinstance(info, dict) and info.get("status") == "sent" and has_replied(addr, *replied):
+                info["replied"] = True
+        save_state(state)
+        print(f"Inbox checked: {len(replied[0])} address(es) have written to us.")
+
+    # Create work queue: new leads + follow-ups that are due
+    work_queue = build_work_queue(leads, state, now_ts, DAILY_LIMIT, replied)
+    followups_due = sum(1 for _, a in work_queue if a != "initial")
+    print(f"Today's queue: {len(work_queue) - followups_due} first email(s), {followups_due} follow-up(s).")
 
     if not work_queue:
-        msg = ("🚨 Fillo outreach: 0 leads left to email. Nothing was sent.\n"
-               f"The list holds {len(leads)} addresses and every one is already contacted or marked bad.\n"
+        msg = ("🚨 Fillo outreach: nothing to send today.\n"
+               f"The list holds {len(leads)} addresses: every one is contacted, followed up, replied or marked bad.\n"
                "Add new leads to restart sending.")
         print(msg)
         send_telegram_notification(os.environ.get("TELEGRAM_BOT_TOKEN"),
@@ -393,8 +508,6 @@ def main():
 
         business_name = lead["Business"]
         recipient_email = lead["Email"].strip()
-        category = lead["Category"]
-        location = lead["Location"]
 
         # Real-time pre-send SMTP verification
         try:
@@ -410,15 +523,8 @@ def main():
             print(f"Pre-send SMTP check warning: {e}")
 
         # Select template based on action type
-        if action_type == "followup":
-            subject = FOLLOWUP_TEMPLATE["subject"].format(business_name=business_name)
-            body = FOLLOWUP_TEMPLATE["body"].format(business_name=business_name, location=location)
-            tag = "🔄 3-DAY FOLLOW-UP"
-        else:
-            template = get_template(category)
-            subject = template["subject"].format(business_name=business_name)
-            body = template["body"].format(business_name=business_name, location=location)
-            tag = "✉️ INITIAL OUTREACH"
+        subject, body = render_email(lead, action_type)
+        tag = {"followup1": "🔄 FOLLOW-UP 1", "followup2": "🔄 FOLLOW-UP 2"}.get(action_type, "✉️ INITIAL OUTREACH")
 
         body = body + email_footer()
 
@@ -451,13 +557,13 @@ def main():
 
                 # Update rich state
                 existing_info = get_lead_info(state, recipient_email)
-                if action_type == "followup":
-                    state[recipient_email] = {
-                        "status": "sent",
-                        "sent_at": existing_info.get("sent_at", now_ts),
-                        "followup_status": "sent",
-                        "followup_sent_at": time.time()
-                    }
+                if action_type in ("followup1", "followup2"):
+                    state[recipient_email] = dict(
+                        existing_info,
+                        status="sent",
+                        followup_status="sent" if action_type == "followup1" else "done",
+                        followup_sent_at=time.time(),
+                    )
                 else:
                     state[recipient_email] = {
                         "status": "sent",
@@ -517,8 +623,11 @@ def main():
                    if get_lead_info(state, lead["Email"].strip()).get("status") == "pending")
         rate, sample = recent_bounce_rate(state)
         days_left = left / DAILY_LIMIT if DAILY_LIMIT else 0
+        followups_note = ("" if replied is not None
+                          else "⚠️ Follow-ups OFF: could not read the inbox to check replies.\n")
         summary = (f"📊 Fillo outreach, run finished.\n"
-                   f"Sent now: {sent_count}\n"
+                   f"Sent now: {sent_count} (queue had {followups_due} follow-up(s))\n"
+                   f"{followups_note}"
                    f"Leads left: {left} (about {days_left:.1f} day(s) at {DAILY_LIMIT}/day)\n"
                    f"Bounces, last {BOUNCE_WINDOW_DAYS} days: {rate:.0%} of {sample}")
         print(summary)

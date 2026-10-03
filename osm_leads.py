@@ -74,11 +74,14 @@ CITIES = {
 }
 
 # OSM tag -> the Category string send_outreach uses to pick a template.
-# Nail bars and spas stay out: they were deliberately dropped from targeting.
+# Every business that has repeat customers is a target (owner's call, 2026-10-03).
 GROUPS = [
-    ('nwr["amenity"~"^(restaurant|cafe|bar|pub|fast_food)$"]', "Restaurant/Cafe"),
+    ('nwr["amenity"~"^(restaurant|cafe|bar|pub|fast_food|ice_cream)$"]', "Restaurant/Cafe"),
+    ('nwr["shop"="bakery"]', "Bakery"),
     ('nwr["shop"~"^(hairdresser|barber)$"]', "Barber"),
+    ('nwr["shop"~"^(beauty|massage|tattoo)$"]', "Salon/Spa"),
     ('nwr["leisure"="fitness_centre"]', "Pilates"),
+    ('nwr["amenity"~"^(dentist|clinic)$"]', "Clinic"),
 ]
 
 
