@@ -69,6 +69,12 @@ def test_footer_offers_opt_out_in_team_voice():
     assert "we won't write again" in footer
 
 
+def test_footer_names_instagram_under_the_signature_without_a_link():
+    footer = email_footer()
+    assert footer.startswith("\nInstagram: @joinfillo\n")
+    assert "http" not in footer
+
+
 def test_render_email_picks_followup_by_step():
     lead = {"Business": "Test Store", "Category": "Barber", "Location": "Austin"}
     s0, _ = render_email(lead, "initial")

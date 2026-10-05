@@ -292,9 +292,13 @@ def recent_bounce_rate(state, days=BOUNCE_WINDOW_DAYS):
     return (bounced / total if total else 0.0), total
 
 
+INSTAGRAM = "Instagram: @joinfillo"
+
+
 def email_footer():
-    """Opt-out line + postal address. US CAN-SPAM requires both in a commercial email."""
-    out = "\n\n--\nNot interested? Reply \"no thanks\" and we won't write again.\n"
+    """Instagram handle under the signature, then opt-out line + postal address.
+    US CAN-SPAM requires the last two in a commercial email."""
+    out = f"\n{INSTAGRAM}\n\n--\nNot interested? Reply \"no thanks\" and we won't write again.\n"
     addr = os.environ.get("SENDER_POSTAL_ADDRESS", "").strip()
     if addr:
         out += addr + "\n"
