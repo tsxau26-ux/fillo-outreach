@@ -1852,14 +1852,14 @@
     "info@walrusrodeo.com": {
         "status": "sent",
         "sent_at": 1790111985.4093342,
-        "followup_status": "sent",
-        "followup_sent_at": 1792044021.8756688
+        "followup_status": "done",
+        "followup_sent_at": 1792475651.7043736
     },
     "miam@miamcafe.com": {
         "status": "sent",
         "sent_at": 1790112078.9952576,
-        "followup_status": "sent",
-        "followup_sent_at": 1792044208.241745
+        "followup_status": "done",
+        "followup_sent_at": 1792475916.271112
     },
     "orders@madrugabakery.com": {
         "status": "sent",
@@ -1870,122 +1870,122 @@
     "info@drinkperla.com": {
         "status": "sent",
         "sent_at": 1790112338.2838054,
-        "followup_status": "sent",
-        "followup_sent_at": 1792044373.247664
+        "followup_status": "done",
+        "followup_sent_at": 1792476202.143052
     },
     "CienfuegosCoffee@gmail.com": {
         "status": "sent",
         "sent_at": 1790112469.6696134,
-        "followup_status": "sent",
-        "followup_sent_at": 1792044594.5902357
+        "followup_status": "done",
+        "followup_sent_at": 1792476519.8696039
     },
     "kaffasgroup@gmail.com": {
         "status": "sent",
         "sent_at": 1790112618.3129416,
-        "followup_status": "sent",
-        "followup_sent_at": 1792044735.4063568
+        "followup_status": "done",
+        "followup_sent_at": 1792476799.5482278
     },
     "ebstampa@gmail.com": {
         "status": "sent",
         "sent_at": 1790112711.7107239,
-        "followup_status": "sent",
-        "followup_sent_at": 1792044948.545041
+        "followup_status": "done",
+        "followup_sent_at": 1792477046.7987778
     },
     "corygreenzweig@gmail.com": {
         "status": "sent",
         "sent_at": 1790112812.0617123,
-        "followup_status": "sent",
-        "followup_sent_at": 1792045213.25821
+        "followup_status": "done",
+        "followup_sent_at": 1792477224.7375026
     },
     "info@kingofbladestampa.co": {
         "status": "sent",
         "sent_at": 1790112899.4988813,
-        "followup_status": "sent",
-        "followup_sent_at": 1792045444.737191
+        "followup_status": "done",
+        "followup_sent_at": 1792477453.184167
     },
     "info@dopemensocial.com": {
         "status": "sent",
         "sent_at": 1790142242.2600152,
-        "followup_status": "sent",
-        "followup_sent_at": 1792045730.0970383
+        "followup_status": "done",
+        "followup_sent_at": 1792477665.3873405
     },
     "Theoriginalfadeologybarbershop@gmail.com": {
         "status": "sent",
         "sent_at": 1790142325.633393,
-        "followup_status": "sent",
-        "followup_sent_at": 1792046043.3236783
+        "followup_status": "done",
+        "followup_sent_at": 1792477955.03536
     },
     "barrelhousebarber@gmail.com": {
         "status": "sent",
         "sent_at": 1790142411.4027836,
-        "followup_status": "sent",
-        "followup_sent_at": 1792046286.1421192
+        "followup_status": "done",
+        "followup_sent_at": 1792478184.9924319
     },
     "sohoshaveco@gmail.com": {
         "status": "sent",
         "sent_at": 1790142583.1616375,
-        "followup_status": "sent",
-        "followup_sent_at": 1792046519.6909645
+        "followup_status": "done",
+        "followup_sent_at": 1792478405.909426
     },
     "cigarcitybarbers@gmail.com": {
         "status": "sent",
         "sent_at": 1790142659.4418213,
-        "followup_status": "sent",
-        "followup_sent_at": 1792046801.7768068
+        "followup_status": "done",
+        "followup_sent_at": 1792478629.0778272
     },
     "prestigebarbershop@gmail.com": {
         "status": "sent",
         "sent_at": 1790142835.1915083,
-        "followup_status": "sent",
-        "followup_sent_at": 1792047052.02137
+        "followup_status": "done",
+        "followup_sent_at": 1792478844.4727755
     },
     "Gscuts@gmail.com": {
         "status": "sent",
         "sent_at": 1790142991.7580705,
-        "followup_status": "sent",
-        "followup_sent_at": 1792047260.1016448
+        "followup_status": "done",
+        "followup_sent_at": 1792479183.4491055
     },
     "thebrixbarbershop@gmail.com": {
         "status": "sent",
         "sent_at": 1790143122.2263017,
-        "followup_status": "sent",
-        "followup_sent_at": 1792047530.1274352
+        "followup_status": "done",
+        "followup_sent_at": 1792479450.3746138
     },
     "elbarbershoptampa@gmail.com": {
         "status": "sent",
         "sent_at": 1790143292.2024035,
-        "followup_status": "sent",
-        "followup_sent_at": 1792047819.2364693
+        "followup_status": "done",
+        "followup_sent_at": 1792479711.840276
     },
     "info@kjbarbershop.com": {
         "status": "sent",
         "sent_at": 1790143434.1098166,
-        "followup_status": "sent",
-        "followup_sent_at": 1792047970.543866
+        "followup_status": "done",
+        "followup_sent_at": 1792480005.9429936
     },
     "avipbarbershop@gmail.com": {
         "status": "sent",
         "sent_at": 1790143572.5470512,
-        "followup_status": "sent",
-        "followup_sent_at": 1792048266.9262881
+        "followup_status": "done",
+        "followup_sent_at": 1792480239.204112
     },
     "Hasanalabod617@gmail.com": {
         "status": "sent",
         "sent_at": 1790143735.236411,
-        "followup_status": "sent",
-        "followup_sent_at": 1792129069.9147315
+        "followup_status": "done",
+        "followup_sent_at": 1792480539.7750363
     },
     "tomascotto1977@gmail.com": {
         "status": "sent",
         "sent_at": 1790143860.9707131,
-        "followup_status": "sent",
-        "followup_sent_at": 1792129337.813236
+        "followup_status": "done",
+        "followup_sent_at": 1792480849.304051
     },
     "info@acmbarberstudio.com": {
         "status": "sent",
         "sent_at": 1790143980.6845431,
-        "followup_status": "sent",
-        "followup_sent_at": 1792129553.502653
+        "followup_status": "done",
+        "followup_sent_at": 1792481113.3443878
     },
     "info@castsalonandspa.com": "email_not_found",
     "contact@ummakitchen.us": "email_not_found",
@@ -2286,7 +2286,8 @@
     "ccmimi94@gmail.com": {
         "status": "sent",
         "sent_at": 1790527873.4731166,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1792481352.11869
     },
     "muellerfeedback@pokeatery.com": {
         "status": "bounced",
@@ -2301,12 +2302,14 @@
     "hola@esteatx.com": {
         "status": "sent",
         "sent_at": 1790577331.329428,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1792481532.3728504
     },
     "team@chilantrobbq.com": {
         "status": "sent",
         "sent_at": 1790577498.2542188,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1792481740.6459885
     },
     "hello@gatiicecream.com": {
         "status": "sent",
@@ -5588,6 +5591,142 @@
     "info@petiterougecoffeetruck.com": {
         "status": "sent",
         "sent_at": 1792394437.4659173,
+        "followup_status": "none"
+    },
+    "promotions@beehivebuzz.com": "email_not_found",
+    "info@alibabapittsburgh.com": "email_not_found",
+    "office@carsoncitysaloon.com": "email_not_found",
+    "info@charliemurdochs.com": "email_not_found",
+    "info@rumshakers-pgh.com": "email_not_found",
+    "info@escobarpgh.com": "email_not_found",
+    "info@tikilounge.biz": "email_not_found",
+    "Info@moodzcompany.org": "email_not_found",
+    "Events@TheLibrary-Pgh.com": "email_not_found",
+    "info@goodbarsd.com": "email_not_found",
+    "info@cremedelacrepe.com": "email_not_found",
+    "steve@nolacakes.com": {
+        "status": "sent",
+        "sent_at": 1792475530.7739942,
+        "followup_status": "none"
+    },
+    "info@sweetsoulfood.net": {
+        "status": "sent",
+        "sent_at": 1792475739.509524,
+        "followup_status": "none"
+    },
+    "info@thecompanyburger.com": {
+        "status": "sent",
+        "sent_at": 1792476037.972981,
+        "followup_status": "none"
+    },
+    "info@attikineworleans.com": {
+        "status": "sent",
+        "sent_at": 1792476350.046317,
+        "followup_status": "none"
+    },
+    "pelicanevents@gmail.com": {
+        "status": "sent",
+        "sent_at": 1792476637.492887,
+        "followup_status": "none"
+    },
+    "info@osterialupo.com": {
+        "status": "sent",
+        "sent_at": 1792476976.4135563,
+        "followup_status": "none"
+    },
+    "pizzadelicious.NO@gmail.com": {
+        "status": "sent",
+        "sent_at": 1792477158.4861808,
+        "followup_status": "none"
+    },
+    "info@nomiyaramen.com": {
+        "status": "sent",
+        "sent_at": 1792477385.6472838,
+        "followup_status": "none"
+    },
+    "hello@mistermao.com": {
+        "status": "sent",
+        "sent_at": 1792477539.156224,
+        "followup_status": "none"
+    },
+    "info@mammothespresso.com": {
+        "status": "sent",
+        "sent_at": 1792477801.2969594,
+        "followup_status": "none"
+    },
+    "theflagpolenola@gmail.com": {
+        "status": "sent",
+        "sent_at": 1792478053.5313776,
+        "followup_status": "none"
+    },
+    "info@sunniesnola.com": {
+        "status": "sent",
+        "sent_at": 1792478291.4634242,
+        "followup_status": "none"
+    },
+    "info@crescentcitygymnastics.com": {
+        "status": "sent",
+        "sent_at": 1792478510.8176668,
+        "followup_status": "none"
+    },
+    "smile@bodyshoppenola.com": {
+        "status": "sent",
+        "sent_at": 1792478717.8233693,
+        "followup_status": "none"
+    },
+    "main@whykikibar.com": {
+        "status": "sent",
+        "sent_at": 1792479007.4603784,
+        "followup_status": "none"
+    },
+    "sangyole@gmail.com": {
+        "status": "sent",
+        "sent_at": 1792479349.8919187,
+        "followup_status": "none"
+    },
+    "granary@lazizkitchen.com": {
+        "status": "sent",
+        "sent_at": 1792479605.213246,
+        "followup_status": "none"
+    },
+    "info@prettybirdchicken.com": {
+        "status": "sent",
+        "sent_at": 1792479830.81235,
+        "followup_status": "none"
+    },
+    "delicious@matteoslc.com": {
+        "status": "sent",
+        "sent_at": 1792480111.7381213,
+        "followup_status": "none"
+    },
+    "hello@lokicoffeeco.com": {
+        "status": "sent",
+        "sent_at": 1792480400.6882985,
+        "followup_status": "none"
+    },
+    "info@saltkitchens.com": {
+        "status": "sent",
+        "sent_at": 1792480673.5702555,
+        "followup_status": "none"
+    },
+    "info@dangerouspretzel.com": {
+        "status": "sent",
+        "sent_at": 1792481020.69109,
+        "followup_status": "none"
+    },
+    "mozz.milkblock@gmail.com": {
+        "status": "sent",
+        "sent_at": 1792481192.2667165,
+        "followup_status": "none"
+    },
+    "lunacoffeencrystals@gmail.com": {
+        "status": "sent",
+        "sent_at": 1792481449.514955,
+        "followup_status": "none"
+    },
+    "contact@killanikkei.com": {
+        "status": "sent",
+        "sent_at": 1792481615.19024,
         "followup_status": "none"
     }
 }
