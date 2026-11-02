@@ -2946,14 +2946,14 @@
     "otakuyakiresto@gmail.com": {
         "status": "sent",
         "sent_at": 1790750965.4179661,
-        "followup_status": "sent",
-        "followup_sent_at": 1793175944.2502375
+        "followup_status": "done",
+        "followup_sent_at": 1793603937.592886
     },
     "deanesseannryu@gmail.com": {
         "status": "sent",
         "sent_at": 1790751027.962033,
-        "followup_status": "sent",
-        "followup_sent_at": 1793176200.5036004
+        "followup_status": "done",
+        "followup_sent_at": 1793604210.6580906
     },
     "doppiocoffee2016@gmail.com": {
         "status": "sent",
@@ -3266,117 +3266,140 @@
     "info@southernstrainbeer.com": {
         "status": "sent",
         "sent_at": 1790839441.240553,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793604430.686805
     },
     "info@hiphopsmoothies.com": {
         "status": "sent",
         "sent_at": 1790839521.379005,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793604622.8240783
     },
     "info@tipsypickle.com": {
         "status": "sent",
         "sent_at": 1790839674.4591193,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793604929.9673681
     },
     "providedcoffee@gmail.com": {
         "status": "sent",
         "sent_at": 1790839754.8146968,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793605192.3123896
     },
     "wilmore@summitcoffee.com": {
         "status": "sent",
         "sent_at": 1790839866.176756,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793605426.2065423
     },
     "info@abarigamebar.com": {
         "status": "sent",
         "sent_at": 1790839993.473606,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793605635.5446012
     },
     "compatacoclt@gmail.com": {
         "status": "sent",
         "sent_at": 1790840083.639492,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793605833.0770593
     },
     "melonjugo@gmail.com": {
         "status": "sent",
         "sent_at": 1790840225.6970294,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793606177.3753493
     },
     "theclthorseshoe@gmail.com": {
         "status": "sent",
         "sent_at": 1790840319.8156788,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793606506.8505266
     },
     "itspoppingourmetkettlekorn@gmail.com": {
         "status": "sent",
         "sent_at": 1790840452.8549972,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793606804.8159845
     },
     "crispybanhmi@gmail.com": {
         "status": "sent",
         "sent_at": 1790840556.9146106,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793607051.3993998
     },
     "info@paoslemonade2.com": {
         "status": "sent",
         "sent_at": 1790840664.3635736,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793607345.1259098
     },
     "howdy@substrateclt.com": {
         "status": "sent",
         "sent_at": 1790840840.5160923,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793607566.2724764
     },
     "info@zamindarsclubhouse.com": {
         "status": "sent",
         "sent_at": 1790841000.8105388,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793607870.034865
     },
     "hello@lavecina.com": {
         "status": "sent",
         "sent_at": 1790841142.0864043,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793608127.1749763
     },
     "info@heistbrewery.com": {
         "status": "sent",
         "sent_at": 1790841231.7002227,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793608388.0420742
     },
     "madgreekofclt@gmail.com": {
         "status": "sent",
         "sent_at": 1790841368.7497427,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793608641.5274377
     },
     "info@zepeddies.com": {
         "status": "sent",
         "sent_at": 1790841525.1138964,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793608887.0952191
     },
     "info@grailsmiami.com": {
         "status": "sent",
         "sent_at": 1790841593.2757661,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793609101.1036322
     },
     "info@oceanstensobe.com": {
         "status": "sent",
         "sent_at": 1790841694.64367,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793609307.630928
     },
     "info@barcelonetamiami.com": {
         "status": "sent",
         "sent_at": 1790841861.7746067,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793609586.2247694
     },
     "hellocreamparlor@gmail.com": {
         "status": "sent",
         "sent_at": 1790842011.0651634,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793609903.8034477
     },
     "benzour@shepherdartisan.com": {
         "status": "sent",
         "sent_at": 1790842166.1152062,
-        "followup_status": "none"
+        "followup_status": "sent",
+        "followup_sent_at": 1793610190.5958548
     },
     "Miamicrisppis@crisppischicken.com": {
         "status": "sent",
@@ -7410,9 +7433,9 @@
         "followup_status": "none"
     },
     "info@breezemassage.ph": {
-        "status": "sent",
+        "status": "bounced",
         "sent_at": 1793520866.9047177,
-        "followup_status": "none"
+        "bounced_at": 1793603384.6212826
     },
     "info@climbcentral.ph": {
         "status": "sent",
@@ -7467,6 +7490,131 @@
     "macswoodgrilled@gmail.com": {
         "status": "sent",
         "sent_at": 1793523557.4947977,
+        "followup_status": "none"
+    },
+    "info@bangersandlace.com": {
+        "status": "sent",
+        "sent_at": 1793603862.3250384,
+        "followup_status": "none"
+    },
+    "info@masalladelsolrestaurant.com": {
+        "status": "sent",
+        "sent_at": 1793604112.402228,
+        "followup_status": "none"
+    },
+    "reedslocaltap@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793604278.6776078,
+        "followup_status": "none"
+    },
+    "info@dstrktchicago.com": {
+        "status": "sent",
+        "sent_at": 1793604523.2204833,
+        "followup_status": "none"
+    },
+    "info@parachute-hifi.com": {
+        "status": "sent",
+        "sent_at": 1793604786.0537083,
+        "followup_status": "none"
+    },
+    "gallerycafechi@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793605085.178147,
+        "followup_status": "none"
+    },
+    "info@thepublicanrestaurant.com": {
+        "status": "sent",
+        "sent_at": 1793605350.9507353,
+        "followup_status": "none"
+    },
+    "atasteofthephilippines@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793605521.9882174,
+        "followup_status": "none"
+    },
+    "tufanosrestaurant@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793605712.65802,
+        "followup_status": "none"
+    },
+    "info@thetinlizzie.com": {
+        "status": "sent",
+        "sent_at": 1793605997.875505,
+        "followup_status": "none"
+    },
+    "tesfa.ec@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793606323.6561527,
+        "followup_status": "none"
+    },
+    "cdir.chicago@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793606656.153689,
+        "followup_status": "none"
+    },
+    "Fornorossochicago@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793606940.0365338,
+        "followup_status": "none"
+    },
+    "info@royalpalmschicago.com": {
+        "status": "sent",
+        "sent_at": 1793607169.4167504,
+        "followup_status": "none"
+    },
+    "hello@corridorchicago.com": {
+        "status": "sent",
+        "sent_at": 1793607413.194415,
+        "followup_status": "none"
+    },
+    "Nepalhousedevonave@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793607694.6271963,
+        "followup_status": "none"
+    },
+    "hello@prequelchicago.com": {
+        "status": "sent",
+        "sent_at": 1793607980.9523766,
+        "followup_status": "none"
+    },
+    "edlau6888@yahoo.com": {
+        "status": "sent",
+        "sent_at": 1793608270.2742934,
+        "followup_status": "none"
+    },
+    "chicago@mapleandash.com": {
+        "status": "sent",
+        "sent_at": 1793608555.7040226,
+        "followup_status": "none"
+    },
+    "info.8a5e@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793608765.7587757,
+        "followup_status": "none"
+    },
+    "info@trucechicago.com": {
+        "status": "sent",
+        "sent_at": 1793608971.034501,
+        "followup_status": "none"
+    },
+    "Brendan@wolfhoundchicago.com": {
+        "status": "sent",
+        "sent_at": 1793609183.8633718,
+        "followup_status": "none"
+    },
+    "micafecentral@gmail.com": {
+        "status": "sent",
+        "sent_at": 1793609486.8578982,
+        "followup_status": "none"
+    },
+    "hola@rubischicago.com": {
+        "status": "sent",
+        "sent_at": 1793609745.6579041,
+        "followup_status": "none"
+    },
+    "info@firstslice.org": {
+        "status": "sent",
+        "sent_at": 1793610046.772487,
         "followup_status": "none"
     }
 }
