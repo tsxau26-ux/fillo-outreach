@@ -178,10 +178,27 @@ def followup_step(info):
     return {"sent": 1, "done": 2}.get(info.get("followup_status"), 0)
 
 
-def build_work_queue(leads, state, now, limit, replied=(set(), set())):
+VERIFIED_FILE = "verified_inboxes.txt"
+
+
+def load_verified(path=VERIFIED_FILE):
+    """Addresses whose inbox was confirmed on a machine with port 25 open.
+
+    GitHub runners block port 25, so the bot cannot check inboxes itself.
+    One address per line; lines starting with # are notes.
+    """
+    if not os.path.exists(path):
+        return set()
+    with open(path, encoding="utf-8") as f:
+        return {ln.strip().lower() for ln in f if ln.strip() and not ln.startswith("#")}
+
+
+def build_work_queue(leads, state, now, limit, replied=(set(), set()), verified=None):
     """Today's sends: new leads plus follow-ups that are due.
 
     replied=None means the inbox could not be checked, so no follow-ups go out.
+    verified=set(...) is safe mode: new leads only if their inbox was confirmed.
+    Follow-ups still go out - those addresses already took our first email.
     While new leads wait, follow-ups take at most half the day.
     """
     new, due, seen = [], [], set()
@@ -193,7 +210,8 @@ def build_work_queue(leads, state, now, limit, replied=(set(), set())):
         info = get_lead_info(state, addr)
         status = info.get("status")
         if status == "pending":
-            new.append((lead, "initial"))
+            if verified is None or addr.lower() in verified:
+                new.append((lead, "initial"))
             continue
         if status != "sent" or replied is None or info.get("replied") or has_replied(addr, *replied):
             continue
@@ -468,10 +486,37 @@ def main():
         save_state(state)
         print(f"Inbox checked: {len(replied[0])} address(es) have written to us.")
 
+    tg_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    tg_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
+    # Guard the sender account: too many bounces and Gmail starts blocking.
+    # Safe mode, not a full stop: a full stop never recovers, because with no
+    # new sends the 14-day window shrinks and the rate only climbs (that froze
+    # the bot from 12 Nov 2026). Safe mode keeps sending what cannot bounce:
+    # follow-ups, and new leads whose inbox was confirmed (verified_inboxes.txt).
+    rate, sample = recent_bounce_rate(state)
+    print(f"Recent bounce rate: {rate:.0%} of {sample} dated send(s) in the last {BOUNCE_WINDOW_DAYS} days.")
+    verified = None
+    if sample >= BOUNCE_MIN_SAMPLE and rate > BOUNCE_LIMIT:
+        verified = load_verified()
+        msg = (f"🛡️ Fillo outreach: SAFE MODE.\n"
+               f"{rate:.0%} of the last {sample} emails bounced (limit {BOUNCE_LIMIT:.0%}).\n"
+               f"Sending only follow-ups and {len(verified)} inbox-checked lead(s) until it drops.")
+        print(msg)
+        send_telegram_notification(tg_token, tg_chat_id, msg)
+
     # Create work queue: new leads + follow-ups that are due
-    work_queue = build_work_queue(leads, state, now_ts, DAILY_LIMIT, replied)
+    work_queue = build_work_queue(leads, state, now_ts, DAILY_LIMIT, replied, verified)
     followups_due = sum(1 for _, a in work_queue if a != "initial")
     print(f"Today's queue: {len(work_queue) - followups_due} first email(s), {followups_due} follow-up(s).")
+
+    if not work_queue and verified is not None:
+        msg = ("🛡️ Fillo outreach: safe mode, nothing safe to send today.\n"
+               "No follow-ups due and no inbox-checked new leads. "
+               "Run the inbox check on the Mac to add some.")
+        print(msg)
+        send_telegram_notification(tg_token, tg_chat_id, msg)
+        raise SystemExit(1)
 
     if not work_queue:
         msg = ("🚨 Fillo outreach: nothing to send today.\n"
@@ -483,23 +528,8 @@ def main():
         # Fail loudly: a green run with 0 emails is what hid this for two weeks.
         raise SystemExit(1)
 
-    # Telegram settings
-    tg_token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    tg_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     if tg_token and tg_chat_id:
         print("Telegram notifications enabled.")
-
-    # Guard the sender account: too many bounces and Gmail starts blocking.
-    rate, sample = recent_bounce_rate(state)
-    print(f"Recent bounce rate: {rate:.0%} of {sample} dated send(s) in the last {BOUNCE_WINDOW_DAYS} days.")
-    if sample >= BOUNCE_MIN_SAMPLE and rate > BOUNCE_LIMIT:
-        msg = (f"🛑 Fillo outreach: PAUSED, nothing sent.\n"
-               f"{rate:.0%} of the last {sample} emails bounced (limit {BOUNCE_LIMIT:.0%}).\n"
-               f"Sending more from {sender_email} now risks the account being blocked. "
-               f"Clean the list before the next run.")
-        print(msg)
-        send_telegram_notification(tg_token, tg_chat_id, msg)
-        raise SystemExit(1)
 
     sent_count = 0
     consecutive_failures = 0

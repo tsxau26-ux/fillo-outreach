@@ -8885,5 +8885,113 @@
         "status": "sent",
         "sent_at": 1794389214.3692982,
         "followup_status": "none"
+    },
+    "carolcromer@yourpremierimage.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@thecornermiami.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@twrg.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@ultimocoffee.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@thegoodkarmacafe.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@yardsbrewing.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@essenbakery.com": {
+        "status": "email_not_found",
+        "reason": "No MX server found"
+    },
+    "info@helmand.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@tapasteatro.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@verdepizza.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@wileygunters.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@theduchessbaltimore.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@mosirishpub.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "antonio@walnutway.org": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@oakbarrelmilwaukee.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@whosonthirdmke.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "contact@kaffeinecoffeecompany.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@theblockbistro.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@heightenedaesthetics.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "salonqe@salonqe.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "kismet@salonkismet.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "massage@talkingtreemassage.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@aditistudio.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@gyrotonicmc.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@firsthilldentalcenter.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "info@linkdentistry.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
+    },
+    "srminfo@seattlefertility.com": {
+        "status": "email_not_found",
+        "reason": "SMTP Rejected (550): 5.7.1 Service unavailable, Client host [197.244.44.244] blocked using Spamhaus. "
     }
 }
